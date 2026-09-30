@@ -3,13 +3,15 @@
 <img src="docs/logo.png" alt="Logo" width="128">
 
 Mod de contenu pour [Vintage Story](https://www.vintagestory.at/) qui traduit en français les
-textes de mods que ni les mods eux-mêmes ni les packs existants (Pack de Traduction Française,
-Mod Traductions FR, French Translation Pack) ne traduisent.
+textes de mods que les mods eux-mêmes ne traduisent pas. Il couvre aussi, avec ses propres
+traductions, le périmètre des packs existants (Pack de Traduction Française, Mod Traductions FR,
+French Translation Pack) : il se suffit à lui-même.
 
 - **Aucune dépendance** : le mod ne dépend que du jeu. Une traduction ne sert que si son mod est
   installé, et reste sans effet sinon.
-- **Que les trous** : chaque clé livrée est absente de tous les autres fichiers `fr.json` du
-  modpack de référence. L'ordre de chargement des packs n'a donc pas d'importance.
+- **Que les trous des mods** : aucune clé déjà traduite par un mod lui-même (ou par le jeu) n'est
+  livrée. Les packs tiers ci-dessus ne comptent pas : installés avec vsopenfrench, c'est le
+  dernier chargé qui l'emporte sur les clés communes, sans rien casser.
 - Facultatif des deux côtés : un client peut l'avoir sans le serveur, et inversement.
 
 L'état des lieux qui motive le projet est dans [`docs/audit-2026-09-30.md`](docs/audit-2026-09-30.md).

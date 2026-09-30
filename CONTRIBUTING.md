@@ -79,9 +79,11 @@ se traduit lui-même.
 
 `vs-lint` (et la CI) refuse un fichier qui enfreint les règles marquées ✔.
 
-- ✔ **Ne livrer que les trous.** Une clé déjà traduite par le mod ou un autre pack n'est pas
-  livrée : en cas de doublon, la dernière valeur chargée gagne, et l'ordre de chargement n'est pas
-  maîtrisé.
+- ✔ **Ne livrer que les trous.** Une clé déjà traduite par le mod lui-même ou par un autre mod
+  n'est pas livrée : en cas de doublon, la dernière valeur chargée gagne, et l'ordre de chargement
+  n'est pas maîtrisé. Exception : les packs de traduction tiers (`TRANSLATION_PACKS` dans
+  `devenv.nix` : modtraductionsfr, vintagestoryfr, frtraductionmods) ne comptent pas, car
+  vsopenfrench couvre leur périmètre avec ses propres traductions.
 - ✔ **Clés à l'identique**, jokers `*` compris (`block-hay-aged-*`), sinon elles ne remplacent pas l'anglais.
 - ✔ **Conserver les paramètres** `{0}`, `{1}`, `>>>nom<<<`… et les balises (`<a href="handbook://…">`, `<font>`).
   Conserver aussi les `\n` (avertissement seulement).

@@ -6,6 +6,7 @@ Acacia
 Amaretto
 Animation
 Archer
+Auto
 Bestial
 Bismuth
 Cape
@@ -25,9 +26,11 @@ Gecko
 Ginkgo
 Gozinaki
 Herbivore
+Interactions
 intoxication
 Jacaranda
 Jade
+Joker
 Jonas
 Karee
 Kauri
@@ -35,8 +38,10 @@ Khiaz
 Kobold
 Kumquat
 Limoncello
+Litharge
 Long
 Malachite
+Massicot
 Mors
 Muffin
 Nickel
@@ -45,15 +50,22 @@ Omnivore
 Onyx
 Orange
 Oriental
+Palette (Jonas)
 Parasite
 Pemmican
 Pestilens
+Pilaf
+Pilaf {1}
+Portfolio
+Production
+ProspectTogether
 Rage
 Rictus
 Rimu
 Sal
 Skryre
 Stable
+Standard
 Tamanu
 Tawhai
 Thuya
@@ -61,5 +73,6 @@ Totara
 Tourmaline
 Umgolotl
 Uranium
+Vintage Story
 Xylophone
 Zinc

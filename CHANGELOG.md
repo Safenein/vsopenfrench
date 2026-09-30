@@ -12,6 +12,10 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- vsopenfrench couvre aussi le périmètre des trois packs tiers avec ses propres traductions
+  (4 035 textes de plus, 31 mods) : il n'a plus besoin d'eux. Les packs ne comptent plus dans
+  l'audit, le lint et `vs-gen`.
+- `vs-lint` ignore les textes sans deux lettres (nombres, ponctuation, lettre seule).
 - `vs-check-updates` et workflow hebdomadaire : issue « traductions à faire » quand une nouvelle
   version d'un mod apporte des textes sans français ou rend des clés obsolètes.
 - Textes manquants des 36 derniers mods du modpack (windowdisplay, substrate, aculinaryartillery,

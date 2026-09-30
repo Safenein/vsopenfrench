@@ -101,5 +101,11 @@
   "ScentMaskPotionScalesDuration": "Durée de la potion de masque d'odeur selon sa puissance",
   "LooterPotionScalesDuration": "Durée de la potion de pilleur selon sa puissance",
   "MiningPotionScalesDuration": "Durée de la potion de minage selon sa puissance",
-  "PoisonPotionScalesDuration": "Durée de la potion de poison selon sa puissance"
+  "PoisonPotionScalesDuration": "Durée de la potion de poison selon sa puissance",
+  "potion-nogravity-effect": "La gravité ne vous attire plus vers le bas",
+  "potion-knockback-resist-effect": "Votre résistance au recul change de {0} %",
+  "potion-no-fall-damage-effect": "Vous ne subissez aucun dégât de chute",
+  "potion-no-climb-effect": "Vous ne pouvez plus grimper",
+  "potion-climb-reach-effect": "Votre portée d'escalade change de {0} blocs",
+  "potion-weight-effect": "Votre poids change de {0} kg"
 }
