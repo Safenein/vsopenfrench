@@ -139,6 +139,48 @@ let
                         english[modid][qualify(key, domain)] = (domain, key, text)
         return english, french, game_english
 
+    # --- ModDB (vs-lock-mods, vs-check-updates) ---
+
+    MODDB_API = "https://mods.vintagestory.at/api"
+
+    def fetch(url):
+        import urllib.error, urllib.request
+        req = urllib.request.Request(url, headers={"User-Agent": "vsopenfrench"})
+        try:
+            with urllib.request.urlopen(req) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            return e.read()
+
+    def moddb_api(path):
+        return json.loads(fetch(f"{MODDB_API}/{path}"))
+
+    _aliases = None
+    def moddb_resolve(modid, moddb):
+        """Renvoie (id ModDB, fiche). Repli sur l'urlalias pour les mods mal étiquetés."""
+        global _aliases
+        data = moddb_api(f"mod/{moddb or modid}")
+        if str(data.get("statuscode")) == "200":
+            return moddb, data["mod"]
+        if _aliases is None:
+            _aliases = {m.get("urlalias"): m["modid"] for m in moddb_api("mods")["mods"]}
+        if modid not in _aliases:
+            sys.exit(f"{modid}: introuvable sur la ModDB ; renseigner \"moddb\" dans mods.json")
+        return _aliases[modid], moddb_api(f"mod/{_aliases[modid]}")["mod"]
+
+    def mod_entry(modid, moddb, release, previous):
+        """Entrée de mods.json pour une release ; sha256 recalculé si le fichier a changé."""
+        import hashlib, urllib.parse
+        url = urllib.parse.quote(release["mainfile"], safe=":/?=&+%")
+        entry = {"modid": modid, "version": release["modversion"], "fileid": release["fileid"], "url": url}
+        if moddb:
+            entry["moddb"] = moddb
+        if previous.get("fileid") == release["fileid"] and previous.get("sha256"):
+            entry["sha256"] = previous["sha256"]
+        else:
+            entry["sha256"] = hashlib.sha256(fetch(url)).hexdigest()
+        return entry
+
     def repo_lang_files():
         """Fichiers fr.json livrés par ce dépôt, avec leur chemin dans le zip."""
         base = ROOT / "assets"
@@ -158,34 +200,6 @@ let
 
     Usage: vs-lock-mods <dossier des zips> [version du jeu]
     """
-    import hashlib, urllib.parse, urllib.request
-
-    API = "https://mods.vintagestory.at/api"
-
-    def fetch(url):
-        req = urllib.request.Request(url, headers={"User-Agent": "vsopenfrench/vs-lock-mods"})
-        try:
-            with urllib.request.urlopen(req) as r:
-                return r.read()
-        except urllib.error.HTTPError as e:
-            return e.read()
-
-    def api(path):
-        return json.loads(fetch(f"{API}/{path}"))
-
-    aliases = None
-    def resolve(modid, moddb):
-        """Renvoie (id ModDB, fiche). Repli sur l'urlalias pour les mods mal étiquetés."""
-        global aliases
-        data = api(f"mod/{moddb or modid}")
-        if str(data.get("statuscode")) == "200":
-            return moddb, data["mod"]
-        if aliases is None:
-            aliases = {m.get("urlalias"): m["modid"] for m in api("mods")["mods"]}
-        if modid not in aliases:
-            sys.exit(f"{modid}: introuvable sur la ModDB ; renseigner \"moddb\" dans mods.json")
-        return aliases[modid], api(f"mod/{aliases[modid]}")["mod"]
-
     src = Path(sys.argv[1])
     game = sys.argv[2] if len(sys.argv) > 2 else GAME_VERSION
     lock_path = ROOT / "mods.json"
@@ -194,24 +208,54 @@ let
     mods = []
     for z in sorted(src.glob("*.zip")):
         modid, version = modinfo(zipfile.ZipFile(z))
-        moddb, mod = resolve(modid, old.get(modid, {}).get("moddb"))
+        moddb, mod = moddb_resolve(modid, old.get(modid, {}).get("moddb"))
         release = next((r for r in mod["releases"] if r["modversion"] == version), None)
         if release is None:
             sys.exit(f"{modid}: version {version} absente de la ModDB")
-        url = urllib.parse.quote(release["mainfile"], safe=":/?=&+%")
-        entry = {"modid": modid, "version": version, "fileid": release["fileid"], "url": url}
-        if moddb:
-            entry["moddb"] = moddb
-        prev = old.get(modid, {})
-        if prev.get("fileid") == release["fileid"] and prev.get("sha256"):
-            entry["sha256"] = prev["sha256"]
-        else:
-            entry["sha256"] = hashlib.sha256(fetch(url)).hexdigest()
         print(f"{modid} {version}", file=sys.stderr)
-        mods.append(entry)
+        mods.append(mod_entry(modid, moddb, release, old.get(modid, {})))
 
     lock_path.write_text(json.dumps({"game": game, "mods": mods}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{len(mods)} mods écrits dans {lock_path}")
+  '';
+
+  checkUpdates = mkPy "vs-check-updates" ''
+    """Cherche sur la ModDB une version plus récente de chaque mod de mods.json.
+
+    Usage: vs-check-updates [--write] [--markdown FICHIER]
+    Retient, pour chaque mod, la release la plus récente dont les tags contiennent la version du
+    jeu de mods.json. --write met mods.json à jour (sha256 compris) ; --markdown écrit la liste
+    des mises à jour en tableau. Sort en 0 dans tous les cas : c'est vs-audit qui dit s'il y a
+    de nouveaux textes.
+    """
+    args = sys.argv[1:]
+    write = "--write" in args
+    markdown = Path(args[args.index("--markdown") + 1]) if "--markdown" in args else None
+
+    lock_path = ROOT / "mods.json"
+    lock = json.loads(lock_path.read_text("utf-8"))
+    game = lock["game"]
+    updates, mods = [], []
+    for old in lock["mods"]:
+        moddb, mod = moddb_resolve(old["modid"], old.get("moddb"))
+        release = next((r for r in mod["releases"] if game in r.get("tags", [])), None)
+        if release is None or release["fileid"] == old["fileid"]:
+            mods.append(old)
+            continue
+        page = f"https://mods.vintagestory.at/show/mod/{mod['assetid']}"
+        updates.append((old["modid"], old["version"], release["modversion"], page))
+        print(f"{old['modid']} : {old['version']} -> {release['modversion']}")
+        mods.append(mod_entry(old["modid"], moddb, release, {}) if write else old)
+
+    print(f"{len(updates)} mise(s) à jour pour le jeu {game}")
+    if write and updates:
+        lock_path.write_text(json.dumps({"game": game, "mods": mods}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if markdown:
+        lines = [f"Nouvelles versions pour le jeu {game} : {len(updates)}.", ""]
+        if updates:
+            lines += ["| Mod | Référence | Nouvelle version |", "| --- | --- | --- |"]
+            lines += [f"| [`{m}`]({page}) | {a} | {b} |" for m, a, b, page in updates]
+        markdown.write_text("\n".join(lines) + "\n", encoding="utf-8")
   '';
 
   audit = mkPy "vs-audit" ''
@@ -669,6 +713,7 @@ in
     pkgs.nixfmt
     vsServer
     lockMods
+    checkUpdates
     audit
     gen
     lint
@@ -846,6 +891,7 @@ in
     echo "  vs-logo      régénère le logo et modicon.png"
     echo "  vs-release   publie une version (tag + release GitHub)"
     echo "  vs-lock-mods régénère mods.json depuis un dossier de zips"
+    echo "  vs-check-updates cherche des versions plus récentes des mods (--write : met mods.json à jour)"
   '';
 
   enterTest = ''

@@ -1,0 +1,99 @@
+name: Nouvelles versions des mods
+
+# Chaque semaine : met mods.json à jour avec les dernières versions des mods pour la version du
+# jeu (dans l'exécution seulement, le dépôt n'est pas modifié), relance vs-audit et vs-lint sur
+# ce modpack, et tient à jour une issue « traductions à faire » : ouverte ou mise à jour s'il y a
+# de nouveaux textes ou des clés devenues obsolètes, fermée quand il n'y a plus rien à faire.
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: mods-update
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+  actions: write # purge des anciens caches Nix (setup-devenv)
+
+env:
+  LABEL: traductions à faire
+  TITLE: Nouveaux textes à traduire après mise à jour des mods
+
+jobs:
+  check:
+    name: Nouvelles versions et audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: ./.github/actions/setup-devenv
+
+      - name: Chercher les nouvelles versions
+        run: devenv shell -- vs-check-updates --write --markdown updates.md
+
+      # devenv réévalue devenv.nix : le modpack est reconstruit depuis le mods.json modifié.
+      - name: Audit et lint sur le modpack à jour
+        id: audit
+        run: |
+          devenv shell -- vs-audit >audit.txt
+          devenv shell -- vs-lint >lint.txt || true
+          total=$(sed -n 's/^Total : \([0-9]*\) clé.*/\1/p' audit.txt)
+          errors=$(grep -c '^erreur' lint.txt || true)
+          echo "total=${total:-0}" >>"$GITHUB_OUTPUT"
+          echo "errors=$errors" >>"$GITHUB_OUTPUT"
+          cat updates.md audit.txt lint.txt
+
+      - name: Rapport
+        run: |
+          {
+            cat updates.md
+            echo
+            echo "**Textes sans français : ${{ steps.audit.outputs.total }}**"
+            echo
+            grep -v '^Total' audit.txt | sed 's/^/- /'
+            if [ "${{ steps.audit.outputs.errors }}" != 0 ]; then
+              echo
+              echo "**vs-lint : ${{ steps.audit.outputs.errors }} erreur(s)** (souvent des clés disparues de l'anglais)"
+              echo
+              echo '```'
+              grep '^erreur' lint.txt | head -n 50
+              echo '```'
+            fi
+            echo
+            echo "Pour traiter : \`vs-check-updates --write\`, puis \`vs-audit\` (fichiers dans \`work/todo/\`),"
+            echo "traduire (ou compléter \`gen/*.json\` et relancer \`vs-gen\`), \`vs-lint\`, et committer"
+            echo "\`mods.json\` avec les traductions. Détail : artefact \`todo\` de [cette exécution]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+          } >report.md
+          cat report.md >>"$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: todo
+          path: |
+            work/todo/
+            mods.json
+            report.md
+          if-no-files-found: ignore
+
+      - name: Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TOTAL: ${{ steps.audit.outputs.total }}
+          ERRORS: ${{ steps.audit.outputs.errors }}
+        run: |
+          gh label create "$LABEL" --color d93f0b --description "Textes de mods sans traduction française" 2>/dev/null || true
+          issue=$(gh issue list --label "$LABEL" --state open --json number --jq '.[0].number // empty')
+          if [ "$TOTAL" != 0 ] || [ "$ERRORS" != 0 ]; then
+            if [ -n "$issue" ]; then
+              gh issue edit "$issue" --body-file report.md
+              gh issue comment "$issue" --body "Rapport mis à jour : $TOTAL texte(s) sans français, $ERRORS erreur(s) vs-lint."
+            else
+              gh issue create --title "$TITLE" --label "$LABEL" --body-file report.md
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "Plus aucun texte sans français ni erreur vs-lint sur le modpack à jour."
+          fi

@@ -12,6 +12,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- `vs-check-updates` et workflow hebdomadaire : issue « traductions à faire » quand une nouvelle
+  version d'un mod apporte des textes sans français ou rend des clés obsolètes.
 - Textes manquants des 36 derniers mods du modpack (windowdisplay, substrate, aculinaryartillery,
   windchimes, effectlib, universaldisplaylib et une trentaine de petits trous) : `vs-audit` ne
   trouve plus aucun texte sans français dans le modpack de référence.

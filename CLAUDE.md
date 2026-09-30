@@ -26,6 +26,7 @@ dans `devenv shell`.
 | `vs-logo` | régénère `docs/logo.png` (512 px, ModDB/GitHub) et `modicon.png` (128 px) ; police Libertinus Serif de nixpkgs |
 | `vs-release <version>` | met à jour modinfo + CHANGELOG, commit, tag `v<version>`, push, `gh release create` |
 | `vs-lock-mods <dossier> [jeu]` | régénère `mods.json` via l'API ModDB (`api/mod/<modid>`, repli sur l'urlalias ; champ `moddb` pour forcer un id) |
+| `vs-check-updates [--write] [--markdown f]` | cherche sur la ModDB la release la plus récente de chaque mod de `mods.json` compatible avec sa version du jeu ; `--write` met `mods.json` à jour |
 
 Hooks pre-commit (lancés par prek, sur les fichiers suivis par git) : `vs-lint`, `nixfmt`, `actionlint`.
 
@@ -38,6 +39,11 @@ est factorisée dans `.github/actions/setup-devenv`.
   résumé. Sous GitHub Actions, `vs-lint` émet des annotations `::error file=…,line=…::`, visibles
   sur la ligne fautive d'une PR (utile aux contributeurs sans Nix).
 - **Chargement en jeu** : `vs-test` ; logs du serveur en artefact en cas d'échec.
+- **Nouvelles versions des mods** (`.github/workflows/mods.yml`, lundi 5 h UTC et à la demande) :
+  `vs-check-updates --write` dans l'exécution seulement, puis `vs-audit` et `vs-lint` sur ce modpack.
+  Tient à jour une issue étiquetée « traductions à faire » (nouveaux textes, clés disparues de
+  l'anglais), fermée quand il ne reste rien ; `work/todo/` et le `mods.json` à jour en artefact.
+  Pour traiter : `vs-check-updates --write` en local, traduire, committer `mods.json` avec.
 - Le store Nix (serveur + modpack, ~2 Go) est mis en cache par `cache-nix-action`, clé sur
   `devenv.lock`, `devenv.nix` et `mods.json`. Purge seulement sur push (jeton en lecture seule
   dans les PR de forks).
@@ -68,7 +74,7 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
 ## Priorités (voir la note)
 
 Toutes faites : `vs-audit` ne trouve plus aucun texte sans français dans le modpack de référence.
-La suite, c'est suivre les mises à jour des mods (relancer `vs-audit` après `vs-lock-mods`).
+La suite, c'est suivre les mises à jour des mods : le workflow `mods.yml` s'en charge (voir CI).
 
 
 1. ~~wcfefcompat~~ : fait, généré par `vs-gen`.
