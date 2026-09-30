@@ -1,0 +1,13 @@
+{
+  "improvedhandbookrecipes:stackSize": "\nTaille de pile maximale : {0}\n",
+  "improvedhandbookrecipes:durability": "\nLa recette consommera {0} de durabilité.\n",
+  "improvedhandbookrecipes:addone": "Ajouter à la grille de quoi fabriquer un exemplaire de plus.",
+  "improvedhandbookrecipes:addmax": "Ajouter à la grille de quoi fabriquer la quantité maximale.",
+  "improvedhandbookrecipes:nextrecipe": "Sert à passer d'une recette en conflit à l'autre.",
+  "improvedhandbookrecipes:matchvariant": "Tenter d'ajouter n'importe quel ingrédient fabricable pour obtenir ce résultat.",
+  "improvedhandbookrecipes:durabilityfree": "\nAucun coût en durabilité",
+  "improvedhandbookrecipes:conflict-button-label": "Conflit",
+  "improvedhandbookrecipes:nextrecipe-hor-conflict": "Conflit détecté ; vous pouvez le résoudre via le manuel si ce n'est pas le résultat voulu.",
+  "improvedhandbookrecipesfork:nextrecipe-notconnected": "Pas encore connecté au serveur : réessayez dans un instant",
+  "improvedhandbookrecipesfork:nextrecipe-noconflict": "Aucune autre recette correspondante"
+}

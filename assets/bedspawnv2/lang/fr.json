@@ -1,0 +1,7 @@
+{
+  "bedspawn:msgSpawnSet": "Point d'apparition défini",
+  "bedspawn:msgBedMissing": "Votre lit a été détruit",
+  "bedspawn:dbgBedNotInRoom": "Impossible de définir le point d'apparition : le lit est trop exposé",
+  "bedspawn:dbgBedUnderSeaLevel": "Impossible de définir le point d'apparition : le lit est sous le niveau de la mer",
+  "bedspawn:dbgCooldownActive": "Impossible de définir le point d'apparition : trop peu de temps s'est écoulé depuis le dernier"
+}

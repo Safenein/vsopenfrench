@@ -1,0 +1,13 @@
+{
+  "Config.Hint.Server": "Règles de saignement côté serveur.",
+  "Config.Hint.DOT": "Dégâts optionnels infligés tant qu'une créature saigne.",
+  "Config.Hint.Client": "Activation locale de l'effet visuel.",
+  "Config.Hint.Duration": "Rythme local des particules de sang.",
+  "Config.Hint.Amount": "Nombre local de particules.",
+  "Config.Hint.Size": "Taille locale des particules.",
+  "Config.Hint.Extra": "Comportement et couleur locaux des particules.",
+  "Config.Hint.BloodParticlesColor.Red": "Couleur des particules : rouge",
+  "Config.Hint.BloodParticlesColor.Green": "Couleur des particules : vert",
+  "Config.Hint.BloodParticlesColor.Blue": "Couleur des particules : bleu",
+  "Config.Hint.BloodParticlesColor.Transparency": "Couleur des particules : transparence"
+}

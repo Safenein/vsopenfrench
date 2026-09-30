@@ -1,0 +1,15 @@
+{
+  "bdtree:block-floor-cabinet-angle-*": "Meuble bas (angle intérieur)",
+  "bdtree:block-floor-cabinet-corner-*": "Meuble bas (angle extérieur)",
+  "bdtree:block-floor-cabinet-straight-*": "Meuble bas",
+  "bdtree:block-upper-cabinet-angle-*": "Meuble haut (angle intérieur)",
+  "bdtree:block-upper-cabinet-corner-*": "Meuble haut (angle extérieur)",
+  "bdtree:block-upper-cabinet-plain-*": "Meuble haut",
+  "block-floor-cabinet-angle-*": "Meuble bas (angle intérieur)",
+  "block-floor-cabinet-corner-*": "Meuble bas (angle extérieur)",
+  "block-floor-cabinet-straight-*": "Meuble bas",
+  "block-upper-cabinet-angle-*": "Meuble haut (angle intérieur)",
+  "block-upper-cabinet-corner-*": "Meuble haut (angle extérieur)",
+  "block-upper-cabinet-plain-*": "Meuble haut",
+  "game:tabname-extrafurniture": "Meubles supplémentaires"
+}

@@ -1,0 +1,8 @@
+{
+  "game:block-fruitbushcutting-redgrapes-*": "Bouture de vigne à raisin rouge",
+  "game:block-fruitbushcutting-greengrapes-*": "Bouture de vigne à raisin vert",
+  "wildfarmingrevival:item-wildseeds-bigberrybush-redgrapes-empty": "Pépins de raisin rouge",
+  "wildfarmingrevival:item-wildseeds-bigberrybush-greengrapes-empty": "Pépins de raisin vert",
+  "wildfarmingrevival:block-wildplant-bigberrybush-redgrapes-empty": "Vigne à raisin rouge en croissance",
+  "wildfarmingrevival:block-wildplant-bigberrybush-greengrapes-empty": "Vigne à raisin vert en croissance"
+}

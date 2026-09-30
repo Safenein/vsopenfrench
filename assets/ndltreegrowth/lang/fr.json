@@ -1,0 +1,23 @@
+{
+  "item-burlapbundle-burlapbundle": "Ballot de toile de jute",
+  "item-burlapfibers-burlapfibers": "Fibres de jute",
+  "block-oaksack-north": "Jeune chêne en sac",
+  "block-walnutsack-north": "Jeune noyer en sac",
+  "block-maplesack-north": "Jeune érable en sac",
+  "block-kapoksack-north": "Jeune fromager en sac",
+  "block-ebonysack-north": "Jeune ébène en sac",
+  "block-purpleheartsack-north": "Jeune peltogyne en sac",
+  "block-crimsonkingmaplesack-north": "Jeune érable royal cramoisi en sac",
+  "block-larchsack-north": "Jeune mélèze en sac",
+  "block-pinesack-north": "Jeune pin en sac",
+  "block-burlapsackdirt-north": "Sac de jute (terre)",
+  "block-burlapsackdirtfert-north": "Sac de jute (compost)",
+  "block-burlapsackdirtfertbone-north": "Sac de jute (farine d'os)",
+  "block-burlapsackempty-north": "Sac de jute (vide)",
+  "blockdesc-burlapsackempty-*": "Remplir de terre (toute fertilité)<br>     - Vide",
+  "blockdesc-burlapsackdirt-*": "Remplir de compost<br>     - Rempli de terre<br>",
+  "blockdesc-burlapsackdirtfert-*": "Remplir de farine d'os<br>     - Rempli de terre<br>     - Rempli de compost",
+  "blockdesc-burlapsackdirtfertbone-*": "Placez-y une graine d'arbre !<br>     - Rempli de terre<br>     - Rempli de compost<br>     - Rempli de farine d'os",
+  "game:treegrowth-title": "NDL-ExpandedGrowth : guide de croissance des arbres",
+  "game:treegrowth-text": "<strong>Pour commencer, il vous faut :</strong><br>     - un sac de jute<br>     - de la terre (toute fertilité)<br>     - du compost<br>     - de la farine d'os<br>     - un rouleau de corde<br>     - une GRAINE d'arbre<br><br><strong>Marche à suivre :</strong><br>     - Posez votre sac de jute vide au sol<br>     - Faites un clic droit sur le sac avec de la terre pour le remplir<br>     - Faites ensuite un clic droit sur le sac avec du compost<br>     - Puis un clic droit avec de la farine d'os<br>     - Ajoutez enfin votre graine d'arbre dans le sac rempli<br>     - Attendez 15 jours de jeu et l'arbre finira par pousser !<br><br><strong>Informations générales</strong><br>     - Les arbres en sac ne poussent que dans leur plage de température, mais par n'importe quel temps<br>     - La fertilité de la terre INFLUE sur le temps de croissance<br>          - Fertilité faible : 15 jours<br>          - Fertilité moyenne : 13 jours<br>          - Fertilité élevée : 8 jours<br>          - Terra preta : 5 jours<br>     - Jeunes arbres acceptés :<br>          - Chêne (1x1/2x2)<br>          - Érable<br>          - Noyer<br>          - Fromager (2x2)<br>          - Peltogyne<br>          - Ébène<br>          - Mélèze<br>          - Pin<br>          - Érable cramoisi<br>     - Acacia"
+}

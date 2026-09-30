@@ -1,0 +1,21 @@
+{
+  "toggle-beam": "Ajouter/retirer une poutre de charpente",
+  "reset-beams": "Réinitialiser les poutres de charpente",
+  "frame-metalbeam": "Métal",
+  "frame-firewood": "Branches",
+  "roof-straw": "Paille",
+  "roof-straw-aged": "Paille vieillie",
+  "roof-aged-thatch": "Chaume vieilli",
+  "roof-metal": "Métal",
+  "roof-sticks": "Bâtons simples",
+  "roof-sticks-layer": "Bâtons",
+  "roof-cloth": "Tissu",
+  "roof-wood-shingle": "Tuiles d'argile sur planches",
+  "roof-wood-slab": "Dalles en bois",
+  "roof-slab-sod-bare": "Mottes de gazon",
+  "roof-slab-sod": "Mottes de gazon",
+  "roof-firewood": "Branches",
+  "roof-stone": "Lauzes",
+  "roof-wood-stone": "Lauzes sur planches",
+  "roof-leaf": "Feuillage"
+}

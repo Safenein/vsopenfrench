@@ -1,0 +1,20 @@
+{
+  "dialog-setup-title": "Configuration d'Enhanced Handbook",
+  "dialog-setup-header": "Personnalisation d'Enhanced Handbook",
+  "dialog-setup-restart": "Les changements nécessitent un redémarrage pour prendre effet.",
+  "dialog-setup-ok": "OK",
+  "toggle-hide-tutorial": "Masquer l'onglet Tutoriel",
+  "tooltip-hide-tutorial": "Masque l'onglet du tutoriel pour qu'il n'apparaisse plus dans la vue d'ensemble du manuel.",
+  "toggle-hide-blocksitems": "Masquer l'onglet Blocs et objets",
+  "tooltip-hide-blocksitems": "Masque l'onglet Blocs et objets du jeu de base pour se concentrer sur les catégories enrichies.",
+  "toggle-hide-guides": "Masquer l'onglet Guides",
+  "tooltip-hide-guides": "Retire l'onglet Guides de la vue d'ensemble du manuel.",
+  "toggle-hide-originalsearch": "Masquer le bouton de recherche d'origine",
+  "tooltip-hide-originalsearch": "Retire le bouton de recherche par défaut du manuel pour n'utiliser que la recherche d'Enhanced Handbook.",
+  "toggle-grouped-category": "Afficher la nouvelle catégorie Tout (groupé)",
+  "tooltip-grouped-category": "Affiche la catégorie Tout (groupé), générée automatiquement, qui regroupe les variantes.",
+  "toggle-variant-category": "Afficher les nouvelles catégories de variantes",
+  "tooltip-variant-category": "Affiche les catégories de variantes générées automatiquement pour les blocs et les objets.",
+  "label-create-defaults": "Créer les catégories prédéfinies",
+  "button-create-defaults": "Créer maintenant"
+}

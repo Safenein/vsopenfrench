@@ -17,7 +17,7 @@ dans `devenv shell`.
 
 | Commande | Rôle |
 | --- | --- |
-| `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Référence : 14 405 clés / 55 mods sans aucune traduction du dépôt |
+| `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Référence : 14 405 clés / 55 mods sans aucune traduction du dépôt, 0 avec (tout le modpack est couvert) |
 | `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés), `expandedfoods.json` (tartes mixtes « A/B pie » × glossaire d'ingrédients), `pipeleaf.json` (mélanges × plantes, pipes × métaux) et `heraldique.json` (motifs × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
 | `vs-lint` | JSON strict UTF-8 sans BOM, sans doublon ; clé présente en anglais dans le modpack ; non traduite ailleurs ; mêmes `{n}`, `>>>nom<<<` et balises que l'anglais (le texte des pluriels `{p0:…}` se traduit). Hook pre-commit |
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
@@ -66,6 +66,10 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
   `Entering runphase RunGame`, qui ne l'est pas.
 
 ## Priorités (voir la note)
+
+Toutes faites : `vs-audit` ne trouve plus aucun texte sans français dans le modpack de référence.
+La suite, c'est suivre les mises à jour des mods (relancer `vs-audit` après `vs-lock-mods`).
+
 
 1. ~~wcfefcompat~~ : fait, généré par `vs-gen`.
 2. ~~Héraldique (heraldry, capes, heraldrybanners, morebanners)~~ : fait, généré par `vs-gen`.

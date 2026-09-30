@@ -1,0 +1,15 @@
+{
+  "game:tabname-desirepaths": "Chemins de désir",
+  "block-soilpath-verylow-*": "Chemin de sol stérile",
+  "block-soilpath-low-*": "Chemin de sol peu fertile",
+  "block-soilpath-medium-*": "Chemin de sol moyennement fertile",
+  "block-soilpath-high-*": "Chemin de terra preta",
+  "block-soilpath-compost-*": "Chemin de sol très fertile",
+  "block-soilpath-forest-*": "Chemin de sol forestier",
+  "block-soilpathslab-verylow-*": "Chemin de sol stérile",
+  "block-soilpathslab-low-*": "Chemin de sol peu fertile",
+  "block-soilpathslab-medium-*": "Chemin de sol moyennement fertile",
+  "block-soilpathslab-high-*": "Chemin de terra preta",
+  "block-soilpathslab-compost-*": "Chemin de sol très fertile",
+  "block-soilpathslab-forest-*": "Chemin de sol forestier"
+}

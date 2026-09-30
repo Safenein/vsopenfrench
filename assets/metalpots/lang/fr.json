@@ -1,0 +1,17 @@
+{
+  "block-crockmold-blue-raw": "Moule de boîte de conserve en argile bleue crue",
+  "block-crockmold-fire-raw": "Moule de boîte de conserve en argile réfractaire crue",
+  "block-crockmold-red-raw": "Moule de boîte de conserve en argile rouge crue",
+  "block-crockmold-blue-fired": "Moule de boîte de conserve en céramique bleue",
+  "block-crockmold-fire-fired": "Moule de boîte de conserve en céramique réfractaire",
+  "block-crockmold-black-fired": "Moule de boîte de conserve en céramique noire",
+  "block-crockmold-brown-fired": "Moule de boîte de conserve en céramique marron",
+  "block-crockmold-cream-fired": "Moule de boîte de conserve en céramique crème",
+  "block-crockmold-earthyorange-fired": "Moule de boîte de conserve en céramique terre cuite",
+  "block-crockmold-gray-fired": "Moule de boîte de conserve en céramique grise",
+  "block-crockmold-orange-fired": "Moule de boîte de conserve en céramique orange",
+  "block-crockmold-red-fired": "Moule de boîte de conserve en céramique rouge",
+  "block-crockmold-tan-fired": "Moule de boîte de conserve en céramique beige",
+  "metalpots:block-handbooktitle-metalcrock": "Utilisation",
+  "metalpots:block-handbooktext-metalcrock": "Les <a href=\"handbooksearch://boîte de conserve\">boîtes de conserve</a> contiennent jusqu'à 8 portions, que l'on retire ou ajoute en posant la boîte au sol puis en cliquant dessus avec un autre récipient. Posées au sol, les boîtes peuvent aussi être scellées en cliquant dessus avec un <a href=\"handbook://item-solderingiron\">fer à souder</a>. Ces deux actions sont également possibles quand la boîte est sur une étagère ou dans l'écran de gestion de l'inventaire."
+}

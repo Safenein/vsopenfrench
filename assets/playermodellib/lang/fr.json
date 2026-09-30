@@ -1,0 +1,18 @@
+{
+  "playermodellib:skinpart-tab-default": "Autre",
+  "playermodellib:skinpart-tab-head": "Tête",
+  "playermodellib:skinpart-tab-eyes": "Yeux",
+  "playermodellib:skinpart-tab-fur": "Fourrure",
+  "playermodellib:skinpart-tab-face": "Visage",
+  "playermodellib:skinpart-tab-presets": "Préréglages",
+  "gui-button-ramdomize": "Aléatoire",
+  "gui-button-last-selection": "Dernière sélection",
+  "gui-button-export-skin": "Exporter",
+  "gui-button-import-skin": "Importer",
+  "gui-button-open-skins-folder": "Dossier",
+  "gui-button-refresh-skins": "Actualiser",
+  "gui-button-confirm-skin": "Valider l'apparence",
+  "gui-button-export-skin-as-cpm": "Exporter en modèle CPM",
+  "setting-disable_custom_classes_and_traits": "Désactiver les classes et traits des modèles personnalisés",
+  "setting-export_model_button": "Bouton d'export du modèle actuel en CPM (en chantier)"
+}

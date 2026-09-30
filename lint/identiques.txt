@@ -2,12 +2,16 @@
 # vs-lint n'avertit pas quand le texte affiché d'une traduction vaut l'un d'eux (casse, balises
 # et puces ignorées : « <font …>• Archer</font> » compte comme « Archer »).
 # Un texte par ligne ; les lignes commençant par # sont ignorées.
+Acacia
 Amaretto
+Animation
 Archer
 Bestial
 Bismuth
 Cape
 Carnivore
+Catalpa
+Chanterelle
 Citrine
 Cordovan
 Cupronickel
@@ -15,12 +19,17 @@ Cyan
 Description
 Dragon
 Eshin
+Eucalyptus
 Fragile
 Gecko
+Ginkgo
 Herbivore
 intoxication
+Jacaranda
 Jade
 Jonas
+Karee
+Kauri
 Khiaz
 Kobold
 Limoncello
@@ -28,6 +37,7 @@ Long
 Malachite
 Mors
 Nickel
+Ohia
 Omnivore
 Onyx
 Orange
@@ -36,9 +46,16 @@ Parasite
 Pestilens
 Rage
 Rictus
+Rimu
+Sal
 Skryre
 Stable
+Tamanu
+Tawhai
+Thuya
+Totara
 Tourmaline
+Umgolotl
 Uranium
 Xylophone
 Zinc

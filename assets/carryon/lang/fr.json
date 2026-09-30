@@ -1,0 +1,21 @@
+{
+  "block-has-attached-blocks": "Impossible de poser ici le bloc porté tant que des panneaux y sont fixés",
+  "pick-up-failed-no-permission": "Vous n'avez pas la permission de ramasser ce bloc",
+  "place-down-failed-claimed": "Vous n'avez pas la permission de poser ici le bloc porté",
+  "place-down-failed-notenoughspace": "Pas assez d'espace pour poser le bloc ici",
+  "pick-up-already-carrying": "Vous portez déjà quelque chose dans les mains.",
+  "entityhelp-pickup-carriedblock": "Ramasser le bloc lâché",
+  "pickup-not-owner": "Ce bloc lâché appartient à un autre joueur",
+  "offline-player": "(Joueur hors ligne)",
+  "dropped-block": "Lâché : {0}",
+  "dropped-by": "Lâché par : {0}",
+  "dropped-ago": "Lâché il y a {0}",
+  "grace-period-left": "Réservé au propriétaire : encore {0}",
+  "despawn-in": "Disparaît dans {0} jours",
+  "duration-seconds": "{0} s",
+  "duration-minutes": "{0} min",
+  "duration-hours": "{0} h",
+  "duration-days": "{0} j",
+  "attached-block-no-clearance": "Pas assez d'espace pour poser le bloc porté avec ses panneaux muraux",
+  "unsupported-attachment": "Impossible de poser ici le bloc porté : un panneau mural fixé n'a pas de support"
+}

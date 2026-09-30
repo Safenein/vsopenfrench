@@ -1,0 +1,10 @@
+{
+  "block-prophiveempty-north": "Ruche de propagation (vide)",
+  "block-prophivefilled-north": "Ruche de propagation (remplie)",
+  "item-prophiveempty": "Ruche de propagation (vide)",
+  "item-prophivefilled": "Ruche de propagation (remplie)",
+  "blockdesc-prophiveempty-*": "Posez-la et remplissez-la avec une ruche traditionnelle peuplée",
+  "blockdesc-prophivefilled-*": "Placez une fleur à l'intérieur !",
+  "game:flowerpropegation-title": "NDL-ExpandedGrowth : guide de propagation des fleurs",
+  "game:flowerpropegation-text": "<strong>Pour commencer, il vous faut :</strong><br>     - une ruche de propagation (vide)<br>     - une ruche traditionnelle peuplée<br>     - la fleur que vous voulez faire pousser<br><br><strong>Marche à suivre :</strong><br>     - Posez d'abord la <strong>RUCHE DE PROPAGATION</strong><br>     - Faites un clic droit sur la ruche de propagation avec votre ruche traditionnelle peuplée<br>     - Faites un clic droit sur la ruche de propagation remplie avec la fleur à faire pousser (la fleur est consommée)<br><br><strong>Informations générales :</strong><br>     - Les fleurs poussent sur une zone de 7x7 centrée sur la ruche<br>     - La ruche doit être entourée d'un bloc de <strong>SOL</strong>, quel qu'il soit<br>     - Vous <strong>DEVEZ</strong> dégager toutes les hautes herbes de la zone de 7x7 : tout ce qui se trouve sur le sol empêche la fleur de pousser<br>     - Les fleurs apparaissent au niveau de la ruche et un bloc en dessous (vous pouvez donc la poser sur un poteau ou un socle)<br>     - Les fleurs ne poussent pas au-dessus de la ruche<br>     - Si vous cassez la ruche, vous ne récupérez qu'une ruche de propagation VIDE<br>     - Chaque heure de jeu, la ruche a 25 % de chances de faire apparaître une fleur dans la zone, même en votre absence (tronçons déchargés) : vous retrouverez plein de fleurs à votre retour !<br>     - Les fleurs ne poussent pas sous 0 °C (32 °F), comme pour l'essaimage des abeilles"
+}

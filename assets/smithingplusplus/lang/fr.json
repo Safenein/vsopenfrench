@@ -1,0 +1,19 @@
+{
+  "trait-sp:smith": "<font color=\"#84ff84\">• Forgeron </font>",
+  "trait-sp:drosshand": "<font color=\"#ff8484\">• Main de scorie </font>",
+  "traitname-sp:smith": "Forgeron",
+  "traitname-sp:drosshand": "Main de scorie",
+  "traitdesc-sp:smith": "Forgeron dans l'âme : pénalités de réparation des outils réduites et meilleure qualité de forge",
+  "traitdesc-sp:drosshand": "La forge n'est pas votre fort : pénalités de réparation des outils accrues et qualité de forge moindre",
+  "charattribute-sp:toolRepairPenalty-0.2": "Réduit de 20 % les pénalités de réparation des outils",
+  "charattribute-sp:toolRepairPenalty--0.1": "Augmente de 10 % les pénalités de réparation des outils",
+  "charattribute-sp:smithingQuality-0.2": "Augmente de 20 % la durabilité des ouvrages forgés",
+  "charattribute-sp:smithingQuality--0.1": "Réduit de 10 % la durabilité des ouvrages forgés",
+  "game:requires": "nécessite",
+  "game:Mold for": "Moule pour",
+  "game:Requires for casting": "Nécessaire à la coulée",
+  "game:Can be cast in": "Peut être coulé dans",
+  "smithingplus:ingameerror-rotationrequirestongs": "Nécessite des pinces pour être tourné",
+  "smithingplus:setting-serveroverridesclientsettings": "Le serveur impose ses réglages aux clients",
+  "smithingplus:setting-serveroverridesclientsettings-desc": "Les joueurs utilisent les valeurs du serveur, et non les leurs, y compris pour les réglages côté client"
+}

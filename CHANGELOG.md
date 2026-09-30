@@ -12,6 +12,9 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- Textes manquants des 36 derniers mods du modpack (windowdisplay, substrate, aculinaryartillery,
+  windchimes, effectlib, universaldisplaylib et une trentaine de petits trous) : `vs-audit` ne
+  trouve plus aucun texte sans français dans le modpack de référence.
 - Textes manquants d'Expanded Foods (2 956 : tartes mixtes, légumes émincés), générés par `vs-gen`
   depuis `gen/expandedfoods.json`.
 - Traduction complète de Kobold Player Model (koboldrdx, 95 textes).
