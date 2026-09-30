@@ -5,6 +5,10 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Relecture : héraldique en émaux (« Bordure de gueules », « Lion de sable », « Champ au
+  naturel ») ; noms de fruits de wcfefcompat repris de Wildcraft: Fruits and Nuts pour que les
+  deux mods concordent ; Pipeleaf : « scaferlati » au lieu de « brins » ; acier de cémentation
+  (skeletons), « Pillard » (allclasses), essences de bois de bdtree alignées (aculinaryartillery).
 - Modpack de référence à jour (chiseltools 1.17.8, foodshelves 3.1.1, ndltreegrowth 2.8.0,
   playercorpseforkedazu 1.15.2, realsmoke 2.0.0-pre.6, smithingplusplus 1.10.6) ; ndltreegrowth :
   sacs de jute renommés (15 textes), 17 clés obsolètes retirées.

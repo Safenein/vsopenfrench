@@ -7,6 +7,7 @@ Amaretto
 Animation
 Archer
 Auto
+Azobé
 Bestial
 Bismuth
 Cape
@@ -63,6 +64,7 @@ Rage
 Rictus
 Rimu
 Sal
+Satinash
 Skryre
 Stable
 Standard
@@ -71,6 +73,7 @@ Tawhai
 Thuya
 Totara
 Tourmaline
+Umgoloti
 Umgolotl
 Uranium
 Vintage Story

@@ -1,134 +1,518 @@
 {
   "couleurs": {
-    "black": {"m": "noir", "f": "noire"},
-    "blue": {"m": "bleu", "f": "bleue"},
-    "brown": {"m": "marron", "f": "marron", "invariable": true},
-    "gray": {"m": "gris", "f": "grise"},
-    "green": {"m": "vert", "f": "verte"},
-    "orange": {"m": "orange", "f": "orange", "invariable": true},
-    "pink": {"m": "rose", "f": "rose"},
-    "plain": {"m": "écru", "f": "écrue"},
-    "purple": {"m": "violet", "f": "violette"},
-    "red": {"m": "rouge", "f": "rouge"},
-    "white": {"m": "blanc", "f": "blanche"},
-    "yellow": {"m": "jaune", "f": "jaune"}
+    "black": {
+      "m": "noir",
+      "f": "noire"
+    },
+    "blue": {
+      "m": "bleu",
+      "f": "bleue"
+    },
+    "brown": {
+      "m": "marron",
+      "f": "marron",
+      "invariable": true
+    },
+    "gray": {
+      "m": "gris",
+      "f": "grise"
+    },
+    "green": {
+      "m": "vert",
+      "f": "verte"
+    },
+    "orange": {
+      "m": "orange",
+      "f": "orange",
+      "invariable": true
+    },
+    "pink": {
+      "m": "rose",
+      "f": "rose"
+    },
+    "plain": {
+      "m": "écru",
+      "f": "écrue"
+    },
+    "purple": {
+      "m": "violet",
+      "f": "violette"
+    },
+    "red": {
+      "m": "rouge",
+      "f": "rouge"
+    },
+    "white": {
+      "m": "blanc",
+      "f": "blanche"
+    },
+    "yellow": {
+      "m": "jaune",
+      "f": "jaune"
+    }
   },
   "objets": {
-    "capes:item-cape-color_": {"fr": "Cape", "genre": "f"},
-    "heraldrybanners:item-banner-color_": {"fr": "Bannière", "genre": "f"}
+    "capes:item-cape-color_": {
+      "fr": "Cape",
+      "genre": "f"
+    },
+    "heraldrybanners:item-banner-color_": {
+      "fr": "Bannière",
+      "genre": "f"
+    }
   },
   "motifs": {
-    "border": {"fr": "Bordure", "genre": "f"},
-    "bricks": {"fr": "Champ maçonné", "genre": "m"},
-    "castlewall": {"fr": "Muraille", "genre": "f"},
-    "catfish": {"fr": "Silure", "genre": "m"},
-    "checker2": {"fr": "Échiqueté {c} à deux tires", "genre": "m"},
-    "checker2_inverted": {"fr": "Échiqueté {c} à deux tires inversé", "genre": "m"},
-    "checker4": {"fr": "Échiqueté {c} à quatre tires", "genre": "m"},
-    "checker4_inverted": {"fr": "Échiqueté {c} à quatre tires inversé", "genre": "m"},
-    "chinesedragon_base": {"fr": "Dragon chinois {c} (bas)", "genre": "m"},
-    "chinesedragon_middle": {"fr": "Dragon chinois {c} (milieu)", "genre": "m"},
-    "chinesedragon_top": {"fr": "Dragon chinois {c} (haut)", "genre": "m"},
-    "circle": {"fr": "Tourteau", "genre": "m"},
-    "circle_large": {"fr": "Grand tourteau", "genre": "m"},
-    "club": {"fr": "Trèfle", "genre": "m"},
-    "color": {"fr": "Couleur", "genre": "f"},
-    "cookie": {"fr": "Biscuit", "genre": "m"},
-    "crescent_down": {"fr": "Croissant {c} versé", "genre": "m"},
-    "crescent_left": {"fr": "Croissant {c} tourné", "genre": "m"},
-    "crescent_right": {"fr": "Croissant {c} contourné", "genre": "m"},
-    "crescent_up": {"fr": "Croissant", "genre": "m"},
-    "crest": {"fr": "Cimier", "genre": "m"},
-    "cross": {"fr": "Sautoir", "genre": "m"},
-    "cross_bottom_left": {"fr": "Croix {c} en pointe à dextre", "genre": "f"},
-    "cross_bottom_right": {"fr": "Croix {c} en pointe à senestre", "genre": "f"},
-    "cross_top_left": {"fr": "Croix {c} en chef à dextre", "genre": "f"},
-    "cross_top_right": {"fr": "Croix {c} en chef à senestre", "genre": "f"},
-    "curly_border": {"fr": "Bordure {c} dentelée", "genre": "f"},
-    "diagonal_left": {"fr": "Taillé", "genre": "m"},
-    "diagonal_right": {"fr": "Tranché", "genre": "m"},
-    "diagonal_up_left": {"fr": "Tranché {c} inversé", "genre": "m"},
-    "diagonal_up_right": {"fr": "Taillé {c} inversé", "genre": "m"},
-    "dragon": {"fr": "Dragon", "genre": "m"},
-    "drifter": {"fr": "Rôdeur", "genre": "m"},
-    "eidolon": {"fr": "Eidolon", "genre": "m"},
-    "elk": {"fr": "Wapiti", "genre": "m"},
-    "falx_left": {"fr": "Falx {c} à gauche", "genre": "f"},
-    "falx_right": {"fr": "Falx {c} à droite", "genre": "f"},
-    "fish_bottom_left": {"fr": "Poisson {c} en pointe à dextre", "genre": "m"},
-    "fish_bottom_right": {"fr": "Poisson {c} en pointe à senestre", "genre": "m"},
-    "fish_center": {"fr": "Poisson", "genre": "m"},
-    "fish_top_left": {"fr": "Poisson {c} en chef à dextre", "genre": "m"},
-    "fish_top_right": {"fr": "Poisson {c} en chef à senestre", "genre": "m"},
-    "fleurdelis": {"fr": "Fleur de lys", "genre": "f"},
-    "flower": {"fr": "Fleur", "genre": "f"},
-    "gear": {"fr": "Engrenage", "genre": "m"},
-    "globe": {"fr": "Globe", "genre": "m"},
-    "gradient": {"fr": "Dégradé", "genre": "m"},
-    "gradient_up": {"fr": "Dégradé {c} en pointe", "genre": "m"},
-    "half_horizontal": {"fr": "Coupé", "genre": "m"},
-    "half_horizontal_bottom": {"fr": "Coupé {c} inversé", "genre": "m"},
-    "half_vertical": {"fr": "Parti", "genre": "m"},
-    "half_vertical_right": {"fr": "Parti {c} inversé", "genre": "m"},
-    "hansafish": {"fr": "Poisson {c} de la Hanse", "genre": "m"},
-    "hansakeys": {"fr": "Clés {c} de la Hanse", "genre": "f", "nombre": "pluriel"},
-    "hansalargefish": {"fr": "Grand poisson {c} de la Hanse", "genre": "m"},
-    "hansaship": {"fr": "Navire {c} de la Hanse", "genre": "m"},
-    "hansatown": {"fr": "Ville {c} de la Hanse", "genre": "f"},
-    "heart": {"fr": "Cœur", "genre": "m"},
-    "heiwa_hanko": {"fr": "Sceau {c} Heiwa Hanko", "genre": "m"},
-    "keys_bottom_left": {"fr": "Clés {c} en pointe à dextre", "genre": "f", "nombre": "pluriel"},
-    "keys_bottom_right": {"fr": "Clés {c} en pointe à senestre", "genre": "f", "nombre": "pluriel"},
-    "keys_center": {"fr": "Clés", "genre": "f", "nombre": "pluriel"},
-    "keys_top_left": {"fr": "Clés {c} en chef à dextre", "genre": "f", "nombre": "pluriel"},
-    "keys_top_right": {"fr": "Clés {c} en chef à senestre", "genre": "f", "nombre": "pluriel"},
-    "lion_left": {"fr": "Lion {c} rampant morné", "genre": "m"},
-    "lion_right": {"fr": "Lion {c} rampant morné contourné", "genre": "m"},
-    "maester": {"fr": "Motif {c} abstrait de l'Alliance Maester", "genre": "m"},
-    "merrick": {"fr": "Dragon {c} rampant", "genre": "m"},
-    "mobydick": {"fr": "Moby Dick", "genre": "m"},
-    "rhombus": {"fr": "Losange", "genre": "m"},
-    "skull": {"fr": "Crâne", "genre": "m"},
-    "small_stripes": {"fr": "Palé", "genre": "m"},
-    "small_stripes_hor": {"fr": "Fascé", "genre": "m"},
-    "spade": {"fr": "Pique", "genre": "m"},
-    "square_bottom_left": {"fr": "Canton {c} dextre de la pointe", "genre": "m"},
-    "square_bottom_right": {"fr": "Canton {c} senestre de la pointe", "genre": "m"},
-    "square_half_bottom_left": {"fr": "Quartier {c} dextre de la pointe", "genre": "m"},
-    "square_half_bottom_right": {"fr": "Quartier {c} senestre de la pointe", "genre": "m"},
-    "square_half_top_left": {"fr": "Quartier {c} dextre du chef", "genre": "m"},
-    "square_half_top_right": {"fr": "Quartier {c} senestre du chef", "genre": "m"},
-    "square_top_left": {"fr": "Canton {c} dextre du chef", "genre": "m"},
-    "square_top_right": {"fr": "Canton {c} senestre du chef", "genre": "m"},
-    "straight_cross": {"fr": "Croix", "genre": "f"},
-    "stripe_bottom": {"fr": "Pointe", "genre": "f"},
-    "stripe_center": {"fr": "Pal", "genre": "m"},
-    "stripe_downleft": {"fr": "Barre", "genre": "f"},
-    "stripe_downright": {"fr": "Bande", "genre": "f"},
-    "stripe_left": {"fr": "Pal {c} à dextre", "genre": "m"},
-    "stripe_middle": {"fr": "Fasce", "genre": "f"},
-    "stripe_right": {"fr": "Pal {c} à senestre", "genre": "m"},
-    "stripe_top": {"fr": "Chef", "genre": "m"},
-    "sword": {"fr": "Épée", "genre": "f"},
-    "triangle_bottom": {"fr": "Chevron", "genre": "m"},
-    "triangle_top": {"fr": "Chevron {c} renversé", "genre": "m"},
-    "triangles_bottom": {"fr": "Pointe {c} dentelée", "genre": "f"},
-    "triangles_top": {"fr": "Chef {c} dentelé", "genre": "m"},
-    "trident": {"fr": "Trident", "genre": "m"},
-    "two_stripes_base": {"fr": "Chevron {c} en pointe", "genre": "m"},
-    "two_stripes_center": {"fr": "Chevron", "genre": "m"},
-    "two_stripes_chief": {"fr": "Chevron {c} en chef", "genre": "m"},
-    "unicorn": {"fr": "Licorne", "genre": "f"},
-    "unicorn_bottom_left": {"fr": "Licorne {c} en pointe à dextre", "genre": "f"},
-    "unicorn_bottom_right": {"fr": "Licorne {c} en pointe à senestre", "genre": "f"},
-    "unicorn_center": {"fr": "Licorne", "genre": "f"},
-    "unicorn_top_left": {"fr": "Licorne {c} en chef à dextre", "genre": "f"},
-    "unicorn_top_right": {"fr": "Licorne {c} en chef à senestre", "genre": "f"},
-    "vs": {"fr": "Emblème {c} de Vintage Story", "genre": "m"},
-    "wolf": {"fr": "Loup", "genre": "m"},
-    "yang": {"fr": "Yang", "genre": "m"},
-    "yin": {"fr": "Yin", "genre": "m"},
-    "yoahtl": {"fr": "Soleil et lune {c} de Yoahtl", "genre": "m", "nombre": "pluriel"}
+    "border": {
+      "fr": "Bordure",
+      "genre": "f"
+    },
+    "bricks": {
+      "fr": "Champ maçonné",
+      "genre": "m"
+    },
+    "castlewall": {
+      "fr": "Muraille",
+      "genre": "f"
+    },
+    "catfish": {
+      "fr": "Silure",
+      "genre": "m"
+    },
+    "checker2": {
+      "fr": "Échiqueté {c} à deux tires",
+      "genre": "m"
+    },
+    "checker2_inverted": {
+      "fr": "Échiqueté {c} à deux tires inversé",
+      "genre": "m"
+    },
+    "checker4": {
+      "fr": "Échiqueté {c} à quatre tires",
+      "genre": "m"
+    },
+    "checker4_inverted": {
+      "fr": "Échiqueté {c} à quatre tires inversé",
+      "genre": "m"
+    },
+    "chinesedragon_base": {
+      "fr": "Dragon chinois {c} (bas)",
+      "genre": "m"
+    },
+    "chinesedragon_middle": {
+      "fr": "Dragon chinois {c} (milieu)",
+      "genre": "m"
+    },
+    "chinesedragon_top": {
+      "fr": "Dragon chinois {c} (haut)",
+      "genre": "m"
+    },
+    "circle": {
+      "fr": "Tourteau",
+      "genre": "m"
+    },
+    "circle_large": {
+      "fr": "Grand tourteau",
+      "genre": "m"
+    },
+    "club": {
+      "fr": "Trèfle",
+      "genre": "m"
+    },
+    "color": {
+      "fr": "Champ",
+      "genre": "m"
+    },
+    "cookie": {
+      "fr": "Biscuit",
+      "genre": "m"
+    },
+    "crescent_down": {
+      "fr": "Croissant {c} versé",
+      "genre": "m"
+    },
+    "crescent_left": {
+      "fr": "Croissant {c} tourné",
+      "genre": "m"
+    },
+    "crescent_right": {
+      "fr": "Croissant {c} contourné",
+      "genre": "m"
+    },
+    "crescent_up": {
+      "fr": "Croissant",
+      "genre": "m"
+    },
+    "crest": {
+      "fr": "Cimier",
+      "genre": "m"
+    },
+    "cross": {
+      "fr": "Sautoir",
+      "genre": "m"
+    },
+    "cross_bottom_left": {
+      "fr": "Croix {c} en pointe à dextre",
+      "genre": "f"
+    },
+    "cross_bottom_right": {
+      "fr": "Croix {c} en pointe à senestre",
+      "genre": "f"
+    },
+    "cross_top_left": {
+      "fr": "Croix {c} en chef à dextre",
+      "genre": "f"
+    },
+    "cross_top_right": {
+      "fr": "Croix {c} en chef à senestre",
+      "genre": "f"
+    },
+    "curly_border": {
+      "fr": "Bordure {c} dentelée",
+      "genre": "f"
+    },
+    "diagonal_left": {
+      "fr": "Taillé",
+      "genre": "m"
+    },
+    "diagonal_right": {
+      "fr": "Tranché",
+      "genre": "m"
+    },
+    "diagonal_up_left": {
+      "fr": "Tranché {c} inversé",
+      "genre": "m"
+    },
+    "diagonal_up_right": {
+      "fr": "Taillé {c} inversé",
+      "genre": "m"
+    },
+    "dragon": {
+      "fr": "Dragon",
+      "genre": "m"
+    },
+    "drifter": {
+      "fr": "Rôdeur",
+      "genre": "m"
+    },
+    "eidolon": {
+      "fr": "Eidolon",
+      "genre": "m"
+    },
+    "elk": {
+      "fr": "Wapiti",
+      "genre": "m"
+    },
+    "falx_left": {
+      "fr": "Falx {c} à gauche",
+      "genre": "f"
+    },
+    "falx_right": {
+      "fr": "Falx {c} à droite",
+      "genre": "f"
+    },
+    "fish_bottom_left": {
+      "fr": "Poisson {c} en pointe à dextre",
+      "genre": "m"
+    },
+    "fish_bottom_right": {
+      "fr": "Poisson {c} en pointe à senestre",
+      "genre": "m"
+    },
+    "fish_center": {
+      "fr": "Poisson",
+      "genre": "m"
+    },
+    "fish_top_left": {
+      "fr": "Poisson {c} en chef à dextre",
+      "genre": "m"
+    },
+    "fish_top_right": {
+      "fr": "Poisson {c} en chef à senestre",
+      "genre": "m"
+    },
+    "fleurdelis": {
+      "fr": "Fleur de lys",
+      "genre": "f"
+    },
+    "flower": {
+      "fr": "Fleur",
+      "genre": "f"
+    },
+    "gear": {
+      "fr": "Engrenage",
+      "genre": "m"
+    },
+    "globe": {
+      "fr": "Globe",
+      "genre": "m"
+    },
+    "gradient": {
+      "fr": "Dégradé",
+      "genre": "m"
+    },
+    "gradient_up": {
+      "fr": "Dégradé {c} en pointe",
+      "genre": "m"
+    },
+    "half_horizontal": {
+      "fr": "Coupé",
+      "genre": "m"
+    },
+    "half_horizontal_bottom": {
+      "fr": "Coupé {c} inversé",
+      "genre": "m"
+    },
+    "half_vertical": {
+      "fr": "Parti",
+      "genre": "m"
+    },
+    "half_vertical_right": {
+      "fr": "Parti {c} inversé",
+      "genre": "m"
+    },
+    "hansafish": {
+      "fr": "Poisson {c} de la Hanse",
+      "genre": "m"
+    },
+    "hansakeys": {
+      "fr": "Clés {c} de la Hanse",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "hansalargefish": {
+      "fr": "Grand poisson {c} de la Hanse",
+      "genre": "m"
+    },
+    "hansaship": {
+      "fr": "Navire {c} de la Hanse",
+      "genre": "m"
+    },
+    "hansatown": {
+      "fr": "Ville {c} de la Hanse",
+      "genre": "f"
+    },
+    "heart": {
+      "fr": "Cœur",
+      "genre": "m"
+    },
+    "heiwa_hanko": {
+      "fr": "Sceau {c} Heiwa Hanko",
+      "genre": "m"
+    },
+    "keys_bottom_left": {
+      "fr": "Clés {c} en pointe à dextre",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "keys_bottom_right": {
+      "fr": "Clés {c} en pointe à senestre",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "keys_center": {
+      "fr": "Clés",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "keys_top_left": {
+      "fr": "Clés {c} en chef à dextre",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "keys_top_right": {
+      "fr": "Clés {c} en chef à senestre",
+      "genre": "f",
+      "nombre": "pluriel"
+    },
+    "lion_left": {
+      "fr": "Lion {c} rampant morné",
+      "genre": "m"
+    },
+    "lion_right": {
+      "fr": "Lion {c} rampant morné contourné",
+      "genre": "m"
+    },
+    "maester": {
+      "fr": "Motif {c} abstrait de l'Alliance Maester",
+      "genre": "m"
+    },
+    "merrick": {
+      "fr": "Dragon {c} rampant",
+      "genre": "m"
+    },
+    "mobydick": {
+      "fr": "Moby Dick",
+      "genre": "m"
+    },
+    "rhombus": {
+      "fr": "Losange",
+      "genre": "m"
+    },
+    "skull": {
+      "fr": "Crâne",
+      "genre": "m"
+    },
+    "small_stripes": {
+      "fr": "Palé",
+      "genre": "m"
+    },
+    "small_stripes_hor": {
+      "fr": "Fascé",
+      "genre": "m"
+    },
+    "spade": {
+      "fr": "Pique",
+      "genre": "m"
+    },
+    "square_bottom_left": {
+      "fr": "Canton {c} dextre de la pointe",
+      "genre": "m"
+    },
+    "square_bottom_right": {
+      "fr": "Canton {c} senestre de la pointe",
+      "genre": "m"
+    },
+    "square_half_bottom_left": {
+      "fr": "Quartier {c} dextre de la pointe",
+      "genre": "m"
+    },
+    "square_half_bottom_right": {
+      "fr": "Quartier {c} senestre de la pointe",
+      "genre": "m"
+    },
+    "square_half_top_left": {
+      "fr": "Quartier {c} dextre du chef",
+      "genre": "m"
+    },
+    "square_half_top_right": {
+      "fr": "Quartier {c} senestre du chef",
+      "genre": "m"
+    },
+    "square_top_left": {
+      "fr": "Canton {c} dextre du chef",
+      "genre": "m"
+    },
+    "square_top_right": {
+      "fr": "Canton {c} senestre du chef",
+      "genre": "m"
+    },
+    "straight_cross": {
+      "fr": "Croix",
+      "genre": "f"
+    },
+    "stripe_bottom": {
+      "fr": "Pointe",
+      "genre": "f"
+    },
+    "stripe_center": {
+      "fr": "Pal",
+      "genre": "m"
+    },
+    "stripe_downleft": {
+      "fr": "Barre",
+      "genre": "f"
+    },
+    "stripe_downright": {
+      "fr": "Bande",
+      "genre": "f"
+    },
+    "stripe_left": {
+      "fr": "Pal {c} à dextre",
+      "genre": "m"
+    },
+    "stripe_middle": {
+      "fr": "Fasce",
+      "genre": "f"
+    },
+    "stripe_right": {
+      "fr": "Pal {c} à senestre",
+      "genre": "m"
+    },
+    "stripe_top": {
+      "fr": "Chef",
+      "genre": "m"
+    },
+    "sword": {
+      "fr": "Épée",
+      "genre": "f"
+    },
+    "triangle_bottom": {
+      "fr": "Chevron",
+      "genre": "m"
+    },
+    "triangle_top": {
+      "fr": "Chevron {c} renversé",
+      "genre": "m"
+    },
+    "triangles_bottom": {
+      "fr": "Pointe {c} dentelée",
+      "genre": "f"
+    },
+    "triangles_top": {
+      "fr": "Chef {c} dentelé",
+      "genre": "m"
+    },
+    "trident": {
+      "fr": "Trident",
+      "genre": "m"
+    },
+    "two_stripes_base": {
+      "fr": "Chevron {c} en pointe",
+      "genre": "m"
+    },
+    "two_stripes_center": {
+      "fr": "Chevron",
+      "genre": "m"
+    },
+    "two_stripes_chief": {
+      "fr": "Chevron {c} en chef",
+      "genre": "m"
+    },
+    "unicorn": {
+      "fr": "Licorne",
+      "genre": "f"
+    },
+    "unicorn_bottom_left": {
+      "fr": "Licorne {c} en pointe à dextre",
+      "genre": "f"
+    },
+    "unicorn_bottom_right": {
+      "fr": "Licorne {c} en pointe à senestre",
+      "genre": "f"
+    },
+    "unicorn_center": {
+      "fr": "Licorne",
+      "genre": "f"
+    },
+    "unicorn_top_left": {
+      "fr": "Licorne {c} en chef à dextre",
+      "genre": "f"
+    },
+    "unicorn_top_right": {
+      "fr": "Licorne {c} en chef à senestre",
+      "genre": "f"
+    },
+    "vs": {
+      "fr": "Emblème {c} de Vintage Story",
+      "genre": "m"
+    },
+    "wolf": {
+      "fr": "Loup",
+      "genre": "m"
+    },
+    "yang": {
+      "fr": "Yang",
+      "genre": "m"
+    },
+    "yin": {
+      "fr": "Yin",
+      "genre": "m"
+    },
+    "yoahtl": {
+      "fr": "Soleil et lune {c} de Yoahtl",
+      "genre": "m",
+      "nombre": "pluriel"
+    }
   },
   "cles": {
     "game:tabname-heraldry": "Héraldique",
@@ -163,9 +547,7 @@
     "heraldry:shapepattern-quadruple_notched": "Quadruple entaille",
     "heraldry:shapepattern-roundcorners": "Coins arrondis",
     "heraldry:shapepattern-rounded_notch": "Entaille arrondie",
-
     "capes:item-cape": "Cape",
-
     "heraldrybanners:item-banner": "Bannière",
     "heraldrybanners:block-pole-banner-ground1x3-*": "Mât de bannière (sol, 1x3)",
     "heraldrybanners:block-pole-banner-wall-*": "Mât de bannière mural (type A)",
@@ -178,7 +560,6 @@
     "heraldrybanners:transform-onHeraldryPoleCeilingTransform": "Sur un mât de bannière (plafond)",
     "heraldrybanners:transform-onHeraldryFlagpoleTransform": "Sur un mât de drapeau",
     "heraldrybanners:ingameerror-pole-doesnotfit": "Cet objet ne tient pas sur ce mât.",
-
     "game:clutter-hansa-ground-dragon": "Bannière de la Hanse (Dragon)",
     "game:clutter-hansa-wall-dragon": "Bannière de la Hanse murale (Dragon)",
     "game:clutter-hansa-ground-tool": "Bannière de la Hanse (Outils) [en chantier]",
@@ -305,5 +686,19 @@
     "morebanners:setting_enable_ruins_comment": "Si désactivé, aucune nouvelle ruine de More Banners n'apparaît lors de la génération de nouveaux terrains.",
     "morebanners:setting_ruins_rarity_multiplier": "Rareté des ruines",
     "morebanners:setting_ruins_rarity_multiplier_comment": "Multiplicateur de rareté des ruines : 2.0 double leur apparition, 0.5 la divise par deux, etc."
+  },
+  "emaux": {
+    "black": "de sable",
+    "blue": "d'azur",
+    "brown": "de tanné",
+    "gray": "de cendré",
+    "green": "de sinople",
+    "orange": "d'orangé",
+    "pink": "de carnation",
+    "plain": "au naturel",
+    "purple": "de pourpre",
+    "red": "de gueules",
+    "white": "d'argent",
+    "yellow": "d'or"
   }
 }

@@ -307,8 +307,8 @@ let
       et glossaire des ingrédients, noms spéciaux, légumes émincés, « cles ».
     - gen/pipeleaf.json -> assets/pipeleaf : mélanges de deux plantes, formes à fumer, pipes par
       métal, descriptions par paire de plantes, et « cles » (clés qualifiées).
-    - gen/heraldique.json -> heraldry, capes, heraldrybanners, morebanners : motif × couleur
-      accordée, objets × couleur, et « cles » (clés qualifiées). Une clé déclarée par plusieurs de
+    - gen/heraldique.json -> heraldry, capes, heraldrybanners, morebanners : motif × émail
+      héraldique (« de gueules »), objets × couleur accordée, objets × couleur, et « cles » (clés qualifiées). Une clé déclarée par plusieurs de
       ces mods va dans le fichier de son domaine (assets/heraldry), les autres dans celui du mod.
     Échoue sur toute clé anglaise sans traduction. --check échoue si un fichier livré diffère.
     """
@@ -444,7 +444,8 @@ let
             entry = heraldry["motifs"].get(motif)
             if entry is None:
                 return None, f"motif « {motif} » absent de « motifs »"
-            return colored(entry, color), None
+            name = entry["fr"] if "{c}" in entry["fr"] else entry["fr"] + " {c}"
+            return name.replace("{c}", heraldry["emaux"][color]), None
         for prefix, entry in heraldry["objets"].items():
             color = qkey.removeprefix(prefix)
             if qkey.startswith(prefix) and color in colors:
