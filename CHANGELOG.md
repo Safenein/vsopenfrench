@@ -5,6 +5,9 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Modpack de référence à jour (chiseltools 1.17.8, foodshelves 3.1.1, ndltreegrowth 2.8.0,
+  playercorpseforkedazu 1.15.2, realsmoke 2.0.0-pre.6, smithingplusplus 1.10.6) ; ndltreegrowth :
+  sacs de jute renommés (15 textes), 17 clés obsolètes retirées.
 - Squelette du mod, outillage d'audit, de vérification et de publication.
 - Traduction complète de Wildcraft x Expanded Foods Compatability (wcfefcompat 1.2.7, 5 447 textes),
   générée par `vs-gen` depuis `gen/wcfefcompat.json`.
