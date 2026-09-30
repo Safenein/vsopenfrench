@@ -90,6 +90,9 @@ se traduit lui-même.
 - ✔ **JSON strict en UTF-8** : pas de commentaires, pas de virgule finale, pas de BOM.
 - ✔ **Pas de clé du jeu de base** : les trous du jeu lui-même se signalent à la
   [traduction officielle](https://crowdin.com/project/vintage-story-game).
+- **Lexique ancien et authentique** : entre deux termes, préférer le plus ancien et le plus
+  authentique (« Pholiote marginée » plutôt que le calque « Chapeau ondulé », « charrette », « coupe »,
+  « eau-de-vie » plutôt que « brandy »), y compris quand le jeu de base n'a qu'un calque.
 - **Vocabulaire du jeu de base** (`game/lang/fr.json`) : « Cuproplomb » et non « molybdochalkos »,
   majuscules comme « Clous et bandes (Bismuth) ». Chercher le terme officiel avant d'en inventer un.
 - Une valeur anglaise vide ne se traduit pas (`vs-audit` l'ignore déjà).

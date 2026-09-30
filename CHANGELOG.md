@@ -12,6 +12,9 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- Lexique plus ancien et authentique : Pholiote marginée, Strophaire cubaine, Pholiote remarquable,
+  Armillaire couleur de miel ; charrette (et non chariot), coupe (et non gobelet), eau-de-vie
+  vieillie ou millésimée (et non brandy).
 - vsopenfrench couvre aussi le périmètre des trois packs tiers avec ses propres traductions
   (4 035 textes de plus, 31 mods) : il n'a plus besoin d'eux. Les packs ne comptent plus dans
   l'audit, le lint et `vs-gen`.
