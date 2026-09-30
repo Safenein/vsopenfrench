@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://devenv.sh/devenv.schema.json
+inputs:
+  nixpkgs:
+    url: github:cachix/devenv-nixpkgs/rolling
+  git-hooks:
+    url: github:cachix/git-hooks.nix
+    inputs:
+      nixpkgs:
+        follows: nixpkgs
+
+# Le serveur Vintage Story est récupéré par fetchzip dans devenv.nix : aucune
+# licence non libre n'est évaluée côté nixpkgs, allow_unfree est inutile.

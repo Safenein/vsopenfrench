@@ -1,0 +1,15 @@
+{
+  "type": "content",
+  "modid": "vsopenfrench",
+  "name": "Traductions françaises complémentaires",
+  "version": "0.1.0",
+  "side": "Universal",
+  "requiredOnClient": false,
+  "requiredOnServer": false,
+  "authors": ["Safenein"],
+  "description": "Comble les textes sans traduction française des mods, sans écraser les traductions existantes. Ne dépend d'aucun mod : une traduction ne sert que si son mod est installé.",
+  "website": "https://github.com/Safenein/vsopenfrench",
+  "dependencies": {
+    "game": "1.22.0"
+  }
+}

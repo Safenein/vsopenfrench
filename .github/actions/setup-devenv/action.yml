@@ -1,0 +1,29 @@
+name: Environnement devenv
+description: Installe Nix et devenv, et restaure le store Nix (serveur du jeu et modpack de référence).
+
+runs:
+  using: composite
+  steps:
+    - uses: cachix/install-nix-action@v31
+
+    # Le serveur (tarball du CDN) et les 112 zips de la ModDB ne sont dans aucun
+    # cache binaire : sans ce cache, chaque exécution les retélécharge.
+    - uses: nix-community/cache-nix-action@v7
+      with:
+        primary-key: nix-${{ runner.os }}-${{ hashFiles('devenv.lock', 'devenv.nix', 'mods.json') }}
+        restore-prefixes-first-match: nix-${{ runner.os }}-
+        gc-max-store-size-linux: 3G
+        # Les PR de forks ont un jeton en lecture seule : pas de purge.
+        purge: ${{ github.event_name == 'push' }}
+        purge-prefixes: nix-${{ runner.os }}-
+        purge-created: 0
+        purge-last-accessed: P7D
+        purge-primary-key: never
+
+    - uses: cachix/cachix-action@v16
+      with:
+        name: devenv
+
+    - name: Installer devenv
+      shell: bash
+      run: nix profile add nixpkgs#devenv
