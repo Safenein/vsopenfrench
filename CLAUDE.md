@@ -72,8 +72,8 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
    Ne jamais éditer à la main les fr.json générés : modifier `gen/*.json`.
 3. ~~Petits trous des mods déjà traduits~~ (alchemy, bricklayers, em, molds, foodshelves, wool,
    hydrateordiedrate) : fait à la main, un fr.json par mod.
-4. Texte suivi à la main : betterruins. (~~pipeleaf~~ : fait, généré par `vs-gen` ;
-   ~~orekiwoofsbeehives~~ : fait à la main.)
+4. ~~Texte suivi~~ : fait. pipeleaf généré par `vs-gen`, orekiwoofsbeehives et betterruins à la
+   main (dialogues de marchands sans accord de genre : les marchands existent en homme et en femme).
 5. Modèles de joueur : skeletons, vintageskavenrat, koboldrdx.
 
 ## Publication
