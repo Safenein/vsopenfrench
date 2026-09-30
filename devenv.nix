@@ -473,8 +473,16 @@ let
 
     Sous GitHub Actions, chaque problème devient aussi une annotation sur la ligne concernée.
     """
-    PLACEHOLDER = re.compile(r"\{[^{}]*\}")
+    PLACEHOLDER = re.compile(r"\{[^{}]*\}|>>>\w+<<<")
+    PLURAL = re.compile(r"\{(p\d+):[^{}]*\}")  # le texte des pluriels {p0:# jour|# jours} se traduit
+
+    def placeholders(text):
+        return sorted(PLACEHOLDER.findall(PLURAL.sub(r"{\1}", text)))
+
     TAG = re.compile(r"</?\s*([a-zA-Z]+)")
+
+    def tags(text):
+        return sorted(t.lower() for t in TAG.findall(PLACEHOLDER.sub("", text)))
     GITHUB = os.environ.get("GITHUB_ACTIONS") == "true"
     counts = {"error": 0, "warning": 0}
     lines = {}  # rel -> lignes du fichier, pour situer les clés
@@ -560,9 +568,9 @@ let
             source = all_english[qk][1]
             if not value.strip():
                 report("error", rel, "valeur vide", key)
-            if sorted(PLACEHOLDER.findall(value)) != sorted(PLACEHOLDER.findall(source)):
+            if placeholders(value) != placeholders(source):
                 report("error", rel, f"paramètres différents de l'anglais : {source!r}", key)
-            if sorted(t.lower() for t in TAG.findall(value)) != sorted(t.lower() for t in TAG.findall(source)):
+            if tags(value) != tags(source):
                 report("error", rel, f"balises différentes de l'anglais : {source!r}", key)
             if value.count("\n") != source.count("\n"):
                 report("warning", rel, "nombre de sauts de ligne différent de l'anglais", key)

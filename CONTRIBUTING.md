@@ -81,7 +81,7 @@ se traduit lui-même.
   livrée : en cas de doublon, la dernière valeur chargée gagne, et l'ordre de chargement n'est pas
   maîtrisé.
 - ✔ **Clés à l'identique**, jokers `*` compris (`block-hay-aged-*`), sinon elles ne remplacent pas l'anglais.
-- ✔ **Conserver les paramètres** `{0}`, `{1}`… et les balises (`<a href="handbook://…">`, `<font>`).
+- ✔ **Conserver les paramètres** `{0}`, `{1}`, `>>>nom<<<`… et les balises (`<a href="handbook://…">`, `<font>`).
   Conserver aussi les `\n` (avertissement seulement).
 - ✔ **JSON strict en UTF-8** : pas de commentaires, pas de virgule finale, pas de BOM.
 - ✔ **Pas de clé du jeu de base** : les trous du jeu lui-même se signalent à la
