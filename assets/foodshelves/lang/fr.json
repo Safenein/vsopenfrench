@@ -1,0 +1,10 @@
+{
+  "block-icekeeper-*": "Glacière",
+  "blockdesc-icekeeper-text": "  -Glace pilée.",
+  "helddesc-ceilingrack": "La nourriture placée dans le grand bocal de ce support suspendu sèche ou fond 2,5 fois plus vite et reste fraîche 30 % plus longtemps. Le grain qui y est stocké reste frais 35 % plus longtemps que dans une jarre de stockage.",
+  "helddesc-icekeeper": "Conserve votre glace pilée en grande quantité, sans qu'elle fonde jamais !",
+  "A Large Jar must be placed on this rack first.": "Un grand bocal doit d'abord être placé sur ce support.",
+  "Will never melt": "Ne fondra jamais",
+  "Will never cure": "Ne sera jamais maturé",
+  "Will never dry": "Ne séchera jamais"
+}

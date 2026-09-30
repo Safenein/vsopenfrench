@@ -1,0 +1,23 @@
+{
+  "wool:handbook-description": "Description",
+  "wool:setting_enable_gazelle_drops": "Butin additionnel des gazelles",
+  "wool:setting_enable_gazelle_drops_comment": "Les gazelles mortes doivent-elles laisser tomber de la toison ?",
+  "wool:setting_enable_soil": "Amélioration de la fertilité du sol",
+  "wool:setting_enable_soil_comment": "Peut-on fabriquer un sol plus fertile avec de l'engrais organique ?",
+  "wool:item-fertilizer-organic-wool": "Engrais organique de laine",
+  "wool:itemdesc-fertilizer-organic-wool": "Fait de poils et de toisons d'animaux bruts, non lavés.",
+  "wool:item-fertilizer-organic-horn": "Copeaux de corne",
+  "wool:itemdesc-fertilizer-organic-horn": "Un engrais organique fait de corne animale.",
+  "wool:item-fertilizer-organic-fish": "Farine de poisson",
+  "wool:itemdesc-fertilizer-organic-fish": "Un engrais organique fait de poisson séché.",
+  "wool:item-fertilizer-organic-feather": "Farine de plumes",
+  "wool:itemdesc-fertilizer-organic-feather": "Un engrais organique fait de plumes et de duvet d'oiseaux.",
+  "game:handbook-leggings-qivuit": "De la laine de bœuf musqué, rare et coûteuse, tricotée à la perfection.",
+  "game:handbook-leggings-mohair": "Tricotées avec la plus fine laine blanche de chèvre angora.",
+  "game:handbook-leggings-game": "Tricotées avec une laine très fine de cerf et de chèvre, prélevée sur la chaude toison du ventre.",
+  "game:handbook-leggings-noble": "Tricotées dans une laine coûteuse teinte en rose. La dernière mode de la noblesse, adorée des princes comme des princesses.",
+  "wool:item-clothes-lowerbody-leggings-mohair": "Jambières chaudes en mohair",
+  "wool:item-clothes-lowerbody-leggings-qivuit": "Jambières chaudes en qiviut",
+  "wool:item-clothes-lowerbody-leggings-game": "Jambières chaudes de chasseur",
+  "wool:item-clothes-lowerbody-leggings-noble": "Jambières chaudes de noble"
+}

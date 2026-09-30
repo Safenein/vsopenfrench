@@ -1,0 +1,6 @@
+{
+  "hydrateordiedrate:Config.Setting.ShowPrimingStrokes": "Afficher l'état d'amorçage en regardant une pompe à main.",
+  "hydrateordiedrate:Config.Setting.WellOutputInfo": "Afficher le débit de la source d'eau dans les infobulles (sur la source elle-même comme sur les treuils et pompes qui y sont reliés)",
+  "hydrateordiedrate:wellspring-output": "Débit de la source d'eau :",
+  "hydrateordiedrate:drinking": "Boire"
+}

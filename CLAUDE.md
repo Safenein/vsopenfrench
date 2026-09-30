@@ -70,7 +70,8 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
 1. ~~wcfefcompat~~ : fait, généré par `vs-gen`.
 2. ~~Héraldique (heraldry, capes, heraldrybanners, morebanners)~~ : fait, généré par `vs-gen`.
    Ne jamais éditer à la main les fr.json générés : modifier `gen/*.json`.
-3. Petits trous des mods déjà traduits.
+3. ~~Petits trous des mods déjà traduits~~ (alchemy, bricklayers, em, molds, foodshelves, wool,
+   hydrateordiedrate) : fait à la main, un fr.json par mod.
 4. Texte suivi à la main : betterruins, pipeleaf, orekiwoofsbeehives.
 5. Modèles de joueur : skeletons, vintageskavenrat, koboldrdx.
 
