@@ -4,6 +4,7 @@
 # Un texte par ligne ; les lignes commençant par # sont ignorées.
 Amaretto
 Archer
+Bestial
 Bismuth
 Cape
 Carnivore
@@ -15,11 +16,13 @@ Description
 Dragon
 Eshin
 Fragile
+Gecko
 Herbivore
 intoxication
 Jade
 Jonas
 Khiaz
+Kobold
 Limoncello
 Long
 Malachite
@@ -28,8 +31,10 @@ Nickel
 Omnivore
 Onyx
 Orange
+Oriental
 Parasite
 Pestilens
+Rage
 Rictus
 Skryre
 Stable

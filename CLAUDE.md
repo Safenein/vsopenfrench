@@ -74,8 +74,8 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
    hydrateordiedrate) : fait à la main, un fr.json par mod.
 4. ~~Texte suivi~~ : fait. pipeleaf généré par `vs-gen`, orekiwoofsbeehives et betterruins à la
    main (dialogues de marchands sans accord de genre : les marchands existent en homme et en femme).
-5. Modèles de joueur : koboldrdx. (~~skeletons~~, ~~vintageskavenrat~~ : faits à la main ; les deux clés
-   `game:skinpart-*` que vintageskavenrat partage avec koboldrdx sont livrées dans son fichier.)
+5. ~~Modèles de joueur~~ (skeletons, vintageskavenrat, koboldrdx) : faits à la main. Les deux clés
+   `game:skinpart-*` que vintageskavenrat partage avec koboldrdx sont livrées dans son fichier.
 
 ## Publication
 
