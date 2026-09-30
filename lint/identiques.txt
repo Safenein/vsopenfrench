@@ -1,9 +1,29 @@
 # Textes identiques en anglais et en français (noms propres, emprunts).
-# vs-lint n'avertit pas quand une traduction vaut l'un d'eux (casse ignorée).
+# vs-lint n'avertit pas quand le texte affiché d'une traduction vaut l'un d'eux (casse, balises
+# et puces ignorées : « <font …>• Archer</font> » compte comme « Archer »).
 # Un texte par ligne ; les lignes commençant par # sont ignorées.
 Amaretto
-Limoncello
+Archer
+Bismuth
 Cape
-Dragon
+Carnivore
+Citrine
+Cupronickel
 Description
+Dragon
+Fragile
+Herbivore
 intoxication
+Jade
+Jonas
+Limoncello
+Malachite
+Nickel
+Omnivore
+Onyx
+Parasite
+Stable
+Tourmaline
+Uranium
+Xylophone
+Zinc

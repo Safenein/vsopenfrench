@@ -481,6 +481,10 @@ let
 
     TAG = re.compile(r"</?\s*([a-zA-Z]+)")
 
+    def visible(text):
+        """Texte affiché, sans balises ni puces : « <font …>• Archer</font> » -> « Archer »."""
+        return re.sub(r"<[^>]*>", "", text).strip(" •\n")
+
     def tags(text):
         return sorted(t.lower() for t in TAG.findall(PLACEHOLDER.sub("", text)))
     GITHUB = os.environ.get("GITHUB_ACTIONS") == "true"
@@ -574,7 +578,7 @@ let
                 report("error", rel, f"balises différentes de l'anglais : {source!r}", key)
             if value.count("\n") != source.count("\n"):
                 report("warning", rel, "nombre de sauts de ligne différent de l'anglais", key)
-            if value == source and value.strip().lower() not in same_in_french:
+            if value == source and visible(value).lower() not in same_in_french:
                 report("warning", rel, "identique à l'anglais (sinon l'ajouter à lint/identiques.txt)", key)
 
     print(f"vs-lint : {len(ours)} clé(s), {counts['error']} erreur(s), {counts['warning']} avertissement(s)")

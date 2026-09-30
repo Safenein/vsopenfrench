@@ -12,6 +12,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- Traduction complète de Skeletons (343 textes : modèles, apparence, classes, traits).
+- `vs-lint` compare le texte affiché (sans balises ni puces) à `lint/identiques.txt`.
 - Traduction complète de Better Ruins (295 textes, environ 11 000 mots : récits, lettres, quêtes des
   marchands).
 - Traduction complète d'OrekiWoof's Simple Immersive Beehive (2.0.0, 134 textes).
