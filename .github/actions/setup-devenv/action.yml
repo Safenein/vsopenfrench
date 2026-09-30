@@ -20,7 +20,7 @@ runs:
         purge-last-accessed: P7D
         purge-primary-key: never
 
-    - uses: cachix/cachix-action@v16
+    - uses: cachix/cachix-action@v17
       with:
         name: devenv
 
