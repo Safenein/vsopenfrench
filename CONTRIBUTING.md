@@ -56,10 +56,17 @@ assets/
   `"game:trait-…": "…"`. Une clé avec `:` garde son domaine, quel que soit le fichier.
 - Les sous-dossiers `compatibility/<mod>/` reprennent le chemin du mod d'origine.
 
-Exception : `assets/wcfefcompat/lang/fr.json` est **généré** par `vs-gen-wcfef` à partir de
-`gen/wcfefcompat.json` (gabarits par type de produit, glossaire des fruits avec leur genre,
-clés traduites à la main). Pour corriger un nom de fruit ou une tournure, modifier ce fichier puis
-relancer `vs-gen-wcfef` ; la CI refuse un fr.json qui n'est plus à jour.
+Exception : certains fichiers sont **générés** par `vs-gen` à partir de `gen/*.json`, ne pas les
+modifier à la main :
+
+- `assets/wcfefcompat/lang/fr.json` depuis `gen/wcfefcompat.json` (gabarits par type de produit,
+  glossaire des fruits avec leur genre, clés traduites à la main) ;
+- `assets/{heraldry,capes,heraldrybanners,morebanners}/lang/fr.json` depuis `gen/heraldique.json`
+  (couleurs, motifs avec leur genre, clés traduites à la main). Les clés `heraldry:pattern-*`
+  déclarées à la fois par capes et heraldrybanners vont dans `assets/heraldry`.
+
+Pour corriger un nom ou une tournure, modifier le fichier de `gen/` puis relancer `vs-gen` ; la CI
+refuse un fr.json qui n'est plus à jour.
 
 Un fichier par mod se relit d'un bloc, s'envoie à l'auteur du mod, et se supprime le jour où le mod
 se traduit lui-même.

@@ -246,28 +246,39 @@ let
     print(f"Total : {total} clé(s) dans {mods} mod(s) -> {out}")
   '';
 
-  genWcfef = mkPy "vs-gen-wcfef" ''
-    """Génère assets/wcfefcompat/lang/fr.json depuis gen/wcfefcompat.json.
+  gen = mkPy "vs-gen" ''
+    """Génère les fr.json des mods traduits par gabarits, depuis gen/*.json.
 
-    Usage: vs-gen-wcfef [--check]
-    Chaque clé anglaise de wcfefcompat prend sa valeur dans « cles », sinon dans le premier
-    gabarit de son type dont la regex « en » correspond au texte anglais, avec le nom français
-    du code tiré de la table du gabarit (« fruits » par défaut). --check échoue si le fichier
-    livré diffère du fichier généré.
+    Usage: vs-gen [--check]
+    - gen/wcfefcompat.json -> assets/wcfefcompat : chaque clé prend sa valeur dans « cles »,
+      sinon dans le premier gabarit de son type dont la regex « en » correspond au texte anglais,
+      avec le nom français du code tiré de la table du gabarit (« fruits » par défaut).
+    - gen/heraldique.json -> heraldry, capes, heraldrybanners, morebanners : motif × couleur
+      accordée, objets × couleur, et « cles » (clés qualifiées). Une clé déclarée par plusieurs de
+      ces mods va dans le fichier de son domaine (assets/heraldry), les autres dans celui du mod.
+    Échoue sur toute clé anglaise sans traduction. --check échoue si un fichier livré diffère.
     """
-    DATA = ROOT / "gen/wcfefcompat.json"
-    OUT = ROOT / "assets/wcfefcompat/lang/fr.json"
     VOWELS = "aàâeéèêëiîïoôuùûüœ"
     PREPOSITIONS = {"de", "du", "des", "à", "au", "aux", "en"}
 
-    data = json.loads(DATA.read_text("utf-8"))
-    types = "|".join(sorted(map(re.escape, data["gabarits"]), key=len, reverse=True))
-    states = "|".join(data["etats"])
-    PIE = re.compile(rf"^pie-single-wcfefcompat:({types})-(.+)-({states})$")
-    ITEM = re.compile(
-        rf"^(?:incontainer-item-|game:recipeingredient-item-|recipeingredient-item-|item-"
-        rf"|game:meal-ingredient-yogurtmeal-primary-yogurt-)({types})-(.+?)(?:-insturmentalcase)?$"
-    )
+    english, french, _ = load_modpack()
+    outputs = defaultdict(dict)  # domaine du fichier -> {clé: texte}
+    missing = 0
+
+    def todo(modid):
+        """Clés anglaises du mod sans français ailleurs : (clé qualifiée, texte)."""
+        for qkey, (_, _, text) in english[modid].items():
+            if qkey not in french and text.strip():
+                yield qkey, text
+
+    def put(domain, qkey, value):
+        key_domain, key = qkey.split(":", 1)
+        outputs[domain][key if key_domain == domain else qkey] = value
+
+    def miss(qkey, error, text):
+        global missing
+        missing += 1
+        print(f"{qkey}: {error} : {text}", file=sys.stderr)
 
     def plural_word(word):
         if word[-1] in "sxz":
@@ -283,7 +294,22 @@ let
             words[i] = "-".join(plural_word(part) for part in word.split("-"))
         return " ".join(words)
 
-    def fields(entry):
+    def same_case(text, model):
+        first = text[0].upper() if model[0].isupper() else text[0].lower()
+        return first + text[1:]
+
+    # --- wcfefcompat : produits × fruits ---
+
+    wcfef = json.loads((ROOT / "gen/wcfefcompat.json").read_text("utf-8"))
+    types = "|".join(sorted(map(re.escape, wcfef["gabarits"]), key=len, reverse=True))
+    states = "|".join(wcfef["etats"])
+    PIE = re.compile(rf"^pie-single-wcfefcompat:({types})-(.+)-({states})$")
+    ITEM = re.compile(
+        rf"^(?:incontainer-item-|game:recipeingredient-item-|recipeingredient-item-|item-"
+        rf"|game:meal-ingredient-yogurtmeal-primary-yogurt-)({types})-(.+?)(?:-insturmentalcase)?$"
+    )
+
+    def fruit_fields(entry):
         name, fem = entry["fr"], entry["genre"] == "f"
         many = entry.get("nombre") == "pluriel"
         elide = entry.get("elision", name[0].lower() in VOWELS)
@@ -302,13 +328,9 @@ let
             "s": "s" if many else "",
         }
 
-    def same_case(text, model):
-        first = text[0].upper() if model[0].isupper() else text[0].lower()
-        return first + text[1:]
-
-    def translate(key, text):
-        if key in data["cles"]:
-            return data["cles"][key], None
+    def translate_wcfef(key, text):
+        if key in wcfef["cles"]:
+            return wcfef["cles"][key], None
         state = ""
         m = PIE.match(key)
         if m:
@@ -319,38 +341,86 @@ let
             form = "objet"
         else:
             return None, "aucun gabarit pour cette clé"
-        for rule in data["gabarits"][kind].get(form, []):
+        for rule in wcfef["gabarits"][kind].get(form, []):
             if re.search(rule["en"], text, re.I):
                 table = rule.get("table", "fruits")
-                entry = data["tables"][table].get(code)
+                entry = wcfef["tables"][table].get(code)
                 if entry is None:
                     return None, f"code « {code} » absent de la table « {table} »"
-                value = rule["fr"].format(etat=data["etats"].get(state, ""), **fields(entry))
+                value = rule["fr"].format(etat=wcfef["etats"].get(state, ""), **fruit_fields(entry))
                 return same_case(value, text), None
         return None, f"texte anglais hors gabarit ({kind}, {form})"
 
-    english, french, _ = load_modpack()
-    result, missing = {}, 0
-    for qkey, (domain, key, text) in english["wcfefcompat"].items():
-        if qkey in french or not text.strip():
-            continue
-        value, error = translate(key, text)
+    for qkey, text in todo("wcfefcompat"):
+        value, error = translate_wcfef(qkey.split(":", 1)[1] if qkey.startswith("wcfefcompat:") else qkey, text)
         if error:
-            missing += 1
-            print(f"{key}: {error} : {text}", file=sys.stderr)
+            miss(qkey, error, text)
         else:
-            result[key] = value
+            put("wcfefcompat", qkey, value)
 
-    rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
-    if "--check" in sys.argv[1:]:
-        if not OUT.exists() or OUT.read_text("utf-8") != rendered:
-            sys.exit(f"vs-gen-wcfef : {OUT.relative_to(ROOT)} n'est pas à jour, relancer vs-gen-wcfef")
-    else:
-        OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(rendered, encoding="utf-8")
-        print(f"{len(result)} clé(s) écrites dans {OUT.relative_to(ROOT)}")
+    # --- héraldique : motifs × couleurs ---
+
+    heraldry = json.loads((ROOT / "gen/heraldique.json").read_text("utf-8"))
+    colors = heraldry["couleurs"]
+    COLOR = "|".join(colors)
+    PATTERN = re.compile(rf"^heraldry:pattern-(.+)_({COLOR})$")
+    HERALDRY_MODS = ["heraldry", "capes", "heraldrybanners", "morebanners"]
+
+    def color_word(color, entry):
+        forms = colors[color]
+        word = forms["f"] if entry["genre"] == "f" else forms["m"]
+        if entry.get("nombre") == "pluriel" and not forms.get("invariable"):
+            word = plural_word(word)
+        return word
+
+    def colored(entry, color):
+        name = entry["fr"] if "{c}" in entry["fr"] else entry["fr"] + " {c}"
+        return name.replace("{c}", color_word(color, entry))
+
+    def translate_heraldry(qkey):
+        if qkey in heraldry["cles"]:
+            return heraldry["cles"][qkey], None
+        if m := PATTERN.match(qkey):
+            motif, color = m.groups()
+            entry = heraldry["motifs"].get(motif)
+            if entry is None:
+                return None, f"motif « {motif} » absent de « motifs »"
+            return colored(entry, color), None
+        for prefix, entry in heraldry["objets"].items():
+            color = qkey.removeprefix(prefix)
+            if qkey.startswith(prefix) and color in colors:
+                return colored(entry, color), None
+        return None, "aucun gabarit pour cette clé"
+
+    owners = defaultdict(list)
+    for modid in HERALDRY_MODS:
+        for qkey, text in todo(modid):
+            owners[qkey].append((modid, text))
+    for qkey, found in owners.items():
+        value, error = translate_heraldry(qkey)
+        if error:
+            miss(qkey, error, found[0][1])
+        else:
+            put(qkey.split(":", 1)[0] if len(found) > 1 else found[0][0], qkey, value)
+
+    # --- écriture ---
+
+    check = "--check" in sys.argv[1:]
+    stale = []
+    for domain, values in sorted(outputs.items()):
+        out = ROOT / "assets" / domain / "lang/fr.json"
+        rendered = json.dumps(values, ensure_ascii=False, indent=2) + "\n"
+        if check:
+            if not out.exists() or out.read_text("utf-8") != rendered:
+                stale.append(out.relative_to(ROOT).as_posix())
+        else:
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(rendered, encoding="utf-8")
+            print(f"{len(values)} clé(s) écrites dans {out.relative_to(ROOT)}")
+    if stale:
+        sys.exit("vs-gen : pas à jour, relancer vs-gen : " + ", ".join(stale))
     if missing:
-        sys.exit(f"vs-gen-wcfef : {missing} clé(s) sans traduction")
+        sys.exit(f"vs-gen : {missing} clé(s) sans traduction")
   '';
 
   lint = mkPy "vs-lint" ''
@@ -494,7 +564,7 @@ in
     vsServer
     lockMods
     audit
-    genWcfef
+    gen
     lint
     build
   ];
@@ -662,7 +732,7 @@ in
   enterShell = ''
     echo "vsopenfrench — jeu $VS_GAME_VERSION, $(ls "$VS_MODS_DIR" | wc -l) mods de référence"
     echo "  vs-audit     textes sans français -> work/todo/<mod>.json"
-    echo "  vs-gen-wcfef génère assets/wcfefcompat/lang/fr.json (gen/wcfefcompat.json)"
+    echo "  vs-gen       génère les fr.json traduits par gabarits (gen/*.json)"
     echo "  vs-lint      vérifie assets/**/fr.json"
     echo "  vs-build     construit dist/vsopenfrench_<version>.zip"
     echo "  vs-test      serveur jetable avec le modpack et le mod"
@@ -673,7 +743,7 @@ in
   '';
 
   enterTest = ''
-    vs-gen-wcfef --check
+    vs-gen --check
     vs-lint
     python3 -m zipfile -t "$(vs-build)"
   '';

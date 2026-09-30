@@ -3,3 +3,5 @@
 # Un texte par ligne ; les lignes commençant par # sont ignorées.
 Amaretto
 Limoncello
+Cape
+Dragon
