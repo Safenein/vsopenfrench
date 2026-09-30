@@ -61,6 +61,8 @@ modifier à la main :
 
 - `assets/wcfefcompat/lang/fr.json` depuis `gen/wcfefcompat.json` (gabarits par type de produit,
   glossaire des fruits avec leur genre, clés traduites à la main) ;
+- `assets/pipeleaf/lang/fr.json` depuis `gen/pipeleaf.json` (plantes, métaux, descriptions des
+  mélanges par paire de plantes, clés traduites à la main) ;
 - `assets/{heraldry,capes,heraldrybanners,morebanners}/lang/fr.json` depuis `gen/heraldique.json`
   (couleurs, motifs avec leur genre, clés traduites à la main). Les clés `heraldry:pattern-*`
   déclarées à la fois par capes et heraldrybanners vont dans `assets/heraldry`.

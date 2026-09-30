@@ -18,7 +18,7 @@ dans `devenv shell`.
 | Commande | Rôle |
 | --- | --- |
 | `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Référence : 14 405 clés / 55 mods sans aucune traduction du dépôt |
-| `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés) et `heraldique.json` (motifs × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
+| `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés), `pipeleaf.json` (mélanges × plantes, pipes × métaux) et `heraldique.json` (motifs × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
 | `vs-lint` | JSON strict UTF-8 sans BOM, sans doublon ; clé présente en anglais dans le modpack ; non traduite ailleurs ; mêmes `{n}` et balises que l'anglais. Hook pre-commit |
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
 | `vs-test` | serveur jetable dans `work/server/` (`ServerLanguage: fr`), échoue sur `Failed to load language file` |
@@ -72,7 +72,7 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
    Ne jamais éditer à la main les fr.json générés : modifier `gen/*.json`.
 3. ~~Petits trous des mods déjà traduits~~ (alchemy, bricklayers, em, molds, foodshelves, wool,
    hydrateordiedrate) : fait à la main, un fr.json par mod.
-4. Texte suivi à la main : betterruins, pipeleaf, orekiwoofsbeehives.
+4. Texte suivi à la main : betterruins, orekiwoofsbeehives. (~~pipeleaf~~ : fait, généré par `vs-gen`.)
 5. Modèles de joueur : skeletons, vintageskavenrat, koboldrdx.
 
 ## Publication

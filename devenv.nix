@@ -253,6 +253,8 @@ let
     - gen/wcfefcompat.json -> assets/wcfefcompat : chaque clé prend sa valeur dans « cles »,
       sinon dans le premier gabarit de son type dont la regex « en » correspond au texte anglais,
       avec le nom français du code tiré de la table du gabarit (« fruits » par défaut).
+    - gen/pipeleaf.json -> assets/pipeleaf : mélanges de deux plantes, formes à fumer, pipes par
+      métal, descriptions par paire de plantes, et « cles » (clés qualifiées).
     - gen/heraldique.json -> heraldry, capes, heraldrybanners, morebanners : motif × couleur
       accordée, objets × couleur, et « cles » (clés qualifiées). Une clé déclarée par plusieurs de
       ces mods va dans le fichier de son domaine (assets/heraldry), les autres dans celui du mod.
@@ -402,6 +404,49 @@ let
             miss(qkey, error, found[0][1])
         else:
             put(qkey.split(":", 1)[0] if len(found) > 1 else found[0][0], qkey, value)
+
+    # --- pipeleaf : mélanges de plantes, pipes par métal ---
+
+    pipeleaf = json.loads((ROOT / "gen/pipeleaf.json").read_text("utf-8"))
+    plants, metals, templates = pipeleaf["plantes"], pipeleaf["metaux"], pipeleaf["gabarits"]
+    PLANT = "|".join(sorted(plants, key=len, reverse=True))
+    METAL = "|".join(sorted(metals, key=len, reverse=True))
+    BLEND = re.compile(rf"^pipeleaf:(item|itemdesc)-(?:cured|shag)blend-({PLANT})-({PLANT})$")
+    SMOKABLE = re.compile(rf"^pipeleaf:item-smokable-({PLANT})-(cured|shag)$")
+    METAL_ITEMS = {
+        "pipe": re.compile(rf"^pipeleaf:item-smokingpipe-briarburl-({METAL})$"),
+        "tuyau": re.compile(rf"^pipeleaf:item-smokingpipestem-({METAL})$"),
+        "briquet": re.compile(rf"^pipeleaf:item-pipelighter-({METAL})$"),
+    }
+
+    def of(name):
+        name = name[0].lower() + name[1:]
+        return ("d'" if name[0] in VOWELS + "h" else "de ") + name
+
+    def translate_pipeleaf(qkey):
+        if qkey in pipeleaf["cles"]:
+            return pipeleaf["cles"][qkey], None
+        if m := BLEND.match(qkey):
+            kind, a, b = m.groups()
+            if kind == "item":
+                return templates["melange"].format(de_a=of(plants[a]), de_b=of(plants[b])), None
+            pair = "+".join(sorted((a, b)))
+            if pair in pipeleaf["descriptions"]:
+                return pipeleaf["descriptions"][pair], None
+            return None, f"description « {pair} » absente de « descriptions »"
+        if m := SMOKABLE.match(qkey):
+            return templates["fumable"][m.group(2)].format(nom=plants[m.group(1)]), None
+        for name, pattern in METAL_ITEMS.items():
+            if m := pattern.match(qkey):
+                return templates[name].format(metal=metals[m.group(1)]), None
+        return None, "aucun gabarit pour cette clé"
+
+    for qkey, text in todo("pipeleaf"):
+        value, error = translate_pipeleaf(qkey)
+        if error:
+            miss(qkey, error, text)
+        else:
+            put("pipeleaf", qkey, value)
 
     # --- écriture ---
 
