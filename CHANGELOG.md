@@ -12,6 +12,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (1.3.3), 2 240 textes, générée par `vs-gen` depuis `gen/heraldique.json`.
 - Traduction complète de Pipeleaf (2.6.1, 1 461 textes), générée par `vs-gen` depuis
   `gen/pipeleaf.json`.
+- Textes manquants d'Expanded Foods (2 956 : tartes mixtes, légumes émincés), générés par `vs-gen`
+  depuis `gen/expandedfoods.json`.
 - Traduction complète de Kobold Player Model (koboldrdx, 95 textes).
 - Traduction complète de Skaven/Rat Player Model (239 textes : apparence, couleurs, réglages).
 - Traduction complète de Skeletons (343 textes : modèles, apparence, classes, traits).

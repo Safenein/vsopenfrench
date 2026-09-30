@@ -253,6 +253,8 @@ let
     - gen/wcfefcompat.json -> assets/wcfefcompat : chaque clé prend sa valeur dans « cles »,
       sinon dans le premier gabarit de son type dont la regex « en » correspond au texte anglais,
       avec le nom français du code tiré de la table du gabarit (« fruits » par défaut).
+    - gen/expandedfoods.json -> assets/expandedfoods : tartes mixtes décomposées par motifs (« A/B pie »)
+      et glossaire des ingrédients, noms spéciaux, légumes émincés, « cles ».
     - gen/pipeleaf.json -> assets/pipeleaf : mélanges de deux plantes, formes à fumer, pipes par
       métal, descriptions par paire de plantes, et « cles » (clés qualifiées).
     - gen/heraldique.json -> heraldry, capes, heraldrybanners, morebanners : motif × couleur
@@ -447,6 +449,50 @@ let
             miss(qkey, error, text)
         else:
             put("pipeleaf", qkey, value)
+
+    # --- expandedfoods : tartes mixtes (« A/B pie ») et légumes émincés ---
+
+    expanded = json.loads((ROOT / "gen/expandedfoods.json").read_text("utf-8"))
+    PIE_EF = re.compile(r"^game:pie-(?:single|mixed)-.+-(raw|partbaked|perfect|charred)$")
+    CHOPPED = re.compile(r"^(?:game:)?recipeingredient-item-cookedchoppedvegetable-(.+)-\*(?:-insturmentalcase)?$")
+    STATE_EN = re.compile(r"\s*\((?:raw|part-baked|charred)\)$")
+
+    def pie_name(stem):
+        if stem in expanded["noms"]:
+            return expanded["noms"][stem]
+        ingredients = expanded["ingredients"]
+        for rule in expanded["motifs"]:
+            m = re.match(rule["en"], stem)
+            if not m:
+                continue
+            parts = {name: ingredients.get(text.lower() + rule.get("suffixe", "")) for name, text in m.groupdict().items()}
+            if None in parts.values():
+                continue
+            kind = "tourte" if any(p.get("tourte") for p in parts.values()) else "tarte"
+            return rule["fr"].format(tarte=expanded["tartes"][kind], **{n: p["fr"] for n, p in parts.items()})
+        return None
+
+    def translate_expanded(qkey, text):
+        key = qkey.split(":", 1)[1] if qkey.startswith("expandedfoods:") else qkey
+        if key in expanded["cles"]:
+            return expanded["cles"][key], None
+        if m := CHOPPED.match(key):
+            if m.group(1) in expanded["emince"]:
+                return expanded["emince"][m.group(1)], None
+            return None, f"légume « {m.group(1)} » absent de « emince »"
+        if m := PIE_EF.match(key):
+            name = pie_name(STATE_EN.sub("", text))
+            if name is None:
+                return None, "nom de tarte hors motifs et hors « noms »"
+            return name + expanded["etats"][m.group(1)], None
+        return None, "aucun gabarit pour cette clé"
+
+    for qkey, text in todo("expandedfoods"):
+        value, error = translate_expanded(qkey, text)
+        if error:
+            miss(qkey, error, text)
+        else:
+            put("expandedfoods", qkey, value)
 
     # --- écriture ---
 

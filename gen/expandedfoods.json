@@ -1,0 +1,305 @@
+{
+  "etats": {
+    "raw": " (non cuite)",
+    "partbaked": " (à moitié cuite)",
+    "perfect": "",
+    "charred": " (carbonisée)"
+  },
+  "tartes": {
+    "tourte": "Tourte",
+    "tarte": "Tarte"
+  },
+  "ingredients": {
+    "fish": {
+      "fr": "au poisson",
+      "tourte": true
+    },
+    "poultry": {
+      "fr": "à la volaille",
+      "tourte": true
+    },
+    "redmeat": {
+      "fr": "à la viande rouge",
+      "tourte": true
+    },
+    "bushmeat": {
+      "fr": "à la viande coriace",
+      "tourte": true
+    },
+    "insect": {
+      "fr": "aux insectes",
+      "tourte": true
+    },
+    "meat": {
+      "fr": "à la viande",
+      "tourte": true
+    },
+    "cheesy meat": {
+      "fr": "à la viande et au fromage",
+      "tourte": true
+    },
+    "cottage cheese": {
+      "fr": "au fromage frais"
+    },
+    "blue cheese": {
+      "fr": "au bleu"
+    },
+    "cheddar": {
+      "fr": "au Cheddar"
+    },
+    "cheese": {
+      "fr": "au fromage"
+    },
+    "peanut": {
+      "fr": "à l'arachide"
+    },
+    "walnut": {
+      "fr": "aux noix"
+    },
+    "soybean": {
+      "fr": "au soja"
+    },
+    "soy": {
+      "fr": "au soja"
+    },
+    "cheesy soy": {
+      "fr": "au soja et au fromage"
+    },
+    "nutty soy": {
+      "fr": "au soja et aux noix"
+    },
+    "bell pepper": {
+      "fr": "aux poivrons"
+    },
+    "cabbage": {
+      "fr": "aux choux"
+    },
+    "carrot": {
+      "fr": "aux carottes"
+    },
+    "cassava": {
+      "fr": "au manioc"
+    },
+    "fennel": {
+      "fr": "au fenouil"
+    },
+    "olive": {
+      "fr": "aux olives"
+    },
+    "onion": {
+      "fr": "à l'oignon"
+    },
+    "parsnip": {
+      "fr": "aux panais"
+    },
+    "pumpkin": {
+      "fr": "à la citrouille"
+    },
+    "turnip": {
+      "fr": "aux navets"
+    },
+    "vegetable": {
+      "fr": "aux légumes"
+    },
+    "mushroom": {
+      "fr": "aux champignons"
+    },
+    "black mushroom": {
+      "fr": "aux champignons noirs"
+    },
+    "yellow mushroom": {
+      "fr": "aux champignons jaunes"
+    },
+    "off-white mushroom": {
+      "fr": "aux champignons blanc cassé"
+    },
+    "orange mushroom": {
+      "fr": "aux champignons orange"
+    },
+    "devilstooth mushroom": {
+      "fr": "à l'hydne du diable"
+    },
+    "red mushroom": {
+      "fr": "aux champignons rouges"
+    },
+    "green mushroom": {
+      "fr": "aux champignons verts"
+    },
+    "blue mushroom": {
+      "fr": "aux champignons bleus"
+    },
+    "lobster mushroom": {
+      "fr": "aux champignons homards"
+    },
+    "brown mushroom": {
+      "fr": "aux champignons bruns"
+    },
+    "white mushroom": {
+      "fr": "aux champignons blancs"
+    },
+    "purple mushroom": {
+      "fr": "aux champignons violets"
+    },
+    "pink mushroom": {
+      "fr": "aux champignons roses"
+    },
+    "apple": {
+      "fr": "aux pommes"
+    },
+    "beautyberry": {
+      "fr": "aux baies de callicarpe"
+    },
+    "blackberry": {
+      "fr": "aux mûres"
+    },
+    "blackcurrant": {
+      "fr": "au cassis"
+    },
+    "blueberry": {
+      "fr": "aux myrtilles"
+    },
+    "cherry": {
+      "fr": "aux cerises"
+    },
+    "cloudberry": {
+      "fr": "aux mûres arctiques"
+    },
+    "cranberry": {
+      "fr": "aux canneberges"
+    },
+    "gooseberry": {
+      "fr": "aux groseilles à maquereau"
+    },
+    "guava": {
+      "fr": "aux goyaves"
+    },
+    "kumquat": {
+      "fr": "aux kumquats"
+    },
+    "lychee": {
+      "fr": "aux litchis"
+    },
+    "mango": {
+      "fr": "à la mangue"
+    },
+    "orange": {
+      "fr": "à l'orange"
+    },
+    "peach": {
+      "fr": "aux pêches"
+    },
+    "pear": {
+      "fr": "aux poires"
+    },
+    "pineapple": {
+      "fr": "à l'ananas"
+    },
+    "num-num": {
+      "fr": "aux prunes du Natal"
+    },
+    "pomegranate": {
+      "fr": "à la grenade"
+    },
+    "raspberry": {
+      "fr": "aux framboises"
+    },
+    "redcurrant": {
+      "fr": "aux groseilles rouges"
+    },
+    "saguaro fruit": {
+      "fr": "aux fruits de saguaro"
+    },
+    "fruit": {
+      "fr": "aux fruits"
+    },
+    "cactus fruit": {
+      "fr": "aux figues de Barbarie"
+    },
+    "strawberry": {
+      "fr": "aux fraises"
+    },
+    "strawberry fruit": {
+      "fr": "aux fraises"
+    },
+    "whitecurrant": {
+      "fr": "aux groseilles blanches"
+    },
+    "whitecurrant fruit": {
+      "fr": "aux groseilles blanches"
+    },
+    "breadfruit": {
+      "fr": "aux fruits à pain"
+    }
+  },
+  "motifs": [
+    {
+      "en": "^(?P<a>.+?)/(?P<b>.+?) pie$",
+      "fr": "{tarte} {a} et {b}"
+    },
+    {
+      "en": "^(?P<a>.+?)/(?P<b>.+?) quiche$",
+      "fr": "Quiche {a} et {b}"
+    },
+    {
+      "en": "^(?P<a>.+) quiche$",
+      "fr": "Quiche {a}"
+    },
+    {
+      "en": "^Nutty (?P<a>.+) pie$",
+      "fr": "{tarte} {a} et aux noix"
+    },
+    {
+      "en": "^(?P<a>.+) earthen pie$",
+      "fr": "Tarte des sous-bois {a}",
+      "suffixe": " mushroom"
+    }
+  ],
+  "noms": {
+    "Earthen pie": "Tarte des sous-bois",
+    "Cheesy mushroom pot pie": "Tarte aux restes, aux champignons et au fromage",
+    "Cheesy pot pie": "Tarte aux restes et au fromage",
+    "Cheesy soy pie": "Tarte au soja et au fromage",
+    "Cheesy ultra vegetarian pie": "Tarte ultra-végétarienne au fromage",
+    "Cheesy vegetarian pie": "Tarte végétarienne au fromage",
+    "Cottage cheese pie": "Tarte au fromage frais",
+    "Forager's pie": "Tarte du cueilleur",
+    "Fruity pot pie": "Tarte aux restes et aux fruits",
+    "Hunter's pot pie": "Tourte du chasseur",
+    "Mince nutmeat pie": "Tourte au hachis de noix",
+    "Mince sweetmeat pie": "Tourte sucrée au hachis de viande",
+    "Mushroom pie": "Tarte aux champignons",
+    "Nature's pot pie": "Tarte aux restes de la nature",
+    "Nutty pie": "Tarte aux noix",
+    "Nutty pot pie": "Tarte aux restes et aux noix",
+    "Pot pie quiche": "Quiche aux restes",
+    "Scavenged pie": "Tarte de récupération",
+    "Soy fruit pie": "Tarte au soja et aux fruits",
+    "Soy pot pie": "Tarte aux restes et au soja",
+    "Vegan pie": "Tarte végane",
+    "Vegetarian quiche": "Quiche végétarienne"
+  },
+  "cles": {
+    "spile-product-birchsapportion": "sève de bouleau",
+    "spile-product-maplesapportion": "sève d'érable",
+    "item-handbooktitle-pressedfruitmash": "Utilisations du marc de fruits (Expanded Foods)",
+    "item-handbooktext-pressedfruitmash": "Faites mijoter du marc de fruits dans une casserole avec un édulcorant et de l'eau pour commencer à préparer du <a href=\"handbook://item-expandedfoods:fruitleather-wet\">cuir de fruits</a>, une friandise fruitée, sucrée et moelleuse."
+  },
+  "emince": {
+    "carrot": "carottes émincées",
+    "cabbage": "chou émincé",
+    "onion": "oignons émincés",
+    "turnip": "navets émincés",
+    "parsnip": "panais émincés",
+    "pumpkin": "citrouille émincée",
+    "pickledcarrot": "carottes marinées émincées",
+    "pickledonion": "oignons marinés émincés",
+    "pickledturnip": "navets marinés émincés",
+    "pickledparsnip": "panais marinés émincés",
+    "pickledpumpkin": "citrouille marinée émincée",
+    "cassava": "manioc émincé",
+    "cattailroot": "racines de massette émincées",
+    "papyrusroot": "racines de papyrus émincées",
+    "bellpepper": "poivron émincé",
+    "pickledbellpepper": "poivron mariné émincé"
+  }
+}
