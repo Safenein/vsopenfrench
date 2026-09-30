@@ -80,6 +80,8 @@ se traduit lui-même.
 - **Vocabulaire du jeu de base** (`game/lang/fr.json`) : « Cuproplomb » et non « molybdochalkos »,
   majuscules comme « Clous et bandes (Bismuth) ». Chercher le terme officiel avant d'en inventer un.
 - Une valeur anglaise vide ne se traduit pas (`vs-audit` l'ignore déjà).
+- Un texte laissé identique à l'anglais déclenche un avertissement. Si c'est voulu (nom propre,
+  emprunt comme « Limoncello »), l'ajouter à `lint/identiques.txt`.
 - Le mod ne déclare **aucune dépendance** hormis le jeu : une traduction ne s'applique que si son
   mod est installé.
 

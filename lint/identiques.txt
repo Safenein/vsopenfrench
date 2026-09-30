@@ -1,0 +1,5 @@
+# Textes identiques en anglais et en français (noms propres, emprunts).
+# vs-lint n'avertit pas quand une traduction vaut l'un d'eux (casse ignorée).
+# Un texte par ligne ; les lignes commençant par # sont ignorées.
+Amaretto
+Limoncello

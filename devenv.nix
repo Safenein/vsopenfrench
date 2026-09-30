@@ -408,6 +408,14 @@ let
             return {}
         return data
 
+    # Textes qui s'écrivent pareil en français (noms propres, emprunts) : pas d'avertissement.
+    same_path = ROOT / "lint/identiques.txt"
+    same_in_french = set()
+    if same_path.exists():
+        for line in same_path.read_text("utf-8").splitlines():
+            if line.strip() and not line.startswith("#"):
+                same_in_french.add(line.strip().lower())
+
     files = repo_lang_files()
     if not files:
         print("vs-lint : aucun fichier de langue")
@@ -443,8 +451,8 @@ let
                 report("error", rel, f"balises différentes de l'anglais : {source!r}", key)
             if value.count("\n") != source.count("\n"):
                 report("warning", rel, "nombre de sauts de ligne différent de l'anglais", key)
-            if value == source:
-                report("warning", rel, "identique à l'anglais", key)
+            if value == source and value.strip().lower() not in same_in_french:
+                report("warning", rel, "identique à l'anglais (sinon l'ajouter à lint/identiques.txt)", key)
 
     print(f"vs-lint : {len(ours)} clé(s), {counts['error']} erreur(s), {counts['warning']} avertissement(s)")
     sys.exit(1 if counts["error"] else 0)
@@ -644,7 +652,7 @@ in
       enable = true;
       name = "vs-lint";
       entry = lib.getExe lint;
-      files = "^assets/.*\\.json$";
+      files = "^(assets/.*\\.json|lint/identiques\\.txt)$";
       pass_filenames = false;
     };
     nixfmt.enable = true;
