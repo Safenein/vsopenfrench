@@ -18,6 +18,7 @@ dans `devenv shell`.
 | Commande | Rôle |
 | --- | --- |
 | `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Référence : 14 405 clés / 55 mods sans aucune traduction du dépôt |
+| `vs-gen-wcfef [--check]` | génère `assets/wcfefcompat/lang/fr.json` depuis `gen/wcfefcompat.json` (gabarits × glossaire des fruits, clés manuelles) ; échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
 | `vs-lint` | JSON strict UTF-8 sans BOM, sans doublon ; clé présente en anglais dans le modpack ; non traduite ailleurs ; mêmes `{n}` et balises que l'anglais. Hook pre-commit |
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
 | `vs-test` | serveur jetable dans `work/server/` (`ServerLanguage: fr`), échoue sur `Failed to load language file` |
@@ -59,14 +60,14 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
   les lang des mods de façon tolérante et compte quand même ces clés comme traduites.
 - wildcraftfruit 1.5.0 : son `assets/wildcraftfruit/lang/fr.json` a un guillemet manquant ligne
   7034 (`…-sugarbeet-insturmentalcase`), le jeu ignore donc tout son français. À signaler à
-  l'auteur ; en attendant, ses noms de fruits (base des gabarits wcfefcompat) n'apparaissent pas en
-  jeu. `vs-test` le signale en avertissement.
+  l'auteur ; en attendant, ses fruits restent en anglais en jeu (le glossaire de
+  `gen/wcfefcompat.json` n'en dépend pas). `vs-test` le signale en avertissement.
 - Les messages du serveur sont traduits avec `ServerLanguage: fr` : `vs-test` attend
   `Entering runphase RunGame`, qui ne l'est pas.
 
 ## Priorités (voir la note)
 
-1. wcfefcompat par gabarits : 51 gabarits × noms de fruits français de `wildcraftfruit`.
+1. ~~wcfefcompat~~ : fait, généré par `vs-gen-wcfef` (ne jamais éditer son fr.json à la main).
 2. Héraldique (capes, heraldrybanners, morebanners) : motifs × couleurs, glossaire commun.
 3. Petits trous des mods déjà traduits.
 4. Texte suivi à la main : betterruins, pipeleaf, orekiwoofsbeehives.

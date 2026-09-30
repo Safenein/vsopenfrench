@@ -1,0 +1,275 @@
+{
+  "etats": {
+    "raw": " (non cuite)",
+    "partbaked": " (à moitié cuite)",
+    "perfect": "",
+    "charred": " (carbonisée)"
+  },
+  "gabarits": {
+    "fruitsyrupportion": {
+      "objet": [{"en": " syrup$", "fr": "Sirop {de}"}],
+      "tarte": [{"en": " syrup pie", "fr": "Tarte au sirop {de}{etat}"}]
+    },
+    "yogurt": {
+      "objet": [{"en": " yogurt$", "fr": "Yaourt {a}"}]
+    },
+    "gelatin": {
+      "objet": [{"en": " gelatin$", "fr": "Gélatine {a}"}],
+      "tarte": [{"en": " jelly pie", "fr": "Tarte à la gelée {de}{etat}"}]
+    },
+    "candiedfruit": {
+      "objet": [{"en": "^candied ", "fr": "{nom} confit{e}{s}"}]
+    },
+    "dryfruit": {
+      "objet": [
+        {"en": "^dried ", "fr": "{nom} séché{e}{s}"},
+        {"en": " raisin$", "fr": "{nom}", "table": "raisins"}
+      ],
+      "tarte": [
+        {"en": "^dried .+ pie", "fr": "Tarte aux {pl} séché{e}s{etat}"},
+        {"en": " raisin pie", "fr": "Tarte aux {pl}{etat}", "table": "raisins"}
+      ]
+    },
+    "dehydratedfruit": {
+      "objet": [{"en": "^dehydrated ", "fr": "{nom} déshydraté{e}{s}"}],
+      "tarte": [{"en": "^dehydrated .+ pie", "fr": "Tarte aux {pl} déshydraté{e}s{etat}"}]
+    },
+    "strongwineportion": {
+      "objet": [
+        {"en": "^strong .+ wine$", "fr": "Vin fort {de}"},
+        {"en": "^strong .+ cider$", "fr": "Cidre fort {de}"}
+      ]
+    },
+    "potentwineportion": {
+      "objet": [
+        {"en": "^fine .+ wine$", "fr": "Vin raffiné {de}"},
+        {"en": "^fine .+ cider$", "fr": "Cidre raffiné {de}"}
+      ]
+    },
+    "strongspiritportion": {
+      "objet": [
+        {"en": "^aged (.+ )?(brandy|liqueur)$", "fr": "Liqueur vieillie {de}"},
+        {"en": "^aged \\w+$", "fr": "{nom} vieilli{e}", "table": "eaux-de-vie"}
+      ]
+    },
+    "potentspiritportion": {
+      "objet": [
+        {"en": "^vintage (.+ )?(brandy|liqueur)$", "fr": "Liqueur millésimée {de}"},
+        {"en": "^vintage \\w+$", "fr": "{nom} millésimé{e}", "table": "eaux-de-vie"}
+      ]
+    },
+    "strongflowerwineportion": {
+      "objet": [{"en": "^strong .+ wine( portion)?$", "fr": "Vin fort {de}", "table": "fleurs"}]
+    },
+    "potentflowerwineportion": {
+      "objet": [{"en": "^fine .+ wine( portion)?$", "fr": "Vin raffiné {de}", "table": "fleurs"}]
+    }
+  },
+  "tables": {
+    "fruits": {
+      "achacha": {"fr": "achacha", "genre": "m"},
+      "apricot": {"fr": "abricot", "genre": "m"},
+      "aronia": {"fr": "baie d'aronia", "genre": "f"},
+      "avocado": {"fr": "avocat", "genre": "m"},
+      "ballart": {"fr": "baie de ballart", "genre": "f"},
+      "baneberry": {"fr": "baie d'actée en épi", "genre": "f"},
+      "barrelcactus": {"fr": "fruit de ferocactus", "genre": "m"},
+      "bearberry": {"fr": "baie de busserole", "genre": "f"},
+      "beautyberry": {"fr": "baie de callicarpe", "genre": "f"},
+      "belladonna": {"fr": "baie de belladone", "genre": "f"},
+      "bergamot": {"fr": "bergamote", "genre": "f"},
+      "bitternightshade": {"fr": "baie de morelle douce-amère", "genre": "f"},
+      "blackelder": {"fr": "baie de sureau noir", "genre": "f"},
+      "blackgrape": {"fr": "raisin noir", "genre": "m"},
+      "blackmulberry": {"fr": "mûre noire", "genre": "f"},
+      "blacknightshade": {"fr": "baie de morelle noire", "genre": "f"},
+      "blacknightshadeunripe": {"fr": "baie verte de morelle noire", "genre": "f"},
+      "bluequandong": {"fr": "quandong bleu", "genre": "m"},
+      "blueraspberry": {"fr": "framboise bleue", "genre": "f"},
+      "bluetongue": {"fr": "baie de langue bleue", "genre": "f"},
+      "brambleberry": {"fr": "mûre", "genre": "f"},
+      "bryony": {"fr": "baie de bryone", "genre": "f"},
+      "bunchberry": {"fr": "cornouille de Suède", "genre": "f"},
+      "bushlawyer": {"fr": "baie de ronce australe", "genre": "f"},
+      "caperberry": {"fr": "câpron", "genre": "m"},
+      "carrot": {"fr": "carotte", "genre": "f"},
+      "cashewapple": {"fr": "pomme de cajou", "genre": "f"},
+      "cheeseberry": {"fr": "baie de cyathode", "genre": "f"},
+      "cherryplum": {"fr": "prune-cerise", "genre": "f"},
+      "chinaberry": {"fr": "baie de mélia", "genre": "f"},
+      "citron": {"fr": "cédrat", "genre": "m"},
+      "cloudberry": {"fr": "plaquebière", "genre": "f"},
+      "cocoa": {"fr": "cacao", "genre": "m"},
+      "commonhackberry": {"fr": "micocoule occidentale", "genre": "f"},
+      "coralbead": {"fr": "baie de corail", "genre": "f"},
+      "crabapple": {"fr": "pommette", "genre": "f"},
+      "creepingpine": {"fr": "fraise de pin", "genre": "f"},
+      "crowberry": {"fr": "baie de camarine", "genre": "f"},
+      "crowseye": {"fr": "baie de parisette", "genre": "f"},
+      "cucumber": {"fr": "concombre", "genre": "m"},
+      "dewberry": {"fr": "mûre de ronce bleue", "genre": "f"},
+      "dogrose": {"fr": "cynorrhodon", "genre": "m"},
+      "elderberry": {"fr": "baie de sureau hièble", "genre": "f"},
+      "engkala": {"fr": "fruit de litsée", "genre": "m"},
+      "falseorange": {"fr": "orange des Osages", "genre": "f"},
+      "falsestrawberry": {"fr": "fraise des Indes", "genre": "f"},
+      "falsetomato": {"fr": "cerise d'amour", "genre": "f"},
+      "feijoa": {"fr": "feijoa", "genre": "m"},
+      "fig": {"fr": "figue", "genre": "f"},
+      "fingerlime": {"fr": "citron caviar", "genre": "m", "pluriel": "citrons caviar"},
+      "flaxlily": {"fr": "baie de dianelle", "genre": "f"},
+      "foxgrape": {"fr": "raisin de renard", "genre": "m"},
+      "fractureberry": {"fr": "baie de brise-roc", "genre": "f"},
+      "gardenstrawberry": {"fr": "fraise", "genre": "f"},
+      "ginkgopulp": {"fr": "ginkgo", "genre": "m"},
+      "gooseberry": {"fr": "groseille à maquereau", "genre": "f"},
+      "granadilla": {"fr": "grenadille", "genre": "f"},
+      "grapefruit": {"fr": "pamplemousse", "genre": "m"},
+      "greengage": {"fr": "reine-claude", "genre": "f"},
+      "guajava": {"fr": "goyave", "genre": "f"},
+      "hackberry": {"fr": "micocoule", "genre": "f"},
+      "hairyappleberry": {"fr": "baie-pomme velue", "genre": "f"},
+      "hawthorn": {"fr": "baie d'aubépine", "genre": "f"},
+      "honeydewmelon": {"fr": "melon miel", "genre": "m", "pluriel": "melons miel"},
+      "honeypots": {"fr": "baie de pots-à-miel", "genre": "f"},
+      "honeysuckle": {"fr": "camerise", "genre": "f"},
+      "huckleberry": {"fr": "airelle de montagne", "genre": "f"},
+      "husktomato": {"fr": "physalis", "genre": "m"},
+      "illawarra": {"fr": "prune d'Illawarra", "genre": "f"},
+      "ivy": {"fr": "baie de lierre", "genre": "f"},
+      "jackfruit": {"fr": "jacque", "genre": "m"},
+      "jalapeno": {"fr": "piment", "genre": "m"},
+      "jujube": {"fr": "jujube", "genre": "m"},
+      "juniper": {"fr": "baie de genièvre", "genre": "f"},
+      "kakaha": {"fr": "baie de kakaha", "genre": "f"},
+      "kawakawa": {"fr": "baie de kawakawa", "genre": "f"},
+      "kiwi": {"fr": "kiwi", "genre": "m"},
+      "knyazberry": {"fr": "framboise arctique", "genre": "f"},
+      "kolkhoznitsa": {"fr": "melon kolkhoznitsa", "genre": "m", "pluriel": "melons kolkhoznitsa"},
+      "kolomikta": {"fr": "kiwi arctique", "genre": "m"},
+      "kumquat": {"fr": "kumquat", "genre": "m"},
+      "lemon": {"fr": "citron", "genre": "m"},
+      "lemonaspen": {"fr": "baie de tremble citron", "genre": "f"},
+      "lillypillyblue": {"fr": "lilly-pilly bleu", "genre": "m", "pluriel": "lilly-pillys bleus"},
+      "lillypillypink": {"fr": "lilly-pilly rose", "genre": "m", "pluriel": "lilly-pillys roses"},
+      "lillypillywhite": {"fr": "lilly-pilly blanc", "genre": "m", "pluriel": "lilly-pillys blancs"},
+      "lime": {"fr": "citron vert", "genre": "m"},
+      "lingonberry": {"fr": "airelle rouge", "genre": "f"},
+      "loquat": {"fr": "nèfle du Japon", "genre": "f"},
+      "mandarin": {"fr": "mandarine", "genre": "f"},
+      "maritabits": {"fr": "marita", "genre": "m"},
+      "midyimberry": {"fr": "baie de midyim", "genre": "f"},
+      "mingimingi": {"fr": "baie de mingimingi", "genre": "f"},
+      "mirzamelon": {"fr": "melon mirza", "genre": "m", "pluriel": "melons mirza"},
+      "munthari": {"fr": "baie de munthari", "genre": "f"},
+      "muskmelon": {"fr": "melon musqué", "genre": "m"},
+      "naranjilla": {"fr": "narangille", "genre": "f"},
+      "numnum": {"fr": "prune du Natal", "genre": "f"},
+      "orangebellpepper": {"fr": "poivron", "genre": "m"},
+      "pandanbits": {"fr": "segments de hala", "genre": "m", "nombre": "pluriel"},
+      "passionfruit": {"fr": "fruit de la passion", "genre": "m"},
+      "pilo": {"fr": "baie de pilo", "genre": "f"},
+      "pineheath": {"fr": "baie de bruyère de pin", "genre": "f"},
+      "pinklemon": {"fr": "citron rose", "genre": "m"},
+      "pittedapricot": {"fr": "abricot", "genre": "m"},
+      "pittedbeachalmond": {"fr": "pulpe de badame", "genre": "f"},
+      "pittedbreadfruit": {"fr": "fruit à pain", "genre": "m"},
+      "pittedcherry": {"fr": "cerise", "genre": "f"},
+      "pittedchinaberry": {"fr": "baie de mélia", "genre": "f"},
+      "pittedyew": {"fr": "baie d'if", "genre": "f"},
+      "pokeberry": {"fr": "baie de phytolaque", "genre": "f"},
+      "pomelo": {"fr": "pomélo", "genre": "m"},
+      "pricklyheath": {"fr": "baie de gaulthérie mucronée", "genre": "f"},
+      "pumpkin": {"fr": "citrouille", "genre": "f"},
+      "purpleappleberry": {"fr": "baie-pomme violette", "genre": "f"},
+      "purpleplum": {"fr": "prune", "genre": "f"},
+      "quince": {"fr": "coing", "genre": "m"},
+      "rambutan": {"fr": "ramboutan", "genre": "m"},
+      "raspberry": {"fr": "framboise", "genre": "f"},
+      "rawginkgo": {"fr": "ginkgo", "genre": "m"},
+      "redgrape": {"fr": "raisin rouge", "genre": "m"},
+      "redquandong": {"fr": "quandong rouge", "genre": "m"},
+      "roseapple": {"fr": "jambose", "genre": "f"},
+      "rowanberry": {"fr": "baie de sorbier", "genre": "f"},
+      "rubysaltbush": {"fr": "baie de saltbush rubis", "genre": "f"},
+      "sallowthorn": {"fr": "baie d'argousier", "genre": "f"},
+      "sandpear": {"fr": "poire asiatique", "genre": "f"},
+      "seamango": {"fr": "mangue de mer", "genre": "f"},
+      "silvernettle": {"fr": "baie de pipturus", "genre": "f"},
+      "sloe": {"fr": "prunelle", "genre": "f"},
+      "snowberry": {"fr": "baie de symphorine", "genre": "f"},
+      "sorb": {"fr": "corme", "genre": "f"},
+      "spindle": {"fr": "baie de fusain", "genre": "f"},
+      "strawberry": {"fr": "fraise des bois", "genre": "f"},
+      "sugarhackberry": {"fr": "micocoule du Mississippi", "genre": "f"},
+      "sumac": {"fr": "sumac", "genre": "m"},
+      "tomatillo": {"fr": "tomatille", "genre": "f"},
+      "tomato": {"fr": "tomate", "genre": "f"},
+      "trifoliate": {"fr": "orange trifoliée", "genre": "f"},
+      "turkscap": {"fr": "fruit d'hibiscus piment", "genre": "m"},
+      "ugni": {"fr": "goyave du Chili", "genre": "f"},
+      "virgingrape": {"fr": "raisin de vigne vierge", "genre": "m"},
+      "wani": {"fr": "mangue blanche", "genre": "f"},
+      "watermelon": {"fr": "pastèque", "genre": "f"},
+      "whitegrape": {"fr": "raisin blanc", "genre": "m"},
+      "wolfberry": {"fr": "baie de bois-joli", "genre": "f"},
+      "woodbine": {"fr": "baie de chèvrefeuille des bois", "genre": "f"},
+      "yuzu": {"fr": "yuzu", "genre": "m"}
+    },
+    "eaux-de-vie": {
+      "apricot": {"fr": "chacha", "genre": "f"},
+      "cashewapple": {"fr": "feni", "genre": "m"},
+      "cherryplum": {"fr": "chacha", "genre": "f"},
+      "citron": {"fr": "limoncello", "genre": "m"},
+      "grappa": {"fr": "grappa", "genre": "f"},
+      "juniper": {"fr": "gin", "genre": "m"},
+      "purpleplum": {"fr": "chacha", "genre": "f"},
+      "ugni": {"fr": "murtado", "genre": "m"}
+    },
+    "raisins": {
+      "foxgrape": {"fr": "raisin sec violet", "genre": "m"},
+      "redgrape": {"fr": "raisin sec rouge", "genre": "m"},
+      "virgingrape": {"fr": "raisin sec amer", "genre": "m"},
+      "whitegrape": {"fr": "raisin sec blond", "genre": "m"}
+    },
+    "fleurs": {
+      "currant": {"fr": "fleurs de groseillier", "genre": "f", "nombre": "pluriel"},
+      "elder": {"fr": "fleurs de sureau", "genre": "f", "nombre": "pluriel"},
+      "hibiscus": {"fr": "pétales d'hibiscus", "genre": "m", "nombre": "pluriel"},
+      "honeysuckle": {"fr": "fleurs de chèvrefeuille", "genre": "f", "nombre": "pluriel"},
+      "orangeblossom": {"fr": "fleurs d'oranger", "genre": "f", "nombre": "pluriel"},
+      "passionflower": {"fr": "fleurs de passiflore", "genre": "f", "nombre": "pluriel"},
+      "rose": {"fr": "pétales de rose", "genre": "m", "nombre": "pluriel"}
+    }
+  },
+  "cles": {
+    "itemdesc-fruitsyrupportion-*": "Épais et sucré, parfait sur les friandises !",
+    "itemdesc-candiedfruit-*": "La plus sucrée des friandises ! En manger vous fera vous sentir mieux que jamais.",
+    "itemdesc-yogurt-*": "Fruité et crémeux !",
+    "itemdesc-gelatin-*": "Le goût est légèrement salé...",
+    "item-strongwineportion-pomace": "Piquette forte",
+    "incontainer-item-strongwineportion-pomace": "Piquette forte",
+    "item-potentwineportion-pomace": "Piquette raffinée",
+    "incontainer-item-potentwineportion-pomace": "Piquette raffinée",
+    "item-liqueurportion-limencello": "Limoncello",
+    "incontainer-item-liqueurportion-limencello": "Limoncello",
+    "recipeingredient-item-liqueurportion-limencello-insturmentalcase": "limoncello",
+    "item-liqueurportion-amaretto": "Amaretto",
+    "incontainer-item-liqueurportion-amaretto": "Amaretto",
+    "recipeingredient-item-liqueurportion-amaretto-insturmentalcase": "amaretto",
+    "item-chocolatebread-dough": "Pâte à pain aux pépites de chocolat",
+    "item-chocolatebread-partbaked": "Pain aux pépites de chocolat (à moitié cuit)",
+    "item-chocolatebread-cooked": "Pain aux pépites de chocolat (cuit)",
+    "item-chocolatebread-charred": "Pain aux pépites de chocolat (carbonisé)",
+    "item-chocolatebread-syruppartbaked": "Pain aux pépites de chocolat (au sirop, à moitié cuit)",
+    "item-chocolatebread-syrup": "Pain aux pépites de chocolat (au sirop)",
+    "item-chocolatebread-syrupcharred": "Pain aux pépites de chocolat (au sirop, carbonisé)",
+    "item-chocolatemuffin-dough": "Pâte à muffin aux pépites de chocolat",
+    "item-chocolatemuffin-partbaked": "Muffin aux pépites de chocolat (à moitié cuit)",
+    "item-chocolatemuffin-cooked": "Muffin aux pépites de chocolat (cuit)",
+    "item-chocolatemuffin-charred": "Muffin aux pépites de chocolat (carbonisé)",
+    "item-chocolatemuffin-syruppartbaked": "Muffin aux pépites de chocolat (au sirop, à moitié cuit)",
+    "item-chocolatemuffin-syrup": "Muffin aux pépites de chocolat (au sirop)",
+    "item-chocolatemuffin-syrupcharred": "Muffin aux pépites de chocolat (au sirop, carbonisé)"
+  }
+}

@@ -246,6 +246,113 @@ let
     print(f"Total : {total} clé(s) dans {mods} mod(s) -> {out}")
   '';
 
+  genWcfef = mkPy "vs-gen-wcfef" ''
+    """Génère assets/wcfefcompat/lang/fr.json depuis gen/wcfefcompat.json.
+
+    Usage: vs-gen-wcfef [--check]
+    Chaque clé anglaise de wcfefcompat prend sa valeur dans « cles », sinon dans le premier
+    gabarit de son type dont la regex « en » correspond au texte anglais, avec le nom français
+    du code tiré de la table du gabarit (« fruits » par défaut). --check échoue si le fichier
+    livré diffère du fichier généré.
+    """
+    DATA = ROOT / "gen/wcfefcompat.json"
+    OUT = ROOT / "assets/wcfefcompat/lang/fr.json"
+    VOWELS = "aàâeéèêëiîïoôuùûüœ"
+    PREPOSITIONS = {"de", "du", "des", "à", "au", "aux", "en"}
+
+    data = json.loads(DATA.read_text("utf-8"))
+    types = "|".join(sorted(map(re.escape, data["gabarits"]), key=len, reverse=True))
+    states = "|".join(data["etats"])
+    PIE = re.compile(rf"^pie-single-wcfefcompat:({types})-(.+)-({states})$")
+    ITEM = re.compile(
+        rf"^(?:incontainer-item-|game:recipeingredient-item-|recipeingredient-item-|item-"
+        rf"|game:meal-ingredient-yogurtmeal-primary-yogurt-)({types})-(.+?)(?:-insturmentalcase)?$"
+    )
+
+    def plural_word(word):
+        if word[-1] in "sxz":
+            return word
+        return word + ("x" if word.endswith(("eau", "eu")) else "s")
+
+    def plural(name):
+        """Met au pluriel les mots qui précèdent le premier complément : « baies de sureau noir »."""
+        words = name.split(" ")
+        for i, word in enumerate(words):
+            if word in PREPOSITIONS or word.startswith("d'"):
+                return " ".join(words)
+            words[i] = "-".join(plural_word(part) for part in word.split("-"))
+        return " ".join(words)
+
+    def fields(entry):
+        name, fem = entry["fr"], entry["genre"] == "f"
+        many = entry.get("nombre") == "pluriel"
+        elide = entry.get("elision", name[0].lower() in VOWELS)
+        if many:
+            article = "aux "
+        elif elide:
+            article = "à l'"
+        else:
+            article = "à la " if fem else "au "
+        return {
+            "nom": name,
+            "pl": entry.get("pluriel", name if many else plural(name)),
+            "de": ("d'" if elide else "de ") + name,
+            "a": article + name,
+            "e": "e" if fem else "",
+            "s": "s" if many else "",
+        }
+
+    def same_case(text, model):
+        first = text[0].upper() if model[0].isupper() else text[0].lower()
+        return first + text[1:]
+
+    def translate(key, text):
+        if key in data["cles"]:
+            return data["cles"][key], None
+        state = ""
+        m = PIE.match(key)
+        if m:
+            kind, code, state = m.group(1), m.group(2), m.group(3)
+            form = "tarte"
+        elif m := ITEM.match(key):
+            kind, code = m.groups()
+            form = "objet"
+        else:
+            return None, "aucun gabarit pour cette clé"
+        for rule in data["gabarits"][kind].get(form, []):
+            if re.search(rule["en"], text, re.I):
+                table = rule.get("table", "fruits")
+                entry = data["tables"][table].get(code)
+                if entry is None:
+                    return None, f"code « {code} » absent de la table « {table} »"
+                value = rule["fr"].format(etat=data["etats"].get(state, ""), **fields(entry))
+                return same_case(value, text), None
+        return None, f"texte anglais hors gabarit ({kind}, {form})"
+
+    english, french, _ = load_modpack()
+    result, missing = {}, 0
+    for qkey, (domain, key, text) in english["wcfefcompat"].items():
+        if qkey in french or not text.strip():
+            continue
+        value, error = translate(key, text)
+        if error:
+            missing += 1
+            print(f"{key}: {error} : {text}", file=sys.stderr)
+        else:
+            result[key] = value
+
+    rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+    if "--check" in sys.argv[1:]:
+        if not OUT.exists() or OUT.read_text("utf-8") != rendered:
+            sys.exit(f"vs-gen-wcfef : {OUT.relative_to(ROOT)} n'est pas à jour, relancer vs-gen-wcfef")
+    else:
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(rendered, encoding="utf-8")
+        print(f"{len(result)} clé(s) écrites dans {OUT.relative_to(ROOT)}")
+    if missing:
+        sys.exit(f"vs-gen-wcfef : {missing} clé(s) sans traduction")
+  '';
+
   lint = mkPy "vs-lint" ''
     """Vérifie les fichiers de langue du dépôt avant livraison.
 
@@ -379,6 +486,7 @@ in
     vsServer
     lockMods
     audit
+    genWcfef
     lint
     build
   ];
@@ -546,6 +654,7 @@ in
   enterShell = ''
     echo "vsopenfrench — jeu $VS_GAME_VERSION, $(ls "$VS_MODS_DIR" | wc -l) mods de référence"
     echo "  vs-audit     textes sans français -> work/todo/<mod>.json"
+    echo "  vs-gen-wcfef génère assets/wcfefcompat/lang/fr.json (gen/wcfefcompat.json)"
     echo "  vs-lint      vérifie assets/**/fr.json"
     echo "  vs-build     construit dist/vsopenfrench_<version>.zip"
     echo "  vs-test      serveur jetable avec le modpack et le mod"
@@ -556,6 +665,7 @@ in
   '';
 
   enterTest = ''
+    vs-gen-wcfef --check
     vs-lint
     python3 -m zipfile -t "$(vs-build)"
   '';
