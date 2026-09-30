@@ -111,8 +111,13 @@ let
         return (MODINFO_FIELD("modid").search(text).group(1).lower(),
                 MODINFO_FIELD("version").search(text).group(1))
 
+    # Packs de traduction française tiers présents dans le modpack de référence. vsopenfrench vise à
+    # couvrir leur périmètre avec ses propres traductions : leurs textes ne comptent pas comme
+    # traduits (audit, lint, vs-gen). Ils restent chargés pour comparer la terminologie.
+    TRANSLATION_PACKS = {"modtraductionsfr", "vintagestoryfr", "frtraductionmods"}
+
     def load_modpack():
-        """Textes du modpack : anglais par mod, et qui traduit quoi en français."""
+        """Textes du modpack : anglais par mod, et qui traduit quoi en français (hors packs tiers)."""
         zips = sorted(MODS_DIR.glob("*.zip"))
         archives = {}
         for z in zips:
@@ -134,7 +139,8 @@ let
                     continue  # textes de compatibilité d'un mod absent
                 for key, text in entries(archive.read(name)).items():
                     if lang == "fr":
-                        french[qualify(key, domain)].add(modid)
+                        if modid not in TRANSLATION_PACKS:
+                            french[qualify(key, domain)].add(modid)
                     else:
                         english[modid][qualify(key, domain)] = (domain, key, text)
         return english, french, game_english
@@ -319,7 +325,12 @@ let
             if qkey not in french and text.strip():
                 yield qkey, text
 
+    placed = set()  # clés qualifiées déjà livrées : une clé déclarée par plusieurs mods ne sort qu'une fois
+
     def put(domain, qkey, value):
+        if qkey in placed:
+            return
+        placed.add(qkey)
         key_domain, key = qkey.split(":", 1)
         outputs[domain][key if key_domain == domain else qkey] = value
 
@@ -520,6 +531,8 @@ let
         key = qkey.split(":", 1)[1] if qkey.startswith("expandedfoods:") else qkey
         if key in expanded["cles"]:
             return expanded["cles"][key], None
+        if text in expanded.get("textes", {}):
+            return expanded["textes"][text], None
         if m := CHOPPED.match(key):
             if m.group(1) in expanded["emince"]:
                 return expanded["emince"][m.group(1)], None

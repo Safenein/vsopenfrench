@@ -23,6 +23,7 @@ Eucalyptus
 Fragile
 Gecko
 Ginkgo
+Gozinaki
 Herbivore
 intoxication
 Jacaranda
@@ -32,10 +33,12 @@ Karee
 Kauri
 Khiaz
 Kobold
+Kumquat
 Limoncello
 Long
 Malachite
 Mors
+Muffin
 Nickel
 Ohia
 Omnivore
@@ -43,6 +46,7 @@ Onyx
 Orange
 Oriental
 Parasite
+Pemmican
 Pestilens
 Rage
 Rictus
