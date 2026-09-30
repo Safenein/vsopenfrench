@@ -23,9 +23,18 @@ jobs:
       - uses: ./.github/actions/setup-devenv
 
       # Hooks git (vs-lint, nixfmt) sur tout le dépôt, puis enterTest
-      # (vs-lint et contrôle du zip). vs-lint annote les lignes fautives.
+      # (vs-gen --check, vs-lint et contrôle du zip). devenv n'affiche la
+      # sortie d'enterTest qu'en cas d'échec : les deux étapes suivantes
+      # relancent ces contrôles pour qu'ils apparaissent dans le journal.
       - name: devenv test
         run: devenv test
+
+      - name: Fichiers générés à jour (vs-gen --check)
+        run: devenv shell -- vs-gen --check
+
+      # vs-lint annote les lignes fautives dans la pull request.
+      - name: Fichiers de langue (vs-lint)
+        run: devenv shell -- vs-lint
 
       - name: Construire le zip
         run: devenv shell -- vs-build

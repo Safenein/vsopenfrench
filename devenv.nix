@@ -512,6 +512,9 @@ let
         sys.exit("vs-gen : pas à jour, relancer vs-gen : " + ", ".join(stale))
     if missing:
         sys.exit(f"vs-gen : {missing} clé(s) sans traduction")
+    if check:
+        keys = sum(len(values) for values in outputs.values())
+        print(f"vs-gen : {len(outputs)} fichier(s) générés à jour, {keys} clé(s)")
   '';
 
   lint = mkPy "vs-lint" ''
