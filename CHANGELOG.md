@@ -5,6 +5,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+## [0.1.0] - 2026-10-01
+
 - Relecture : héraldique en émaux (« Bordure de gueules », « Lion de sable », « Champ au
   naturel ») ; noms de fruits de wcfefcompat repris de Wildcraft: Fruits and Nuts pour que les
   deux mods concordent ; Pipeleaf : « scaferlati » au lieu de « brins » ; acier de cémentation
