@@ -5,6 +5,9 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Nouveaux mods du modpack de référence (119 mods) : Aldi's Classes et ses extensions (advanced
+  features, race patch ; 1 369 textes : classes, traits, remèdes, soupières, havresac), Valkyrja
+  Hair (118), Horns & Antlers (24), More Undergarments Updated (24).
 - Logo et `modicon.png` en 480 × 480 px (format demandé par la ModDB).
 
 ## [0.1.0] - 2026-10-01

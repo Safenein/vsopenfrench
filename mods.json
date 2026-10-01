@@ -16,6 +16,34 @@
       "sha256": "f1cf9bc942387eb29711543efdc77495ff9392a4afd975cf21bffda0e2654e8c"
     },
     {
+      "modid": "aldiclasses",
+      "version": "2.4.1",
+      "fileid": 126437,
+      "url": "https://moddbcdn.vintagestory.at/aldiclasses2.4.1_6afb253e6b0c0f0669c0eb6e09938d3d.zip?dl=aldiclasses2.4.1.zip",
+      "sha256": "55d32de1ced8dd24310bb72e7e6253d0d4748660ad9cd204f6aed9a2905ebe99"
+    },
+    {
+      "modid": "aldiclassesadvancedfeatures",
+      "version": "2.2.0",
+      "fileid": 126442,
+      "url": "https://moddbcdn.vintagestory.at/aldiclassesadvancedf_76efcbc0a29c901874d41ab9647ac7c4.zip?dl=aldiclassesadvancedfeatures2.2.0.zip",
+      "sha256": "8f647ffb58c42a8d4a5bb4fbcadb12b019fda88f7454f1f31c839086ae17edad"
+    },
+    {
+      "modid": "aldiclassesracepatch",
+      "version": "2.1.1",
+      "fileid": 109738,
+      "url": "https://moddbcdn.vintagestory.at/aldiclassesracepatch_6b464ecc5a103482cd9c3948b7d7d9c1.zip?dl=aldiclassesracepatch2.1.1.zip",
+      "sha256": "1db114343d243c901fb9775f4fed92eadfe58b7b7d621f13a8d092a45c8d9589"
+    },
+    {
+      "modid": "aldiclassesvanillapatch",
+      "version": "2.1.0",
+      "fileid": 102443,
+      "url": "https://moddbcdn.vintagestory.at/aldiclassesvanillapa_2e98f9f4da64f0f3015b9fb297c706d6.zip?dl=aldiclassesvanillapatch2.1.0.zip",
+      "sha256": "7dc679a3f3a6013bd5dde8d15105920a6a1752e25dc3463674f1535c71d92195"
+    },
+    {
       "modid": "allclasses",
       "version": "2.3.2",
       "fileid": 115237,
@@ -28,6 +56,13 @@
       "fileid": 114075,
       "url": "https://moddbcdn.vintagestory.at/animalcages_v5.0.1_ce263a94d91f841c4ddef4ef26aec5bc.zip?dl=animalcages_v5.0.1.zip",
       "sha256": "5855cb23422c7ea4c39c95b77ce23860c16500aa1c50ebb999c9e88513c518df"
+    },
+    {
+      "modid": "antlershorns",
+      "version": "1.5.1",
+      "fileid": 93459,
+      "url": "https://moddbcdn.vintagestory.at/antlershorns1.5.1_56ab59f9fac3651fc042f9d56aaa7bd3.zip?dl=antlershorns1.5.1.zip",
+      "sha256": "b2b41ba2489a5e142ef1f63b4f26e5e6c0cd6e420dfdcf1df8f6ae5cacdb199e"
     },
     {
       "modid": "apegrapes",
@@ -430,6 +465,13 @@
       "sha256": "878ed3ecff17661e8a2f9b9155cffa4779e6b7970df0f2f5ce13d83dcbdc0755"
     },
     {
+      "modid": "moreundergarmentsupdated",
+      "version": "0.0.10",
+      "fileid": 67967,
+      "url": "https://moddbcdn.vintagestory.at/More+Undergarments_c69ae0dfad9cad9fa4c3aa84fc1e569a.zip?dl=More%20Undergarments.zip",
+      "sha256": "f360aacb8e5899ad41d4aff8bbbf8c5f43631be514baa0360f69fb2d28dc107c"
+    },
+    {
       "modid": "ndlflowergrowth",
       "version": "2.6.0",
       "fileid": 118087,
@@ -701,6 +743,13 @@
       "fileid": 121815,
       "url": "https://moddbcdn.vintagestory.at/universaldisplaylib__85e133f72c83b4747290c42575d71f92.zip?dl=universaldisplaylib_1.1.3.zip",
       "sha256": "5c1dc76df665e25515f79cafbe059178c2eed46289d9dac352b7e9269e49c0eb"
+    },
+    {
+      "modid": "valkyrjahair",
+      "version": "3.0.0",
+      "fileid": 88436,
+      "url": "https://moddbcdn.vintagestory.at/valkyrjahair-3.0_b95fb00a0ef7e3cf53f2998a53de658b.zip?dl=valkyrjahair-3.0.zip",
+      "sha256": "5003735f12982096fc502ada614adf861d2acbd333242c0b64ffa2d28f360d40"
     },
     {
       "modid": "vaultandroll",
