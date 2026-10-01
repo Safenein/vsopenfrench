@@ -816,12 +816,13 @@ in
     };
 
     vs-logo = {
-      description = "Régénère docs/logo.png (512 px) et modicon.png (128 px).";
+      description = "Régénère docs/logo.png et modicon.png (480 px, format demandé par la ModDB).";
       packages = [ pkgs.imagemagick ];
       exec = ''
         set -euo pipefail
         cd "$DEVENV_ROOT"
-        # Bulle parchemin sur fond bois, cadre laiton, bande tricolore.
+        # Bulle parchemin sur fond bois, cadre laiton, bande tricolore. Dessin sur 512 px,
+        # réduit à 480 px.
         magick -size 512x512 xc:none \
           -fill '#3a2e22' -stroke '#c9a66b' -strokewidth 14 -draw 'roundrectangle 10,10 501,501 72,72' \
           -stroke none -fill '#efe3c8' \
@@ -832,8 +833,8 @@ in
           -fill '#1f3a93' -draw 'rectangle 142,290 232,312' \
           -fill '#fbf8f1' -draw 'rectangle 233,290 279,312' \
           -fill '#c8102e' -draw 'rectangle 280,290 370,312' \
-          -strip docs/logo.png
-        magick docs/logo.png -filter Lanczos -resize 128x128 -strip modicon.png
+          -filter Lanczos -resize 480x480 -depth 8 -strip docs/logo.png
+        cp docs/logo.png modicon.png
         echo "docs/logo.png modicon.png"
       '';
     };

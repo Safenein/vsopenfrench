@@ -5,6 +5,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Logo et `modicon.png` en 480 × 480 px (format demandé par la ModDB).
+
 ## [0.1.0] - 2026-10-01
 
 - Relecture : héraldique en émaux (« Bordure de gueules », « Lion de sable », « Champ au

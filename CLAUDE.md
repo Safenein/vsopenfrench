@@ -23,7 +23,7 @@ dans `devenv shell`.
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
 | `vs-test` | serveur jetable dans `work/server/` (`ServerLanguage: fr`), échoue sur `Failed to load language file` |
 | `vs-install` | copie le zip dans `~/.config/VintagestoryData/Mods` (`VS_CLIENT_MODS` pour changer) |
-| `vs-logo` | régénère `docs/logo.png` (512 px, ModDB/GitHub) et `modicon.png` (128 px) ; police Libertinus Serif de nixpkgs |
+| `vs-logo` | régénère `docs/logo.png` et `modicon.png`, identiques (480 px, format de la ModDB) ; police Libertinus Serif de nixpkgs |
 | `vs-release <version>` | met à jour modinfo + CHANGELOG, commit, tag `v<version>`, push, `gh release create` |
 | `vs-lock-mods <dossier> [jeu]` | régénère `mods.json` via l'API ModDB (`api/mod/<modid>`, repli sur l'urlalias ; champ `moddb` pour forcer un id) |
 | `vs-check-updates [--write] [--markdown f]` | cherche sur la ModDB la release la plus récente de chaque mod de `mods.json` compatible avec sa version du jeu ; `--write` met `mods.json` à jour |
