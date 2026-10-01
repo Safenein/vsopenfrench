@@ -2,7 +2,7 @@
   "type": "content",
   "modid": "vsopenfrench",
   "name": "Traductions françaises complémentaires",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "side": "Universal",
   "requiredOnClient": false,
   "requiredOnServer": false,
