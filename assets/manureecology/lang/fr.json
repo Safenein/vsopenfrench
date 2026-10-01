@@ -1,0 +1,21 @@
+{
+  "item-manure-rich": "Fumier riche",
+  "item-manure-dense": "Fumier dense",
+  "item-manure-dry": "Fumier sec",
+  "item-manure-dark": "Fumier sombre",
+  "item-compostmash-rich": "Pâte de compost de fumier riche",
+  "item-compostmash-dense": "Pâte de compost de fumier dense",
+  "item-compostmash-dry": "Pâte de compost de fumier sec",
+  "item-compostmash-dark": "Pâte de compost de fumier sombre",
+  "item-compost-rich": "Compost de fumier riche",
+  "item-compost-dense": "Compost de fumier dense",
+  "item-compost-dry": "Compost de fumier sec",
+  "item-compost-dark": "Compost de fumier sombre",
+  "itemdesc-manure-rich": "Riche en azote. Produit par des animaux comme la volaille. Les animaux sauvages ne produisent pas de fumier.",
+  "itemdesc-manure-dense": "Riche en phosphore. Produit par des animaux comme les lièvres. Les animaux sauvages ne produisent pas de fumier.",
+  "itemdesc-manure-dry": "Riche en potassium. Produit par des animaux comme les porcs. Les animaux sauvages ne produisent pas de fumier.",
+  "itemdesc-manure-dark": "Nutriments équilibrés. Produit par des animaux comme les moutons, les chèvres et les cerfs. Les animaux sauvages ne produisent pas de fumier.",
+  "itemdesc-compostmash-*": "Un mélange de compost de fumier préparé, prêt pour le mûrissement en baril.",
+  "manureecology:handbook-title": "Écologie du fumier",
+  "manureecology:handbook-text": "<font size=24 weight=bold align=center>Écologie du fumier</font>\n\nSeuls les animaux domestiques produisent du fumier — les animaux sauvages n’en produisent pas. Différentes espèces produisent différents types de fumier, chacun avec des propriétés d’engrais distinctes."
+}

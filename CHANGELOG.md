@@ -5,6 +5,16 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Intégration d'[Aethernia Translation](https://mods.vintagestory.at/show/mod/64379) 0.0.15
+  (DiZurix, avec son accord) : 14 633 textes pour 58 mods. Seuls les trous sont repris : quand nous
+  avions déjà une traduction, la nôtre est gardée, et les clés que les mods traduisent eux-mêmes
+  sont écartées. Vocabulaire aligné sur le jeu de base (« engrenage temporel », « séraphin »).
+- Modpack de référence étendu de 119 à 185 mods (Rustbound Magic, Steep and Brew, Elk
+  Accessories/Adornments, Portcullis, Posts and Beams, Shipwright, Combat Overhaul Fork…) ;
+  leurs 384 textes que le pack ne couvrait pas sont traduits (XSkills : couture, brasserie,
+  navigation, équitation ; Vinconomy, Armory, Downed, Dead…).
+- skeletons : 4 attributs de personnage retirés, désormais traduits par Combat Overhaul Fork.
+
 ## [0.2.0] - 2026-10-01
 
 - Nouveaux mods du modpack de référence (119 mods) : Aldi's Classes et ses extensions (advanced

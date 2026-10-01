@@ -1,0 +1,6 @@
+{
+  "quiversandsheaths:setting-allow_lanterns_in_tool_holster": "Autoriser les lanternes dans l'étui à outils",
+  "quiversandsheaths:setting-comment-allow_lanterns_in_tool_holster": "Permet de stocker de petites lanternes portatives dans l'étui à outils. Les lanternes stockées continuent d'émettre de la lumière, réduite de 4 niveaux.",
+  "quiversandsheaths:handbook-craftingappearance-title": "Apparence de fabrication",
+  "quiversandsheaths:handbook-craftingappearance-text": "Les recettes peuvent accepter plusieurs variantes de matériaux correspondantes. Les ingrédients en cuir, tissu, métal et bois désignés par la recette conservent leur apparence sur l'objet fabriqué."
+}

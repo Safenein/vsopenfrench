@@ -1,0 +1,22 @@
+{
+  "config-title-general": "Génération générale des donjons",
+  "config-title-coalmine": "Mine de charbon",
+  "config-title-cleandungeon": "Donjon propre",
+  "config-title-catacombs": "Catacombes",
+  "config-setting-global-min-distance": "Distance minimale entre les donjons",
+  "config-setting-story-structure-distance": "Distance minimale par rapport aux structures scénarisées",
+  "config-setting-enabled": "Activé",
+  "config-setting-spawn-chance": "Chance d'apparition",
+  "config-setting-min-spawn-distance": "Distance minimale par rapport au point d'apparition du monde",
+  "config-setting-flatland-threshold": "Exigence de terrain plat",
+  "config-setting-min-rooms": "Nombre minimal de salles ou de sections",
+  "config-setting-max-rooms": "Nombre maximal de salles ou de sections",
+  "config-comment-global-min-distance": "Distance minimale en blocs entre les donjons générés, quel que soit leur type. Des valeurs plus élevées espacent davantage les donjons.",
+  "config-comment-story-structure-distance": "Distance minimale en blocs entre un donjon et une structure scénarisée importante. Des valeurs plus élevées créent une zone protégée plus grande autour des emplacements scénarisés.",
+  "config-comment-enabled": "Détermine si ce type de donjon peut être généré. Lorsque désactivé, sa chance d'apparition effective est multipliée par zéro.",
+  "config-comment-spawn-chance": "Détermine la fréquence à laquelle ce type de donjon est sélectionné. Des valeurs plus élevées le rendent plus courant. La valeur est multipliée par le paramètre Activé.",
+  "config-comment-min-spawn-distance": "Distance minimale en blocs par rapport au point d'apparition du monde avant que ce type de donjon puisse être généré.",
+  "config-comment-flatland-threshold": "Planéité minimale requise à l'entrée en surface. Des valeurs plus élevées exigent un terrain plus plat et réduisent le nombre d'emplacements de génération valides.",
+  "config-comment-min-rooms": "Nombre minimal de tuiles ou de sections de donjon générées. Gardez cette valeur inférieure ou égale au maximum.",
+  "config-comment-max-rooms": "Nombre maximal de tuiles ou de sections de donjon générées. Gardez cette valeur supérieure ou égale au minimum."
+}

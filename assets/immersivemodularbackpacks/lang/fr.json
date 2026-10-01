@@ -1,0 +1,23 @@
+{
+  "immersivemodularbackpacks:item-pouch-normal": "Bourse",
+  "immersivemodularbackpacks:item-pouch-sturdy": "Bourse robuste",
+  "immersivemodularbackpacks:item-toolstrap": "Sangle porte-outil",
+  "immersivemodularbackpacks:item-toolroll": "Trousse à outils",
+  "immersivemodularbackpacks:block-backpack-placed-normal": "Sac à dos",
+  "immersivemodularbackpacks:block-backpack-placed-sturdy": "Sac à dos robuste",
+  "immersivemodularbackpacks:pick-up": "Ramasser",
+  "immersivemodularbackpacks:open-cargo": "Ouvrir le chargement",
+  "immersivemodularbackpacks:attach-item": "Attacher l'objet",
+  "immersivemodularbackpacks:remove-attachment": "Retirer l'accessoire",
+  "immersivemodularbackpacks:cargo-dialog-title": "Chargement du sac à dos",
+  "immersivemodularbackpacks:pouch-contents": "Contenu de la bourse",
+  "immersivemodularbackpacks:handbook-backpack-title": "Sac à dos modulaire",
+  "immersivemodularbackpacks:handbook-backpack-text": "Ce sac à dos peut recevoir des accessoires - bourses, sangles porte-outil et autre petit équipement - qui étendent ce qu'il transporte et l'accompagnent sur votre dos.<br><br>Pour fixer un accessoire, posez le sac à dos au sol, puis tenez l'accessoire et effectuez <hk>shift</hk> + <hk>rightmouse</hk> sur l'un de ses points d'attache. Effectuez <hk>ctrl</hk> + <hk>rightmouse</hk> sur le sac à dos pour ouvrir son chargement, ou <hk>shift</hk> + <hk>rightmouse</hk> sur un point occupé pour retirer un accessoire.<br><br>Effectuez <hk>rightmouse</hk> sur le sac à dos pour le ramasser à nouveau - ses accessoires et leur contenu l'accompagnent - puis portez-le comme d'habitude.",
+  "immersivemodularbackpacks:handbook-backpack-points-title": "Points d'attache",
+  "immersivemodularbackpacks:handbook-backpack-points-hint": "Faites glisser pour tourner le sac. Survolez un point marqué pour voir ce qui s'y adapte.",
+  "immersivemodularbackpacks:handbook-backpack-addons-title": "Accessoires",
+  "immersivemodularbackpacks:handbook-addon-title": "Accessoire de sac à dos",
+  "immersivemodularbackpacks:handbook-addon-pouch-text": "Une bourse est un petit sac à part entière - placez-la dans l'un des emplacements de sac de votre personnage et elle contient des objets comme n'importe quel autre sac. Une bourse robuste en contient plus qu'une bourse simple.<br><br>Elle peut aussi être fixée à un <a href=\"handbook://item-backpack-normal\">sac à dos</a> en tant qu'accessoire : posez le sac à dos, tenez la bourse et effectuez <hk>shift</hk> + <hk>rightmouse</hk> sur un point d'attache libre. Ses emplacements rejoignent alors le chargement du sac à dos.",
+  "immersivemodularbackpacks:handbook-addon-toolstrap-text": "Une sangle porte-outil transporte un seul outil. Placez-la dans l'un des emplacements de sac de votre personnage pour l'utiliser seule.<br><br>Elle peut aussi être fixée à un <a href=\"handbook://item-backpack-normal\">sac à dos</a> en tant qu'accessoire : posez le sac à dos, tenez la sangle et effectuez <hk>shift</hk> + <hk>rightmouse</hk> sur un point d'attache libre. Fixé ainsi, l'outil qu'elle porte est visible sur votre dos.",
+  "immersivemodularbackpacks:handbook-addon-toolroll-text": "Une trousse à outils transporte deux outils à main - couteau, ciseau, marteau, scie, cisaille ou autre - là où une <a href=\"handbook://item-toolstrap\">sangle porte-outil</a> ne prend que les outils à long manche. Placez-la dans l'un des emplacements de sac de votre personnage pour l'utiliser seule.<br><br>Elle peut aussi être fixée à un <a href=\"handbook://item-backpack-normal\">sac à dos</a> en tant qu'accessoire : posez le sac à dos, tenez la trousse et effectuez <hk>shift</hk> + <hk>rightmouse</hk> sur un point d'attache libre. Fixée ainsi, les outils qu'elle contient sont visibles sur votre dos."
+}

@@ -1,0 +1,12 @@
+{
+  "editortitle": "Entrez un nouveau nom pour cette entité",
+  "editorcancel": "Annuler",
+  "editorconfirm": "Confirmer",
+  "editorclear": "Effacer",
+  "editordescription": "Description (facultatif)",
+  "item-nametag": "Plaque nominative",
+  "itemdesc-nametag": "Sert à donner des noms à des entités comme les bateaux et les élans. Nécessite de l'encre et une plume dans la main secondaire pour être utilisé.",
+  "game:tabname-nametag": "Nametag",
+  "name": "Donner un nom à l'entité actuellement regardée",
+  "playerowned": "M'appartient"
+}

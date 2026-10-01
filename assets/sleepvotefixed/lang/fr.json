@@ -1,0 +1,13 @@
+{
+  "NowSleeping": "{0}/{1} personnes dorment, {2} encore nécessaires pour passer la nuit",
+  "CMDSleepPrecentage": "/twl config SleepPrecentage [entier] pour définir le pourcentage de sommeil<br/>/twl config SleepPrecentage pour afficher la valeur",
+  "cmdSleepPrecentage_show": "Le pourcentage de sommeil est maintenant {0}",
+  "cmdSleepPrecentage_modify": "Le pourcentage de sommeil est {0}",
+  "null_Arg": "Aucun argument n'est présent.",
+  "Too_many_args": "Trop d'arguments",
+  "Not_Server": "Cette commande est réservée au serveur.",
+  "cmdDisableSleeping_False": "Le sommeil est maintenant activé",
+  "cmdDisableSleeping_True": "Le sommeil est maintenant désactivé",
+  "CMDDisableSleeping": "/twl config DisableSleeping [true/false] pour activer/désactiver le sommeil<br/>/twl config DisableSleeping pour afficher la valeur",
+  "NotBoolean": "La valeur doit être true ou false"
+}

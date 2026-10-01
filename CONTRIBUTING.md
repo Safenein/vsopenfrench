@@ -107,3 +107,4 @@ Le dépôt est sous [CC-BY-4.0](LICENSE). En proposant une contribution, vous ac
 publiée sous cette licence et vous confirmez en être l'auteur. **Ne pas copier les traductions
 d'autres packs** (Pack de Traduction Française, Mod Traductions FR, French Translation Pack…) sans
 l'accord écrit de leurs auteurs : elles ne sont publiées sous aucune licence qui le permette.
+Aethernia Translation (DiZurix) a été intégrée avec l'accord de son auteur.

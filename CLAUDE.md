@@ -12,7 +12,7 @@ dans `devenv shell`.
 
 - `vsServer` : serveur officiel du jeu (`gameVersion`, tarball du CDN). Donne `VS_GAME_ASSETS`.
 - `vsMods` : modpack de référence construit depuis `mods.json` (zips ModDB, ré-empaquetés avec
-  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (119 mods : les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture).
+  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation (185 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…).
 - Les scripts Python partagent `pyLib` (lecture tolérante des lang des mods, résolution des domaines).
 
 | Commande | Rôle |
@@ -58,7 +58,7 @@ contributeurs : la tenir à jour plutôt que de dupliquer ici. En bref : ne livr
 mods (les packs tiers de `TRANSLATION_PACKS` ne comptent pas : on couvre leur périmètre), un
 fichier par mod (`assets/<modid>/lang/fr.json`, clés d'autres domaines préfixées), aucune
 dépendance hormis `game`, `{n}`/balises/`\n` conservés, vocabulaire du jeu de base, JSON strict.
-Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs auteurs.
+Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs auteurs. Exception accordée : Aethernia Translation (DiZurix, ModDB 64379), intégrée en 0.0.15 ; en cas de conflit, nos tournures priment.
 
 ## Pièges connus
 

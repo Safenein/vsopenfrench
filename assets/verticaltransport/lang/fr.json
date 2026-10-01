@@ -1,0 +1,16 @@
+{
+  "placefailure-tooclose-televator": "Impossible de placer le Télévateur ici.",
+  "block-vtladder-copper-north": "Échelle améliorée (cuivre)",
+  "block-vtladder-bronze-north": "Échelle améliorée (bronze-étain)",
+  "block-vtladder-iron-north": "Échelle améliorée (fer)",
+  "block-vtladder-steel-north": "Échelle améliorée (acier)",
+  "block-vttelevator-off-north": "Télévateur (hors ligne)",
+  "block-vttelevator-ready-north": "Télévateur (prêt)",
+  "block-vttelevator-cooldown-north": "Télévateur (indisponible)",
+  "blockdesc-vtladder-*": "Vitesse d'escalade plus rapide.<br>Utilisez la touche de saut sur l'échelle.",
+  "blockdesc-vttelevator-off-*": "Doit être relié à un autre Télévateur.",
+  "blockdesc-vttelevator-ready-*": "Montez dessus pour être téléporté.",
+  "blockdesc-vttelevator-cooldown-*": "En recharge",
+  "handbooktitle-televator": "Instructions",
+  "handbooktext-televator": "Les Télévateurs fonctionnent par paires. Placez le premier Télévateur, il restera hors ligne (gris) tant qu'il n'est pas relié. Placez ensuite un second Télévateur directement au-dessus ou en dessous, sur les mêmes coordonnées X/Z.<br><br>Chaque fois qu'un Télévateur est placé, il recherche automatiquement un autre Télévateur non relié. Il cherche toujours d'abord vers le haut, puis vers le bas. Lorsqu'un Télévateur non relié est trouvé, les deux plateformes se relient et deviennent actives (vertes). Un Télévateur ne peut être relié qu'à un seul autre Télévateur à la fois, et ils ne téléportent que les joueurs. Détruire un Télévateur délie automatiquement son partenaire et le remet hors ligne.<br><br>Montez sur un Télévateur actif pour être instantanément téléporté vers son Télévateur relié. Après la téléportation, les deux Télévateurs entrent en recharge et ne peuvent plus être utilisés jusqu'à la fin du délai. À l'arrivée, vous ferez face à la direction du Télévateur de destination. La lampe en forme de diamant indique sa direction. Utilisez une clé pour faire pivoter un Télévateur placé et ajuster la direction que les joueurs auront après la téléportation."
+}

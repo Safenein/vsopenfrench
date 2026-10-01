@@ -41,6 +41,11 @@ le serveur du jeu, le modpack de référence (`mods.json`) et les commandes :
 Traduire : lancer `vs-audit`, reprendre les clés d'un `work/todo/<mod>.json` dans
 `assets/<domaine>/lang/fr.json`, traduire les valeurs, puis `vs-lint`.
 
+## Remerciements
+
+Une partie des traductions vient d'[Aethernia Translation](https://mods.vintagestory.at/show/mod/64379)
+de DiZurix, reprise avec son accord.
+
 ## Licence
 
 Traductions sous [CC-BY-4.0](LICENSE). Les textes anglais d'origine appartiennent aux auteurs de
