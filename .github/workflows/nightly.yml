@@ -83,7 +83,7 @@ jobs:
           SHA: ${{ steps.check.outputs.sha }}
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          zip=$(ls dist/*.zip)
+          zip="dist/vsopenfrench_$VERSION.zip"
           {
             echo "Build automatique de \`main\` (${SHA:0:7}), version $VERSION."
             echo "Non publié sur la ModDB : pour tester avant la prochaine version."
