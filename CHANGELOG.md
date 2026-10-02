@@ -9,14 +9,16 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   (DiZurix, avec son accord) : 14 633 textes pour 58 mods. Seuls les trous sont repris : quand nous
   avions déjà une traduction, la nôtre est gardée, et les clés que les mods traduisent eux-mêmes
   sont écartées. Vocabulaire aligné sur le jeu de base (« engrenage temporel », « séraphin »).
-- Modpack de référence étendu de 119 à 185 mods (Rustbound Magic, Steep and Brew, Elk
+- Modpack de référence étendu de 119 à 186 mods (Rustbound Magic, Steep and Brew, Elk
   Accessories/Adornments, Portcullis, Posts and Beams, Shipwright, Combat Overhaul Fork…) ;
-  leurs 384 textes que le pack ne couvrait pas sont traduits (XSkills : couture, brasserie,
-  navigation, équitation ; Vinconomy, Armory, Downed, Dead…).
+  leurs textes que le pack ne couvrait pas sont traduits (Vinconomy, Armory, Downed, Dead…).
 - Build nightly de `main` en pré-release GitHub (tag `nightly`), testé en jeu.
 - skeletons : 4 attributs de personnage retirés, désormais traduits par Combat Overhaul Fork.
-- XSkills : relecture. Vocabulaire du jeu et du mod (orpaillage, Creusage, satiété, rames),
-  talents homonymes renommés (Vieux marin, Dernier carré), tournures calquées reprises.
+- XSkills : le modpack passe de Panda XSkills Rework à la lignée HoR (HoR xSkills Compat, HoR
+  XLib, HoR xSkills Addon). Textes de Panda encore présents chez HoR repris et relus (orpaillage,
+  Creusage ; Dernier carré, Feuille morte), pêche de HoR traduite (19 textes). HoR xSkills Addon
+  (381 textes, 6 nouvelles compétences) traduit depuis l'addon privé d'Aethernia, relu (restes
+  d'anglais, points de qualité, noms des compétences du mod).
 
 ## [0.2.0] - 2026-10-01
 

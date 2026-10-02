@@ -563,18 +563,25 @@
       "sha256": "45e002c9653cb10a686c8756246e04cfb11d34cad85d728a8010d9b223530f4f"
     },
     {
-      "modid": "pandaxskills",
-      "version": "0.1.3",
-      "fileid": 98123,
-      "url": "https://moddbcdn.vintagestory.at/pandaxskills-0.1.3_0245078d41aeb32472e90288adbf05fb.zip?dl=pandaxskills-0.1.3.zip",
-      "sha256": "06b172b59152e4035b4ebe2ee98663b4d56d04869dd67ab4d48a4da507113d36"
+      "modid": "horxskills",
+      "version": "1.1.2",
+      "fileid": 106818,
+      "url": "https://moddbcdn.vintagestory.at/HoR-XSkills-Compat_51eb36eb5dce4d773662e0ed7220b888.zip?dl=HoR-XSkills-Compat.zip",
+      "sha256": "a70f2242c5e11c7590268d369b0c22cb3d9712daca60f81e3c076f6947cfeb5d"
     },
     {
-      "modid": "pandaxlib",
-      "version": "0.1.3",
-      "fileid": 96907,
-      "url": "https://moddbcdn.vintagestory.at/pandaxlib-0.1.3_77462fa1413588d38d105ff5fba907c7.zip?dl=pandaxlib-0.1.3.zip",
-      "sha256": "536b4367fb570a0aaa835e73d0bb242e4ed860efd7fbcd5ed02802adb1cc5389"
+      "modid": "horxlib",
+      "version": "1.0.5",
+      "fileid": 99564,
+      "url": "https://moddbcdn.vintagestory.at/HoR-XLib-Compat_cf7ccd12eedd6ed2fa063ebb4f15cac6.zip?dl=HoR-XLib-Compat.zip",
+      "sha256": "439794d44afe6aa85099e4e4bdd60de07a1145ae4552c658ee491d6cbc5c0acb"
+    },
+    {
+      "modid": "horxskillsaddon",
+      "version": "1.0.6",
+      "fileid": 106817,
+      "url": "https://moddbcdn.vintagestory.at/HoR-xSkills-Addon_858d0ee6e61f8210e076ef3ce1d814f3.zip?dl=HoR-xSkills-Addon.zip",
+      "sha256": "732e6e8e4efee754fb90a74d095f4a7d75173566ecf52e5799699c05acb0f653"
     },
     {
       "modid": "abyssaldepths",

@@ -12,7 +12,7 @@ dans `devenv shell`.
 
 - `vsServer` : serveur officiel du jeu (`gameVersion`, tarball du CDN). Donne `VS_GAME_ASSETS`.
 - `vsMods` : modpack de référence construit depuis `mods.json` (zips ModDB, ré-empaquetés avec
-  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation (185 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…).
+  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation (186 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, horxskills/horxlib/horxskillsaddon pour XSkills…). XSkills : la lignée HoR (Panduhs) a remplacé pandaxskills ; horxskillsaddon (domaine `hor-perks`) est l'addon privé d'Aethernia, ses traductions en viennent.
 - Les scripts Python partagent `pyLib` (lecture tolérante des lang des mods, résolution des domaines).
 
 | Commande | Rôle |
