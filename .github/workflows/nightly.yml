@@ -1,0 +1,102 @@
+name: Nightly
+
+# Chaque nuit, si main a changé depuis le dernier nightly : valide, construit le zip avec une
+# version de pré-release (patch + 1, suffixe -dev.<date> ; dans l'exécution seulement, rien n'est
+# committé), vérifie son chargement en jeu et le publie en pré-release GitHub sous le tag glissant
+# « nightly », remplacé à chaque build.
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Reconstruire même si main n'a pas changé
+        type: boolean
+        default: false
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+permissions:
+  contents: write # release et tag nightly
+  actions: write # purge des anciens caches Nix (setup-devenv)
+
+jobs:
+  nightly:
+    name: Build nightly
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Nouveau commit ?
+        id: check
+        env:
+          FORCE: ${{ inputs.force }}
+        run: |
+          head=$(git rev-parse HEAD)
+          last=$(git ls-remote --tags origin refs/tags/nightly | cut -f1)
+          echo "sha=$head" >>"$GITHUB_OUTPUT"
+          if [ "$head" = "$last" ] && [ "$FORCE" != true ]; then
+            echo "skip=true" >>"$GITHUB_OUTPUT"
+            echo "main inchangé depuis le dernier nightly (\`${head:0:7}\`) : rien à faire." >>"$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: ./.github/actions/setup-devenv
+        if: steps.check.outputs.skip != 'true'
+
+      - name: devenv test
+        if: steps.check.outputs.skip != 'true'
+        run: devenv test
+
+      - name: Version nightly
+        id: version
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          base=$(jq -r .version modinfo.json)
+          IFS=. read -r major minor patch <<<"${base%%-*}"
+          version="$major.$minor.$((patch + 1))-dev.$(date -u +%Y%m%d)"
+          jq --indent 2 --arg v "$version" '.version = $v' modinfo.json >modinfo.json.tmp
+          mv modinfo.json.tmp modinfo.json
+          echo "version=$version" >>"$GITHUB_OUTPUT"
+
+      # vs-test construit le zip (vs-build) puis le charge sur un serveur jetable en français.
+      - name: vs-test
+        if: steps.check.outputs.skip != 'true'
+        run: devenv shell -- vs-test
+
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: server-logs-nightly-${{ github.run_id }}
+          path: |
+            work/server/Logs/
+            work/server/stdout.log
+
+      - name: Publier la pré-release
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ steps.check.outputs.sha }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          zip=$(ls dist/*.zip)
+          {
+            echo "Build automatique de \`main\` (${SHA:0:7}), version $VERSION."
+            echo "Non publié sur la ModDB : pour tester avant la prochaine version."
+            echo
+            echo "## Depuis la dernière version"
+            awk '/^## \[Non publié\]/ {on=1; next} /^## \[/ {on=0} on' CHANGELOG.md
+          } >notes.md
+          gh release delete nightly --cleanup-tag --yes || true
+          gh release create nightly "$zip" --prerelease --target "$SHA" \
+            --title "Nightly $(date -u +%F)" --notes-file notes.md
+          {
+            echo "## Nightly $VERSION"
+            echo
+            echo "- Zip : \`$(basename "$zip")\`"
+            echo "- Release : $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/tag/nightly"
+          } >>"$GITHUB_STEP_SUMMARY"

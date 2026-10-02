@@ -20,7 +20,8 @@ L'état des lieux qui motive le projet est dans [`docs/audit-2026-09-30.md`](doc
 
 Télécharger le zip depuis la [ModDB](https://mods.vintagestory.at/vsopenfrench) ou les
 [releases GitHub](https://github.com/Safenein/vsopenfrench/releases) et le déposer dans le dossier
-`Mods` du jeu.
+`Mods` du jeu. Un build de `main` est publié chaque nuit en pré-release
+([nightly](https://github.com/Safenein/vsopenfrench/releases/tag/nightly)) quand il a changé.
 
 ## Contribuer
 

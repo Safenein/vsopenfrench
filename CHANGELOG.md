@@ -13,6 +13,7 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   Accessories/Adornments, Portcullis, Posts and Beams, Shipwright, Combat Overhaul Fork…) ;
   leurs 384 textes que le pack ne couvrait pas sont traduits (XSkills : couture, brasserie,
   navigation, équitation ; Vinconomy, Armory, Downed, Dead…).
+- Build nightly de `main` en pré-release GitHub (tag `nightly`), testé en jeu.
 - skeletons : 4 attributs de personnage retirés, désormais traduits par Combat Overhaul Fork.
 
 ## [0.2.0] - 2026-10-01

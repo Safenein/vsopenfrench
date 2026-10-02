@@ -44,6 +44,10 @@ est factorisée dans `.github/actions/setup-devenv`.
   Tient à jour une issue étiquetée « traductions à faire » (nouveaux textes, clés disparues de
   l'anglais), fermée quand il ne reste rien ; `work/todo/` et le `mods.json` à jour en artefact.
   Pour traiter : `vs-check-updates --write` en local, traduire, committer `mods.json` avec.
+- **Nightly** (`.github/workflows/nightly.yml`, chaque nuit à 3 h UTC et à la demande, input
+  `force`) : sauté si le tag `nightly` pointe déjà sur `main`. Sinon `devenv test`, version
+  `<patch+1>-dev.<AAAAMMJJ>` dans l'exécution seulement, `vs-test`, puis pré-release GitHub
+  `nightly` recréée (zip + section « Non publié » du CHANGELOG).
 - Le store Nix (serveur + modpack, ~2 Go) est mis en cache par `cache-nix-action`, clé sur
   `devenv.lock`, `devenv.nix` et `mods.json`. Purge seulement sur push (jeton en lecture seule
   dans les PR de forks).
