@@ -5,6 +5,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+## [0.3.0] - 2026-10-02
+
 - Intégration d'[Aethernia Translation](https://mods.vintagestory.at/show/mod/64379) 0.0.15
   (DiZurix, avec son accord) : 14 633 textes pour 58 mods. Seuls les trous sont repris : quand nous
   avions déjà une traduction, la nôtre est gardée, et les clés que les mods traduisent eux-mêmes
