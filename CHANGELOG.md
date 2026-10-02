@@ -15,6 +15,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   navigation, équitation ; Vinconomy, Armory, Downed, Dead…).
 - Build nightly de `main` en pré-release GitHub (tag `nightly`), testé en jeu.
 - skeletons : 4 attributs de personnage retirés, désormais traduits par Combat Overhaul Fork.
+- XSkills : relecture. Vocabulaire du jeu et du mod (orpaillage, Creusage, satiété, rames),
+  talents homonymes renommés (Vieux marin, Dernier carré), tournures calquées reprises.
 
 ## [0.2.0] - 2026-10-01
 
