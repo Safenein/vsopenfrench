@@ -92,11 +92,11 @@
       "objet": [
         {
           "en": "^strong .+ wine$",
-          "fr": "Vin fort {de}"
+          "fr": "Vin {de} fort"
         },
         {
           "en": "^strong .+ cider$",
-          "fr": "Cidre fort {de}"
+          "fr": "Cidre {de} fort"
         }
       ]
     },
@@ -104,11 +104,11 @@
       "objet": [
         {
           "en": "^fine .+ wine$",
-          "fr": "Vin raffiné {de}"
+          "fr": "Vin {de} raffiné"
         },
         {
           "en": "^fine .+ cider$",
-          "fr": "Cidre raffiné {de}"
+          "fr": "Cidre {de} raffiné"
         }
       ]
     },
@@ -120,7 +120,7 @@
         },
         {
           "en": "^aged (.+ )?liqueur$",
-          "fr": "Liqueur vieillie {de}"
+          "fr": "Liqueur {de} vieillie"
         },
         {
           "en": "^aged \\w+$",
@@ -137,7 +137,7 @@
         },
         {
           "en": "^vintage (.+ )?liqueur$",
-          "fr": "Liqueur millésimée {de}"
+          "fr": "Liqueur {de} millésimée"
         },
         {
           "en": "^vintage \\w+$",
@@ -150,7 +150,7 @@
       "objet": [
         {
           "en": "^strong .+ wine( portion)?$",
-          "fr": "Vin fort {de}",
+          "fr": "Vin {de} fort",
           "table": "fleurs"
         }
       ]
@@ -159,7 +159,7 @@
       "objet": [
         {
           "en": "^fine .+ wine( portion)?$",
-          "fr": "Vin raffiné {de}",
+          "fr": "Vin {de} raffiné",
           "table": "fleurs"
         }
       ]
@@ -671,7 +671,7 @@
         "genre": "f"
       },
       "rubysaltbush": {
-        "fr": "baie de saltbush barrière",
+        "fr": "baie d'arroche rubis",
         "genre": "f"
       },
       "sallowthorn": {

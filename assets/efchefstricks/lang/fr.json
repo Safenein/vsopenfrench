@@ -12,7 +12,7 @@
   "incontainer-item-resin": "résine",
   "itemdesc-softresin": "Nécessite 1 L et 10 jours pour durcir en <a href=\"handbook://item-efchefstricks:hardresin\">résine</a>.",
   "item-handbooktitle-softresin": "Résine fraîche",
-  "item-handbooktext-softresin": "Récoltée en plaçant un <a href=\"handbook://block-aculinaryartillery:spile-steel-north\">chalumeau</a> dans une bûche d’acacia ou de pin, avec un récipient liquide juste en dessous.<br>Les pins produisent de la résine de mars à novembre.<br>Les acacias produisent de la résine d’avril à septembre.",
+  "item-handbooktext-softresin": "Se récolte en plantant un <a href=\"handbook://block-aculinaryartillery:spile-steel-north\">chalumeau</a> dans un rondin de pin ou d'acacia, avec un récipient à liquide juste en dessous.<br>Les pins produisent de la résine par temps frais à chaud (de 5 à 40 °C).<br>Les acacias sont moins robustes que les pins : ils produisent de la résine par temps tempéré à chaud (de 15 à 40 °C), et en donnent moins par jour.",
   "item-hardresin": "Portion de résine",
   "incontainer-item-hardresin": "Résine durcie",
   "itemdesc-hardresin": "Videz un seau plein de résine durcie pour obtenir de la <a href=\"handbook://item-resin\">résine</a>.",

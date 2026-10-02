@@ -13,20 +13,26 @@ Bismuth
 Cape
 Carnivore
 Catalpa
+Chalix
 Chanterelle
 Citrine
 Cordovan
 Cupronickel
 Cyan
+Cyclone
 Description
 Dragon
 Eshin
 Eucalyptus
+Excavation
+Excavation I
 Fragile
 Gecko
 Ginkgo
 Gozinaki
 Herbivore
+Intellect
+Intellect I
 Interactions
 intoxication
 Jacaranda
@@ -63,16 +69,21 @@ ProspectTogether
 Rage
 Rictus
 Rimu
+Sacrifice
 Sal
 Satinash
+Siphon
+Siphon I
 Skryre
 Stable
 Standard
 Tamanu
 Tawhai
 Thuya
+Torrent
 Totara
 Tourmaline
+Transmutable
 Umgoloti
 Umgolotl
 Uranium

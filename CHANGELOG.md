@@ -15,6 +15,29 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   navigation, équitation ; Vinconomy, Armory, Downed, Dead…).
 - Build nightly de `main` en pré-release GitHub (tag `nightly`), testé en jeu.
 - skeletons : 4 attributs de personnage retirés, désormais traduits par Combat Overhaul Fork.
+- Retraduits depuis l'anglais : environ 3 300 textes intégrés avec Aethernia se sont révélés
+  identiques à Mod Traductions FR (Deadykass_), pack dont nous n'avons pas l'accord. Sont
+  concernés Rustbound Magic (2 811 textes), Art of Growing, AOG Breeding, Chisel Tools,
+  Sprinklers, Smithing Plus, VS Roofing et Wind Chimes. Rustbound Magic est harmonisé au passage :
+  noms de sorts, paliers accordés (« Hache majeure », « Ceinture mineure »), « chiffre de sort »,
+  « four à arc », matériaux accentués (éthérium, xégonite, nethérite).
+- Relecture complète, avec corrections :
+  - seuils d'humidité des arroseurs (85 % et 95 %) ;
+  - températures de récolte de la résine (Chef's Tricks) ;
+  - espaces finales des messages de forage (Betterer Prospecting) ;
+  - chiffres et avertissements de Rustbound Magic (15 % de stabilité, objets perdus du sac
+    invoqué) ;
+  - masques obsolètes d'Elk Adornments signalés comme tels ;
+  - « wapiti » au lieu d'« élan » pour *elk* ;
+  - « cuproplomb », « arcracheurs », « locustes » ;
+  - champignons de Steep and Brew selon le lexique du dépôt (« pholiote marginée »,
+    « hygrophore conique ») ;
+  - tartes et semences d'AOG Breeding alignées sur le jeu de base ;
+  - plaquebière dans Expanded Foods ;
+  - ordre « vin de framboise fort » ;
+  - « de cendrée » en héraldique ;
+  - accords de couleur dans Abyssal Depths ;
+  - coquilles diverses.
 
 ## [0.2.0] - 2026-10-01
 

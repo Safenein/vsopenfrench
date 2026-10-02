@@ -30,7 +30,7 @@
   "combatoverhaul:armor-inventory-dialog-attack-legend-middle": "Couches",
   "combatoverhaul:armor-inventory-dialog-attack-legend-middle-hint": "Paliers de protection pour chaque couche additionnés, puis comparés au palier de dégâts entrant pour calculer la valeur de réduction des dégâts",
   "combatoverhaul:armor-inventory-dialog-attack-legend-right": "Perforant  Tranchant  Contondant",
-  "combatoverhaul:armor-inventory-dialog-attack-legend-right-hint": "Par défaut, certains types d'ennemis infligent des types de dégâts spécifiques :<br/>  Perforant : épines-arc et criquets<br/>  Tranchant : frissonneurs et carnivores<br/>  Contondant : rôdeurs et herbivores",
+  "combatoverhaul:armor-inventory-dialog-attack-legend-right-hint": "Par défaut, certains types d'ennemis infligent des types de dégâts spécifiques :<br/>  Perforant : arcracheurs et locustes<br/>  Tranchant : frissonneurs et carnivores<br/>  Contondant : rôdeurs et herbivores",
   "combatoverhaul:armor-inventory-dialog-title": "Armure",
   "combatoverhaul:armor-inventory-dialog-head": "Tête :",
   "combatoverhaul:armor-inventory-dialog-face": "Visage :",

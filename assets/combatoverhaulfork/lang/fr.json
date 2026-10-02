@@ -66,7 +66,7 @@
   "combatoverhaul:handbook-craftingappearance-title": "Apparence de fabrication",
   "combatoverhaul:handbook-craftingappearance-text": "Certaines recettes acceptent plusieurs variantes de matériaux compatibles. Les pointes de flèches, pointes de lances, manches, tissus, cuirs ou matériaux de projectiles copiés par la recette conservent leur matériau ou leur couleur sur l'objet fabriqué.",
   "combatoverhaul:handbook-shield-wood-title": "Bois de bouclier",
-  "combatoverhaul:handbook-shield-woodmetal-text": "Les boucliers ronds en bois conservent l'apparence du bois de la planche utilisée. Modificateurs de durabilité du bois : vieilli -200 ; chêne +15 ; bois pourpre +20 ; ébène +30 ; bouleau, érable, pin, acacia, kapokier, baldcyprès, mélèze, séquoia et noyer +0.",
+  "combatoverhaul:handbook-shield-woodmetal-text": "Les boucliers ronds en bois conservent l'apparence du bois de la planche utilisée. Modificateurs de durabilité du bois : vieilli -200 ; chêne +15 ; bois pourpre +20 ; ébène +30 ; bouleau, érable, pin, acacia, kapokier, cyprès chauve, mélèze, séquoia et noyer +0.",
   "combatoverhaul:item-wulk-toolhead-falx-*": "Tête de falx",
   "combatoverhaul:item-wulk-toolblade-falx-iron": "Lame de falx (Fer)",
   "combatoverhaul:item-wulk-toolbody-falx-iron": "Corps de falx (Fer)",
