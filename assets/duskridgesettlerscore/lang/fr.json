@@ -1,0 +1,14 @@
+{
+  "entity-duskridgesettlerscore:settler": "Colon",
+  "entityinteraction-manage-settler": "Gérer le colon",
+  "entityinteraction-heal-settler": "Soigner le colon",
+  "item-duskridgesettlerscore:surveyor-scroll": "Parchemin d'arpenteur",
+  "itemdesc-duskridgesettlerscore:surveyor-scroll": "Définit et gère les zones de travail des colons de Duskridge appartenant au joueur.",
+  "item-duskridgesettlerscore:production-orders-scroll": "Parchemin d'ordres de production",
+  "itemdesc-duskridgesettlerscore:production-orders-scroll": "Crée et gère les ordres de taille et de modelage de l'argile pour les colons artisans.",
+  "item-duskridgesettlerscore:settlement-ledger": "Registre de la colonie",
+  "itemdesc-duskridgesettlerscore:settlement-ledger": "Ouvre l'administration de la colonie et la gestion des propriétés.",
+  "item-surveyor-scroll": "Parchemin d'arpenteur",
+  "item-production-orders-scroll": "Parchemin d'ordres de production",
+  "item-settlement-ledger": "Registre de la colonie"
+}

@@ -5,6 +5,17 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Modpack de référence étendu de 185 à 210 mods, et leurs 5 476 textes sans français traduits :
+  Forgotten Armory (Core, Chinese Dynasties, Varangian, Greenwich, Gothic, Landsknechts, Viking),
+  Weapon Pack Alpha - Rebalanced, Fauna of the Stone Age (Capreolinae, Felinae ; Pantherinae se
+  traduit déjà lui-même), Eternal Seraph: Dovidarium, Flowerbeds, Dishware, More Lanterns,
+  Duskridge Settlers: Core, Sauna, EarthLiving Mine Transport, Steelmaking Expanded, Pipes and
+  Power Expanded, Logging Expanded, Vanilla Varnished Planks, Japanese Architecture et Clothier's
+  Heirlooms. Gondola Cable Car se traduit déjà lui-même. Vocabulaire d'époque quand il existe :
+  salade, armet, bourguignotte, lansquenet, espadon, bec-de-corbin, lit de fusion, vent chaud,
+  rigole de coulée, brocard.
+- Notice Board 3.0.4 dans le modpack de référence (déjà traduit par son auteur).
+
 ## [0.3.0] - 2026-10-02
 
 - Intégration d'[Aethernia Translation](https://mods.vintagestory.at/show/mod/64379) 0.0.15

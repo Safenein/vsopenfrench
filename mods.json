@@ -956,10 +956,10 @@
     },
     {
       "modid": "noticeboard",
-      "version": "3.0.3",
-      "fileid": 123232,
-      "url": "https://moddbcdn.vintagestory.at/NoticeBoard_3.0.3_54a84e656e2db7ec59e27ec4910604b0.zip?dl=NoticeBoard_3.0.3.zip",
-      "sha256": "69e37b6568c7704faaceddc42355c13fe3ae2387f1d9333d29b07482528a4146"
+      "version": "3.0.4",
+      "fileid": 127110,
+      "url": "https://moddbcdn.vintagestory.at/NoticeBoard_3.0.4_4593621f8983299a27986ac8a456df66.zip?dl=NoticeBoard_3.0.4.zip",
+      "sha256": "9139afd50fc1f71ad6dc7ad871f18f9a51a3e2aa2d4cc21f0d0f8004960782f1"
     },
     {
       "modid": "offlinefoodnospoil",
@@ -1296,6 +1296,181 @@
       "fileid": 120303,
       "url": "https://moddbcdn.vintagestory.at/wool-1.9.6_a02f96a57eb8c54ef41b647c591c81e5.zip?dl=wool-1.9.6.zip",
       "sha256": "3a8944776f584abd2ec4c8bcd29c00ae07ba041878f2707d6c1f7862c663fd0d"
+    },
+    {
+      "modid": "apelanterns",
+      "version": "1.4.4",
+      "fileid": 125321,
+      "url": "https://moddbcdn.vintagestory.at/apelanterns-v1.22.7-_a2f380301b7d6191ad109913f50b809f.zip?dl=apelanterns-v1.22.7-1.4.4.zip",
+      "sha256": "5fb5ee2a812c773f6259e126aec2238531af42516123ef4319d2bc3593453a2e"
+    },
+    {
+      "modid": "capreolinae",
+      "version": "2.0.19",
+      "fileid": 126788,
+      "url": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_3942ba0bdefb82f3514be3e6caa02202.zip?dl=FotSA-Capreolinae-v2.0.19.zip",
+      "sha256": "37cabc6320cac2d7136062556aaf00601348416716521ddfb93becd0317515a1"
+    },
+    {
+      "modid": "clothierheirloomsmod",
+      "version": "1.1.0",
+      "fileid": 89412,
+      "url": "https://moddbcdn.vintagestory.at/Clothiers_Heirlooms__91c1c2971a783f4797f6a19695653ed7.zip?dl=Clothiers_Heirlooms_1.1.0.zip",
+      "sha256": "ad01d22643eef3a0cf148f20e0e126599256464c8c5f27848378b099331fb2d1"
+    },
+    {
+      "modid": "dishware",
+      "version": "2.0.1",
+      "fileid": 126510,
+      "url": "https://moddbcdn.vintagestory.at/Dishware+2.0.1_4cd62a4d157b2820012d81333c539bf9.zip?dl=Dishware%202.0.1.zip",
+      "sha256": "837ed96acd9d575bf9c1cfaedff69fb1fb20761bcaebeb1008112ae665386ac1"
+    },
+    {
+      "modid": "dovidarium",
+      "version": "1.0.5",
+      "fileid": 127179,
+      "url": "https://moddbcdn.vintagestory.at/EternalS-Dovidarium-_750870ba9f25e9e28f2053f1197c6b94.zip?dl=EternalS-Dovidarium-1.0.5.zip",
+      "sha256": "1be47de22b707c3560e596eec45efed51849aade680d0e8e268ac11f3561411e"
+    },
+    {
+      "modid": "duskridgesettlerscore",
+      "version": "0.8.2-rc.3",
+      "fileid": 124953,
+      "url": "https://moddbcdn.vintagestory.at/duskridge_settlers_c_ac763aed98e4cfce1ca49a8a17d37371.zip?dl=duskridge_settlers_core0.8.2-rc3.zip",
+      "sha256": "fa6288d59401ce34300c6389dc6d1c8b74652b3caf070fe82cc85a551f885f0b"
+    },
+    {
+      "modid": "earthlivingminetransport",
+      "version": "0.12.9",
+      "fileid": 118044,
+      "url": "https://moddbcdn.vintagestory.at/earthlivingminetrans_daaba892ca005e7efb769df46dd333cc.zip?dl=earthlivingminetransport_0.12.9_vs1.22.7.zip",
+      "sha256": "fd3313356b89d0ae543dbe7b34837c926bc4195355bf1b2007f5c63f967e63bb"
+    },
+    {
+      "modid": "facore",
+      "version": "1.1.0",
+      "fileid": 123445,
+      "url": "https://moddbcdn.vintagestory.at/FACore+1.1.0_6bb6f397c8d8296da6a3aaa223afc426.zip?dl=FACore%201.1.0.zip",
+      "sha256": "c13a67431192b1c0857dc5b6134c33f155e92c02811c746c2bbd48d0cf60b739"
+    },
+    {
+      "modid": "fadynasties",
+      "version": "2.1.1",
+      "fileid": 126253,
+      "url": "https://moddbcdn.vintagestory.at/FA-Chinese-Dynasties_f0fe4139568f2e3d6cd01f284031a01c.zip?dl=FA-Chinese-Dynasties%202.1.1.zip",
+      "sha256": "a24a5a269755954bb9c6a81bfaabb9b01f90ea82c215d85bc45c1c4342e556c0"
+    },
+    {
+      "modid": "fagothic",
+      "version": "2.1.0",
+      "fileid": 123447,
+      "url": "https://moddbcdn.vintagestory.at/FA-Gothic+2.1.0_c679301416a63e5b3e1a18422baf0ee9.zip?dl=FA-Gothic%202.1.0.zip",
+      "sha256": "e5be8d17130abbee3a72ce4e84ca75bb2c1b7f98dd81c80ac863a96a51af66a7"
+    },
+    {
+      "modid": "fagreenwich",
+      "version": "2.1.0",
+      "fileid": 123461,
+      "url": "https://moddbcdn.vintagestory.at/FA-Greenwich+2.1.0_e9fc41ab6cf602c95a403d67482b2545.zip?dl=FA-Greenwich%202.1.0.zip",
+      "sha256": "662fb413847eb75119cd1182a274ec3238f820fcade661ad4cc9163acc515b84"
+    },
+    {
+      "modid": "falandsknecht",
+      "version": "1.2.5",
+      "fileid": 86300,
+      "url": "https://moddbcdn.vintagestory.at/Forgotten+Armory_Lan_54227c582f0e59b0a09bd0abc7cc8e08.zip?dl=Forgotten%20Armory_Landsknecht%20v1.2.5.zip",
+      "sha256": "72ac2af59f7851e79e1bd50c307d9db4e31d7ee7597c6dc95af0d91e51322144"
+    },
+    {
+      "modid": "favarangian",
+      "version": "2.0.1",
+      "fileid": 123766,
+      "url": "https://moddbcdn.vintagestory.at/FA-Varangian+2.0.1_3f2ff665ac973d75762fb53570ca7ca0.zip?dl=FA-Varangian%202.0.1.zip",
+      "sha256": "8665dea483a80f7fd5abc5e47865396813bbab78ce0985606e42a35a11bef2ac"
+    },
+    {
+      "modid": "faviking",
+      "version": "1.1.6",
+      "fileid": 89681,
+      "url": "https://moddbcdn.vintagestory.at/Forgotten+Armory_Vik_ff0486f5196692e9e4929731939726be.zip?dl=Forgotten%20Armory_Viking%20v1.1.6.zip",
+      "sha256": "8c604cd7b9e4ba5cea00fadc3a66759334997bf7c7e149a99d445ad2152f5f88"
+    },
+    {
+      "modid": "felinae",
+      "version": "0.2.15",
+      "fileid": 127075,
+      "url": "https://moddbcdn.vintagestory.at/FotSA-Felinae-v0.2.1_202f822b89ca5d02f43980f233f29652.zip?dl=FotSA-Felinae-v0.2.15.zip",
+      "sha256": "4581c208b0c6498d42276f72b6579bda876d5a74f9a76c15c001c6e70be1b12d"
+    },
+    {
+      "modid": "flowerbeds",
+      "version": "1.0.2",
+      "fileid": 126712,
+      "url": "https://moddbcdn.vintagestory.at/flowerbeds-v1.22.0-1_6e5be3c94f60ce441a0cb5bcbb6fbbe3.zip?dl=flowerbeds-v1.22.0-1.0.2.zip",
+      "sha256": "a9390a5481aed33a32808b73c787597c3f227135fc7c78505c32aa77ab8093e5"
+    },
+    {
+      "modid": "gondolacablecar",
+      "version": "0.4.43",
+      "fileid": 125520,
+      "url": "https://moddbcdn.vintagestory.at/GondolaCableCar_0.4._59eff9161082b945ccce9b9729199549.zip?dl=GondolaCableCar_0.4.43.zip",
+      "sha256": "95946be2e16449dc85ba0f71e6cc7096b38b821f6d5cff01f66782ea19b27a70"
+    },
+    {
+      "modid": "japanesearchitecture",
+      "version": "0.9.7",
+      "fileid": 94087,
+      "url": "https://moddbcdn.vintagestory.at/japanesearchitecture_fc22af79749a78f050958fe9919fb22a.zip?dl=japanesearchitecture_0.9.7.zip",
+      "sha256": "1ab2bac7aeaabcfe11154e046600ede28acf68a05f11cfae47718b897fcf4b2e"
+    },
+    {
+      "modid": "loggingmod",
+      "version": "0.3.6",
+      "fileid": 105204,
+      "url": "https://moddbcdn.vintagestory.at/LoggingMod0.3.6_be2137ddcfdf8912e731860023f520f9.zip?dl=LoggingMod0.3.6.zip",
+      "sha256": "c0caa746dc5c745fd1c32076d2b62bfce20642f5f4b4a718b36d6e6ebfe7468b"
+    },
+    {
+      "modid": "pantherinae",
+      "version": "1.2.18",
+      "fileid": 121535,
+      "url": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_8fa84519bab0bd5c26eedc907f70e3d8.zip?dl=FotSA-Pantherinae-v1.2.18.zip",
+      "sha256": "05fed854c50e9e69ac682fc937317aeb8609e0b514b4098f7446891c6e0402c1"
+    },
+    {
+      "modid": "ppex",
+      "version": "0.6.8",
+      "fileid": 114431,
+      "url": "https://moddbcdn.vintagestory.at/ppex_0.6.8_befd512e3b3881e2cd55abc292a57432.zip?dl=ppex_0.6.8.zip",
+      "sha256": "d1366180a5c6b813850534b04bd5fbe9fdbe71878039687dcebae88e321d86f7"
+    },
+    {
+      "modid": "smex",
+      "version": "0.9.8",
+      "fileid": 114432,
+      "url": "https://moddbcdn.vintagestory.at/smex_0.9.8_d49ab50ac95ba14e9d35d0a7f31b59d4.zip?dl=smex_0.9.8.zip",
+      "sha256": "8b1bbd9b62d96d589934d5528625ba742330ccb20d51c75b23551726c7267502"
+    },
+    {
+      "modid": "spa",
+      "version": "1.3.0",
+      "fileid": 124647,
+      "url": "https://moddbcdn.vintagestory.at/spa_1.3.0_14ad74c6f52b893587281ac1e5ce3339.zip?dl=spa_1.3.0.zip",
+      "sha256": "18b361054c39717eec2fe58e9ff9d585388c5d8b79c843ca05a07f1775bcb3da"
+    },
+    {
+      "modid": "vanillavarnished",
+      "version": "1.0.6",
+      "fileid": 104744,
+      "url": "https://moddbcdn.vintagestory.at/VanillaVarnished-1.0_e4ba05a8f3830c98a765bb5b8867d5e2.zip?dl=VanillaVarnished-1.0.6.zip",
+      "sha256": "de505ce435b3404cf7486ca2ab28df08778f52f8e9e4ece2d8399b4ab1376ec4"
+    },
+    {
+      "modid": "weaponpackalphareb",
+      "version": "2.0.2",
+      "fileid": 124728,
+      "url": "https://moddbcdn.vintagestory.at/WeaponPackAlphaRebal_77afca05318c0ad39ee6e9b2e1689ac4.zip?dl=WeaponPackAlphaRebalanced%202.0.2.zip",
+      "sha256": "e7e6086597d36afd6185accd5ed74169b86b15e179fc2f45620579c8b5a20048"
     }
   ]
 }

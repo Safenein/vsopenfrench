@@ -3,37 +3,70 @@
 # et puces ignorées : « <font …>• Archer</font> » compte comme « Archer »).
 # Un texte par ligne ; les lignes commençant par # sont ignorées.
 Acacia
+Active
+Air
+Alboraya
 Amaretto
 Animation
 Archer
+Armet
+Ashbourne
+atm
+Auramare
 Auto
 Azobé
+Banian
 Bestial
 Bismuth
+Branmerie
 Cape
 Carnivore
 Catalpa
 Chalix
 Chanterelle
+Chlorociboria
+Chubbs
 Citrine
+Coke
+Communis Cauda
+Communis Crista
+Communis Lupinae
+Communis Pennae
+Communis Pinna
+Communis Pluma
+Communis Transversa
 Cordovan
 Cupronickel
 Cyan
 Cyclone
+Daitsuki
+Daitsuki Dōrō
+Dalbergia
 Description
+Douglas
+Dovidarium
 Dragon
+EarthLiving
 Eshin
 Eucalyptus
 Excavation
 Excavation I
+Festalis
+Forgotten Armory
 Fragile
+gal
+gal/s
 Gecko
 Ginkgo
 Gozinaki
 Herbivore
+Ikekomi
+Ikekomi Dōrō
+Insignia
 Intellect
 Intellect I
 Interactions
+Interface
 intoxication
 Jacaranda
 Jade
@@ -43,52 +76,89 @@ Karee
 Kauri
 Khiaz
 Kobold
+Kodai Maru Yukimi
+Kodai Maru Yukimi Dōrō
 Kumquat
+L
+L/s
+Lacinia
 Limoncello
 Litharge
+Logging Expanded
 Long
+Lupinae
 Malachite
+Mantellum
 Massicot
+Metallicus Laurea
+More Lanterns
 Mors
 Muffin
 Nickel
+Nominal
+normal
 Ohia
+Okunoin Daitsuki Dōrō
 Omnivore
 Onyx
 Orange
+Oribe Ikekomi Dōrō
 Oriental
 Palette (Jonas)
 Parasite
+Paulownia
 Pemmican
 Pestilens
 Pilaf
 Pilaf {1}
+Pipes & Power
 Portfolio
 Production
 ProspectTogether
+psi
 Rage
+Regalis Crista
 Rictus
 Rimu
+Roselle
 Sacrifice
 Sal
 Satinash
+Saxon
 Siphon
 Siphon I
 Skryre
 Stable
 Standard
+Steelmaking
+Style
+Syzygium
 Tamanu
+Tansu
 Tawhai
+Thornwald
 Thuya
 Torrent
 Totara
 Tourmaline
 Transmutable
+Triastra
+Tōrō (Bauxite)
+Tōrō (Granite)
+Tōrō (Kimberlite)
+Tōrō (Phyllite)
+Umbrarex
 Umgoloti
 Umgolotl
 Uranium
+Vanilla Varnished Planks
+Verdantine
 Vintage Story
+Vulkrian
+Whaycliffe
 Xylophone
+Yukimi
+Yukimi Dōrō
 Zinc
 Umami
 test
@@ -175,3 +245,5 @@ Elk Variants
 More Roads
 Couturier
 Stock
+°C
+°F
