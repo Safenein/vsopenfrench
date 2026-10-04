@@ -5,6 +5,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+## [0.4.0] - 2026-10-04
+
 - Modpack de référence étendu de 185 à 210 mods, et leurs 5 476 textes sans français traduits :
   Forgotten Armory (Core, Chinese Dynasties, Varangian, Greenwich, Gothic, Landsknechts, Viking),
   Weapon Pack Alpha - Rebalanced, Fauna of the Stone Age (Capreolinae, Felinae ; Pantherinae se
