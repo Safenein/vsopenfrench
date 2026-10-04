@@ -18,5 +18,7 @@
   "config-comment-min-spawn-distance": "Distance minimale en blocs par rapport au point d'apparition du monde avant que ce type de donjon puisse être généré.",
   "config-comment-flatland-threshold": "Planéité minimale requise à l'entrée en surface. Des valeurs plus élevées exigent un terrain plus plat et réduisent le nombre d'emplacements de génération valides.",
   "config-comment-min-rooms": "Nombre minimal de tuiles ou de sections de donjon générées. Gardez cette valeur inférieure ou égale au maximum.",
-  "config-comment-max-rooms": "Nombre maximal de tuiles ou de sections de donjon générées. Gardez cette valeur supérieure ou égale au minimum."
+  "config-comment-max-rooms": "Nombre maximal de tuiles ou de sections de donjon générées. Gardez cette valeur supérieure ou égale au minimum.",
+  "game:Debarked log Aged (Ud)": "Rondin écorcé vieilli (Ud)",
+  "game:Meta (Collider)": "Méta (collisionneur)"
 }

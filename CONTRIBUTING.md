@@ -83,7 +83,14 @@ se traduit lui-même.
   n'est pas livrée : en cas de doublon, la dernière valeur chargée gagne, et l'ordre de chargement
   n'est pas maîtrisé. Exception : les packs de traduction tiers (`TRANSLATION_PACKS` dans
   `devenv.nix` : modtraductionsfr, vintagestoryfr, frtraductionmods) ne comptent pas, car
-  vsopenfrench couvre leur périmètre avec ses propres traductions.
+  vsopenfrench couvre leur périmètre avec ses propres traductions. Une « traduction » vide ou
+  restée en anglais dans le fr.json d'un mod ne compte pas non plus (sauf texte listé dans
+  `lint/identiques.txt`) : on la remplace. Elle ne s'affiche en jeu que si le mod charge avant
+  vsopenfrench, donc s'il ne dépend d'aucun autre mod ; sinon, la signaler à son auteur.
+- **Noms de blocs ciselés** : le nom qu'un bâtisseur donne à un bloc ciselé dans un schéma
+  (`worldgen/**/*.json`) passe par la traduction, la première ligne comme nom, le reste comme
+  description. `vs-audit` les extrait comme clés du domaine `game` : `"game:Old stool"`, sauf
+  si le texte contient déjà `:` (alors sans préfixe, comme le jeu le cherche).
 - ✔ **Clés à l'identique**, jokers `*` compris (`block-hay-aged-*`), sinon elles ne remplacent pas l'anglais.
 - ✔ **Conserver les paramètres** `{0}`, `{1}`, `>>>nom<<<`… et les balises (`<a href="handbook://…">`, `<font>`).
   Conserver aussi les `\n` (avertissement seulement).
@@ -97,7 +104,8 @@ se traduit lui-même.
   majuscules comme « Clous et bandes (Bismuth) ». Chercher le terme officiel avant d'en inventer un.
 - Une valeur anglaise vide ne se traduit pas (`vs-audit` l'ignore déjà).
 - Un texte laissé identique à l'anglais déclenche un avertissement. Si c'est voulu (nom propre,
-  emprunt comme « Limoncello »), l'ajouter à `lint/identiques.txt`.
+  emprunt comme « Limoncello »), l'ajouter à `lint/identiques.txt` ; un mod qui laisse ce texte
+  tel quel dans son fr.json compte alors comme traduit.
 - Le mod ne déclare **aucune dépendance** hormis le jeu : une traduction ne s'applique que si son
   mod est installé.
 

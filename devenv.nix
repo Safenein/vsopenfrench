@@ -116,8 +116,58 @@ let
     # traduits (audit, lint, vs-gen). Ils restent chargés pour comparer la terminologie.
     TRANSLATION_PACKS = {"modtraductionsfr", "vintagestoryfr", "frtraductionmods"}
 
+    def visible(text):
+        """Texte affiché, sans balises ni puces : « <font …>• Archer</font> » -> « Archer »."""
+        return re.sub(r"<[^>]*>", "", text).strip(" •\n")
+
+    def load_same_in_french():
+        """Textes qui s'écrivent pareil en français (lint/identiques.txt), en minuscules."""
+        path = ROOT / "lint/identiques.txt"
+        if not path.exists():
+            return set()
+        return {l.strip().lower() for l in path.read_text("utf-8").splitlines() if l.strip() and not l.startswith("#")}
+
+    def untranslated(value, source, same_in_french):
+        """Vrai si un texte « français » est en fait resté vide ou en anglais."""
+        if not value.strip():
+            return True
+        return (value == source and len(re.findall(r"[^\W\d_]", visible(value))) > 1
+                and visible(value).lower() not in same_in_french)
+
+    # Nom donné à un bloc ciselé dans un schéma (attribut « blockName » d'une block entity, chaîne
+    # préfixée de sa longueur en LEB128). Le jeu l'affiche via Lang.Get : la première ligne est le
+    # nom, le reste la description, tous deux clés du domaine game.
+    BLOCK_NAME = re.compile(rb"\x05\tblockName")
+
+    def schematic_names(raw):
+        import base64
+        try:
+            blocks = json.loads(raw.decode("utf-8-sig")).get("BlockEntities") or {}
+        except (ValueError, AttributeError):
+            return
+        for encoded in blocks.values():
+            try:
+                data = base64.a85decode(encoded)
+            except ValueError:
+                continue
+            for m in BLOCK_NAME.finditer(data):
+                i, size, shift = m.end(), 0, 0
+                while True:
+                    byte = data[i]
+                    i, size, shift = i + 1, size | (byte & 0x7F) << shift, shift + 7
+                    if byte < 0x80:
+                        break
+                name = data[i:i + size].decode("utf-8", "replace")
+                cut = name.find("\n")
+                for text in (name[:cut], name[cut + 1:]) if cut > 0 else (name,):
+                    if re.search(r"[^\W\d_]", text) and "*" not in text:
+                        yield text
+
     def load_modpack():
-        """Textes du modpack : anglais par mod, et qui traduit quoi en français (hors packs tiers)."""
+        """Textes du modpack : anglais par mod, et qui traduit quoi en français (hors packs tiers).
+
+        Une traduction vide ou restée en anglais (hors lint/identiques.txt) ne compte pas.
+        """
         zips = sorted(MODS_DIR.glob("*.zip"))
         archives = {}
         for z in zips:
@@ -128,8 +178,13 @@ let
         game_english = {qualify(k, "game"): v for k, v in entries((GAME_ASSETS / "game/lang/en.json").read_bytes()).items()}
         for key in entries((GAME_ASSETS / "game/lang/fr.json").read_bytes()):
             french[qualify(key, "game")].add("jeu de base")
+        translations = []  # (modid, clé qualifiée, texte)
         for modid, archive in archives.items():
             for name in archive.namelist():
+                if re.match(r"assets/[^/]+/worldgen/.*\.json$", name):
+                    for text in schematic_names(archive.read(name)):
+                        english[modid].setdefault(qualify(text, "game"), ("game", text, text))
+                    continue
                 m = LANG.match(name)
                 if not m:
                     continue
@@ -140,9 +195,14 @@ let
                 for key, text in entries(archive.read(name)).items():
                     if lang == "fr":
                         if modid not in TRANSLATION_PACKS:
-                            french[qualify(key, domain)].add(modid)
+                            translations.append((modid, qualify(key, domain), text))
                     else:
                         english[modid][qualify(key, domain)] = (domain, key, text)
+        sources = {qk: text for keys in english.values() for qk, (_, _, text) in keys.items()}
+        same_in_french = load_same_in_french()
+        for modid, qk, text in translations:
+            if not untranslated(text, sources.get(qk, game_english.get(qk)), same_in_french):
+                french[qk].add(modid)
         return english, french, game_english
 
     # --- ModDB (vs-lock-mods, vs-check-updates) ---
@@ -588,10 +648,6 @@ let
 
     TAG = re.compile(r"</?\s*([a-zA-Z]+)")
 
-    def visible(text):
-        """Texte affiché, sans balises ni puces : « <font …>• Archer</font> » -> « Archer »."""
-        return re.sub(r"<[^>]*>", "", text).strip(" •\n")
-
     def tags(text):
         return sorted(t.lower() for t in TAG.findall(PLACEHOLDER.sub("", text)))
     GITHUB = os.environ.get("GITHUB_ACTIONS") == "true"
@@ -643,12 +699,7 @@ let
         return data
 
     # Textes qui s'écrivent pareil en français (noms propres, emprunts) : pas d'avertissement.
-    same_path = ROOT / "lint/identiques.txt"
-    same_in_french = set()
-    if same_path.exists():
-        for line in same_path.read_text("utf-8").splitlines():
-            if line.strip() and not line.startswith("#"):
-                same_in_french.add(line.strip().lower())
+    same_in_french = load_same_in_french()
 
     files = repo_lang_files()
     if not files:
@@ -685,7 +736,7 @@ let
                 report("error", rel, f"balises différentes de l'anglais : {source!r}", key)
             if value.count("\n") != source.count("\n"):
                 report("warning", rel, "nombre de sauts de ligne différent de l'anglais", key)
-            if value == source and len(re.findall(r"[^\W\d_]", visible(value))) > 1 and visible(value).lower() not in same_in_french:
+            if value.strip() and untranslated(value, source, same_in_french):
                 report("warning", rel, "identique à l'anglais (sinon l'ajouter à lint/identiques.txt)", key)
 
     print(f"vs-lint : {len(ours)} clé(s), {counts['error']} erreur(s), {counts['warning']} avertissement(s)")

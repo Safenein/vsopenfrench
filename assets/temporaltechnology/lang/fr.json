@@ -112,5 +112,22 @@
   "locustmod:item-creature-humanoid-trader-tinkerer2": "Invoquer marchand bricoleur",
   "locustmod:tradingwindow-humanoid-trader-tinkerer2": "{0}, le marchand bricoleur (invoqué)",
   "game:item-knife-generic-temporal": "Couteau temporel",
-  "game:itemdesc-knife-generic-temporal": "<font color=\"#69c9a2\"><i>Une antique lame de couteau d'une grande netteté. Il semble que l'utilisation d'un diamant ordinaire comme noyau cristallin n'ait pas permis de restaurer complètement son passé.</i></font><br><font color=\"#ff3333\">Gardez-le chargé - il disparaîtra à 0 de résistance</font>"
+  "game:itemdesc-knife-generic-temporal": "<font color=\"#69c9a2\"><i>Une antique lame de couteau d'une grande netteté. Il semble que l'utilisation d'un diamant ordinaire comme noyau cristallin n'ait pas permis de restaurer complètement son passé.</i></font><br><font color=\"#ff3333\">Gardez-le chargé - il disparaîtra à 0 de résistance</font>",
+  "game:Modrá tapeta (na starých prknech)": "Papier peint bleu (Sur bloc de planches vieillies)",
+  "game:Velmi starý odkorněný špalek dřeva": "Rondin écorcé vétuste",
+  "game:Popraskané kamenné cihly z čediče": "Pierres de taille craquelées en basalte",
+  "game:Staré čedičové otesané kamenné cihly": "Pierres de taille vieillies en basalte",
+  "game:Phyllite stone bricks": "Briques de pierre en phyllite",
+  "game:Staré břidlicové otesané kamenné cihly": "Pierres de taille vieillies en ardoise",
+  "game:Starý kmen": "Rondin vieilli",
+  "game:Zestárlá čtvrtletní kulatina": "Carré de rondins vieillis",
+  "game:Prohnilé desky z ebenu": "Bloc de planches d'ébène pourries",
+  "game:Staré desky z ebenu": "Bloc de planches d'ébène vieillies",
+  "game:Starý dřevěný panel": "Panneau de bois vieilli",
+  "game:Ebenová prkna": "Bloc de planches d'ébène",
+  "game:Středně-úrodná půda (Travnatá)": "Terre moyennement fertile (Herbe)",
+  "game:Černý šindel blok": "Bloc de bardeaux en céramique noire",
+  "game:Suevite impact rock": "Roche d'impact en suévite",
+  "game:Suevite rock (Polished)": "Roche de suévite (Polie)",
+  "game:Andesite rock (Polished)": "Roche d'andésite (Polie)"
 }

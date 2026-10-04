@@ -1,0 +1,6 @@
+{
+  "cmd-usage-toggle": "Utilisation : .optitime &lt;opt&gt; on/off",
+  "profiling-usage": "Utilisation : .optitime profile on|off|dump|reset",
+  "compat-smoke-title": "[OptiTime] Mode de compatibilité {0} activé",
+  "compat-smoke-desc": "Rejet des particules contourné pour les apparitions hors du fil principal (effets de fumée et d'armes à feu préservés)"
+}

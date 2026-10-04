@@ -9,5 +9,7 @@
   "Config.Hint.BloodParticlesColor.Red": "Couleur des particules : rouge",
   "Config.Hint.BloodParticlesColor.Green": "Couleur des particules : vert",
   "Config.Hint.BloodParticlesColor.Blue": "Couleur des particules : bleu",
-  "Config.Hint.BloodParticlesColor.Transparency": "Couleur des particules : transparence"
+  "Config.Hint.BloodParticlesColor.Transparency": "Couleur des particules : transparence",
+  "bloodtrail-client": "Blood Trail (client)",
+  "Config.Setting.Tab.Extra": "Divers"
 }

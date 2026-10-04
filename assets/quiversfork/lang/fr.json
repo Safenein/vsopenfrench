@@ -2,5 +2,13 @@
   "quiversandsheaths:setting-allow_lanterns_in_tool_holster": "Autoriser les lanternes dans l'étui à outils",
   "quiversandsheaths:setting-comment-allow_lanterns_in_tool_holster": "Permet de stocker de petites lanternes portatives dans l'étui à outils. Les lanternes stockées continuent d'émettre de la lumière, réduite de 4 niveaux.",
   "quiversandsheaths:handbook-craftingappearance-title": "Apparence de fabrication",
-  "quiversandsheaths:handbook-craftingappearance-text": "Les recettes peuvent accepter plusieurs variantes de matériaux correspondantes. Les ingrédients en cuir, tissu, métal et bois désignés par la recette conservent leur apparence sur l'objet fabriqué."
+  "quiversandsheaths:handbook-craftingappearance-text": "Les recettes peuvent accepter plusieurs variantes de matériaux correspondantes. Les ingrédients en cuir, tissu, métal et bois désignés par la recette conservent leur apparence sur l'objet fabriqué.",
+  "quiversandsheaths:setting-hotkey_addBeltLeft": "Raccourci de l'emplacement gauche de la ceinture",
+  "quiversandsheaths:setting-hotkey_addBeltRight": "Raccourci de l'emplacement droit de la ceinture",
+  "quiversandsheaths:setting-hotkey_addBeltBack": "Raccourci de l'emplacement arrière de la ceinture",
+  "quiversandsheaths:setting-hotkey_addBeltFront": "Raccourci de l'emplacement avant de la ceinture",
+  "quiversandsheaths:setting-hotkey_frontgear": "Raccourci de l'emplacement d'équipement avant",
+  "quiversandsheaths:setting-hotkey_backgear": "Raccourci de l'emplacement d'équipement dorsal",
+  "quiversandsheaths:setting-hotkey_rightshouldergear": "Raccourci de l'emplacement de l'épaule droite",
+  "quiversandsheaths:setting-hotkey_leftshouldergear": "Raccourci de l'emplacement de l'épaule gauche"
 }

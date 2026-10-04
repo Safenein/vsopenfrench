@@ -1,0 +1,11 @@
+{
+  "game:tabname-millwright": "Constructeur de moulins",
+  "block-improvedaxlepassthrough*": "Axe en bois amélioré (traversant)",
+  "blockdesc-improvedaxlepassthrough*": "Se loge dans un bloc plein pour transmettre la puissance sans briser l'étanchéité de la pièce",
+  "axle-insideof": "à l'intérieur de",
+  "block-windmillrotorud-three-*": "Rotor d'éolienne à axe vertical à trois voiles (renforcé)",
+  "blockdesc-windmillrotorud-*": "Nécessite un ou plusieurs ensembles de voiles pour fonctionner",
+  "item-sailassembly-three-sailwide": "Ensemble de voiles (pour éoliennes verticales à trois axes)",
+  "itemdesc-sailassembly-three-*": "Composant d'éolienne. Nécessite un rotor d'éolienne vertical à trois axes",
+  "itemdesc-sailassembly-two-*": "Composant d'éolienne. Nécessite un rotor d'éolienne vertical à deux axes"
+}

@@ -531,5 +531,16 @@
   "setting_enable_ruins_comment": "Si désactivé, aucune nouvelle ruine de More Banners n'apparaît lors de la génération de nouveaux terrains.",
   "setting_enable_ruins": "Les ruines de More Banners peuvent apparaître",
   "setting_ruins_rarity_multiplier": "Rareté des ruines",
-  "setting_ruins_rarity_multiplier_comment": "Multiplicateur de rareté des ruines : 2.0 double leur apparition, 0.5 la divise par deux, etc."
+  "setting_ruins_rarity_multiplier_comment": "Multiplicateur de rareté des ruines : 2.0 double leur apparition, 0.5 la divise par deux, etc.",
+  "game:Eye of Ra": "Œil de Râ",
+  "game:Aged granite ashlar blocks": "Pierres de taille vieillies en granite",
+  "game:Granite dry stone": "Pierre sèche de granite",
+  "game:Granite cobblestone": "Pavé de granite",
+  "game:Granite ashlar blocks": "Pierres de taille en granite",
+  "game:Aged wooden window": "Fenêtre en bois vieillie",
+  "game:Rotten wooden window": "Fenêtre en bois pourrie",
+  "game:Corroded iron cauldron": "Chaudron en fer corrodé",
+  "game:Broken Quern": "Meule cassée",
+  "game:Bald cypress": "Cyprès chauve",
+  "game:Vintage glass pane (1 thick)": "Vitre ancienne (épaisseur 1)"
 }

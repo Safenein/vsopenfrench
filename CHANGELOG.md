@@ -15,6 +15,17 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   salade, armet, bourguignotte, lansquenet, espadon, bec-de-corbin, lit de fusion, vent chaud,
   rigole de coulée, brocard.
 - Notice Board 3.0.4 dans le modpack de référence (déjà traduit par son auteur).
+- Hanging Storage Vessels 1.1.1 dans le modpack de référence, traduit (jarres suspendues et inclinées).
+- `vs-audit` ne compte plus comme traduite une valeur vide ou restée en anglais dans le fr.json
+  d'un mod, et voit les noms des blocs ciselés des schémas. 1 316 textes de plus traduits, dont :
+  - Better Ruins : plus de 800 noms et descriptions de blocs ciselés des ruines (« Vieux tabouret »,
+    « Four »…), et ceux de More Banners, Temporal Technology (noms laissés en tchèque),
+    Th3Dungeon ;
+  - Primitive Survival : description de la terre agricole avec sillon, aide du fumoir, lombrics ;
+  - Butchering : pain de sang au seigle ;
+  - Armory (acier météorique), XSkills/XLib (effets, aptitudes), Millwright, OptiTime,
+    Footprints, quivers, Racial Equality, All Classes, etc. Les textes identiques en français
+    (Banjo, Cognac, Jujube…) sont déclarés dans `lint/identiques.txt`.
 
 ## [0.3.0] - 2026-10-02
 

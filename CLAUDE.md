@@ -12,12 +12,12 @@ dans `devenv shell`.
 
 - `vsServer` : serveur officiel du jeu (`gameVersion`, tarball du CDN). Donne `VS_GAME_ASSETS`.
 - `vsMods` : modpack de référence construit depuis `mods.json` (zips ModDB, ré-empaquetés avec
-  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation et ceux ajoutés à la demande (210 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…). Sans release taguée 1.22.7, on retient la dernière release 1.22.x (smex, ppex, loggingmod, vanillavarnished, japanesearchitecture, clothierheirloomsmod, faviking, falandsknecht) ; `vs-check-updates` les laisse alors telles quelles.
+  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation et ceux ajoutés à la demande (211 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…). Sans release taguée 1.22.7, on retient la dernière release 1.22.x (smex, ppex, loggingmod, vanillavarnished, japanesearchitecture, clothierheirloomsmod, faviking, falandsknecht) ; `vs-check-updates` les laisse alors telles quelles.
 - Les scripts Python partagent `pyLib` (lecture tolérante des lang des mods, résolution des domaines).
 
 | Commande | Rôle |
 | --- | --- |
-| `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Les packs tiers (`TRANSLATION_PACKS`) ne comptent pas. Référence : 0 clé (tout le modpack, packs compris, est couvert) |
+| `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Les packs tiers (`TRANSLATION_PACKS`) ne comptent pas, ni une valeur vide ou identique à l'anglais dans le fr.json d'un mod (hors `lint/identiques.txt`). Les noms de blocs ciselés des schémas comptent comme clés `game:<nom>`. Référence : 0 clé (tout le modpack, packs compris, est couvert) |
 | `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés), `expandedfoods.json` (tartes mixtes « A/B pie » × glossaire d'ingrédients), `pipeleaf.json` (mélanges × plantes, pipes × métaux) et `heraldique.json` (motifs × émaux héraldiques, « de gueules », et objets × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
 | `vs-lint` | JSON strict UTF-8 sans BOM, sans doublon ; clé présente en anglais dans le modpack ; non traduite ailleurs ; mêmes `{n}`, `>>>nom<<<` et balises que l'anglais (le texte des pluriels `{p0:…}` se traduit). Hook pre-commit |
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
@@ -73,6 +73,11 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
   7034 (`…-sugarbeet-insturmentalcase`), le jeu ignore donc tout son français. À signaler à
   l'auteur ; en attendant, ses fruits restent en anglais en jeu (le glossaire de
   `gen/wcfefcompat.json` n'en dépend pas). `vs-test` le signale en avertissement.
+- Un mod qui dépend d'un autre mod charge après vsopenfrench : ses valeurs restées en anglais dans
+  son fr.json écrasent les nôtres (armoryfork, pandaxskills pour `xskills:`, quiversfork,
+  tabletopgames, electricalprogressiveindustry). Livrées quand même, à signaler aux auteurs.
+- Noms de blocs ciselés (schémas `worldgen`) : le jeu fait `Lang.Get(nom)`, clé du domaine `game`,
+  sensible à la casse ; un nom contenant `:` se cherche sans préfixe. Ne livrer `game:` que sinon.
 - Les messages du serveur sont traduits avec `ServerLanguage: fr` : `vs-test` attend
   `Entering runphase RunGame`, qui ne l'est pas.
 

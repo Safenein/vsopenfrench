@@ -4,5 +4,17 @@
   "game:skinpart-ears-roundedearsears": "Arrondies",
   "game:skinpart-ears-stickoutears": "Saillantes",
   "game:skinpart-ears-neatears": "Soignées",
-  "game:skinpart-ears-pulledears": "Étirées"
+  "game:skinpart-ears-pulledears": "Étirées",
+  "game:skinpart-ears": "Oreilles",
+  "game:skinpart-ears-elangetears": "Allongées",
+  "game:skinpart-ears-massiveears": "Massives",
+  "game:skinpart-ears-sharp": "Pointues",
+  "game:skinpart-ears-omittedears": "Absentes",
+  "game:skinpart-ears-arrowears": "En pointe de flèche",
+  "game:skinpart-ears-plumpears": "Charnues",
+  "game:skinpart-beard-dwarf1": "Grand bouc",
+  "game:skinpart-beard-dwarf2": "Prospecteur",
+  "game:skinpart-beard-dwarf3": "Longue et droite",
+  "game:skinpart-beard-dwarf4": "Courte de mineur",
+  "game:skinpart-beard-dwarf5": "Chignon négligé"
 }

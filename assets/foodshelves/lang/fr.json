@@ -27,5 +27,10 @@
   "segmentnum-coolingcabinet-5": "Au milieu à droite",
   "segmentnum-coolingcabinet-6": "En haut à gauche",
   "segmentnum-coolingcabinet-7": "En haut au centre",
-  "segmentnum-coolingcabinet-8": "En haut à droite"
+  "segmentnum-coolingcabinet-8": "En haut à droite",
+  "game:tabname-foodshelves": "Étagères à nourriture",
+  "foodshelvesclient": "FoodShelves (client)",
+  "Average freshness {0} years": "Fraîcheur moyenne : {0} ans",
+  "Average freshness {0} days": "Fraîcheur moyenne : {0} jours",
+  "Average freshness {0} hours": "Fraîcheur moyenne : {0} heures"
 }

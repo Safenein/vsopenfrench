@@ -1,3 +1,13 @@
 {
-  "ingameerror-support-needed": "Il faut davantage de soutien"
+  "ingameerror-support-needed": "Il faut davantage de soutien",
+  "item-nightcrawler": "Lombric",
+  "item-creature-nightcrawler": "Lombric",
+  "item-dead-creature-nightcrawler": "Lombric",
+  "blockhelp-smoker-trussedmeat": "ajouter de la viande ficelée",
+  "blockhelp-smoker-firewood": "ajouter du bois de chauffage",
+  "blockhelp-smoker-smokedmeat": "retirer la viande fumée",
+  "Worm-Config": "Configuration des lombrics",
+  "fishingstocksat": "les stocks de poissons sont épuisés à {0} % ici",
+  "blockdesc-furrowedland-*": "Commencez le sillon à une source d'eau et progressez vers l'intérieur des terres : il se remplira d'eau tout seul. Sinon, il faudra remplir le sillon au seau (si le transport des sources de liquide est activé dans le jeu).",
+  "block-floatingdock-aged-*": "Quai flottant (Chêne vieilli)"
 }
