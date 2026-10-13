@@ -163,10 +163,12 @@ let
                     if re.search(r"[^\W\d_]", text) and "*" not in text:
                         yield text
 
-    def load_modpack():
+    def load_modpack(with_texts=False):
         """Textes du modpack : anglais par mod, et qui traduit quoi en français (hors packs tiers).
 
         Une traduction vide ou restée en anglais (hors lint/identiques.txt) ne compte pas.
+        Avec with_texts, renvoie en plus le français affiché sans ce dépôt (clé qualifiée -> texte) :
+        celui du jeu de base, remplacé par celui d'un mod quand il y en a un.
         """
         zips = sorted(MODS_DIR.glob("*.zip"))
         archives = {}
@@ -176,8 +178,10 @@ let
         english = defaultdict(dict)  # modid -> {clé qualifiée: (domaine, clé, texte)}
         french = defaultdict(set)    # clé qualifiée -> {source}
         game_english = {qualify(k, "game"): v for k, v in entries((GAME_ASSETS / "game/lang/en.json").read_bytes()).items()}
-        for key in entries((GAME_ASSETS / "game/lang/fr.json").read_bytes()):
+        texts = {}
+        for key, text in entries((GAME_ASSETS / "game/lang/fr.json").read_bytes()).items():
             french[qualify(key, "game")].add("jeu de base")
+            texts[qualify(key, "game")] = text
         translations = []  # (modid, clé qualifiée, texte)
         for modid, archive in archives.items():
             for name in archive.namelist():
@@ -203,6 +207,9 @@ let
         for modid, qk, text in translations:
             if not untranslated(text, sources.get(qk, game_english.get(qk)), same_in_french):
                 french[qk].add(modid)
+                texts[qk] = text
+        if with_texts:
+            return english, french, game_english, texts
         return english, french, game_english
 
     # --- ModDB (vs-lock-mods, vs-check-updates) ---
@@ -715,9 +722,20 @@ let
         print("vs-lint : aucun fichier de langue")
         sys.exit(0)
 
-    english, french, game_english = load_modpack()
+    # Surcharges assumées (lint/surcharges.txt) : clés déjà traduites, par le jeu de base ou par
+    # un autre mod, que ce dépôt remplace quand même, chacune avec sa raison.
+    OVERRIDES = "lint/surcharges.txt"
+    overrides = {}
+    if (ROOT / OVERRIDES).exists():
+        for n, line in enumerate((ROOT / OVERRIDES).read_text("utf-8").splitlines(), 1):
+            key = line.split("#", 1)[0].strip()
+            if key:
+                overrides[key] = n
+
+    english, french, game_english, shown = load_modpack(with_texts=True)
     all_english = {qk: (modid, text) for modid, keys in english.items() for qk, (_, _, text) in keys.items()}
     ours = {}
+    values = {}  # clé qualifiée -> texte livré
     for path, rel in files:
         m = LANG.match(rel)
         if not m or m.group(3) != "fr":
@@ -728,15 +746,19 @@ let
             if qk in ours:
                 report("error", rel, f"déjà livrée dans {ours[qk]}", key)
             ours[qk] = rel
-            if qk not in all_english:
+            values[qk] = value
+            if qk in all_english:
+                source = all_english[qk][1]
+            elif qk in game_english and qk in overrides:
+                source = game_english[qk]
+            else:
                 if qk in game_english:
-                    report("error", rel, "clé du jeu de base, à signaler à la traduction officielle", key)
+                    report("error", rel, f"clé du jeu de base, à signaler à la traduction officielle (ou à justifier dans {OVERRIDES})", key)
                 else:
                     report("error", rel, "aucune clé anglaise correspondante dans le modpack", key)
                 continue
-            if french.get(qk):
-                report("error", rel, f"déjà traduite par {', '.join(sorted(french[qk]))}", key)
-            source = all_english[qk][1]
+            if french.get(qk) and qk not in overrides:
+                report("error", rel, f"déjà traduite par {', '.join(sorted(french[qk]))} (sinon justifier dans {OVERRIDES})", key)
             if not value.strip():
                 report("error", rel, "valeur vide", key)
             if placeholders(value) != placeholders(source):
@@ -747,6 +769,35 @@ let
                 report("warning", rel, "nombre de sauts de ligne différent de l'anglais", key)
             if value.strip() and untranslated(value, source, same_in_french):
                 report("warning", rel, "identique à l'anglais (sinon l'ajouter à lint/identiques.txt)", key)
+
+    for qk, line in overrides.items():
+        if qk not in ours:
+            report("warning", OVERRIDES, "surcharge listée mais pas livrée", qk, line=line)
+        elif not french.get(qk):
+            report("warning", OVERRIDES, "ne surcharge plus aucune traduction, à retirer", qk, line=line)
+
+    # Une caractéristique de classe a deux noms : « trait-X » dans la liste du personnage, « traitname-X »
+    # dans les recettes qui l'exigent (« requiert Drapier »). Ils doivent dire la même chose. Comparé
+    # sur le texte affiché en jeu : le nôtre (vsopenfrench, pack theme, charge en dernier), sinon
+    # celui du modpack. Seule la première ligne compte (les races y ajoutent leur description), et
+    # l'un peut contenir l'autre (« Hydrate or Diedrate : Hydraté » pour « Hydraté »).
+    def trait_name(text):
+        first = re.split(r"<br\s*/?>|\n", text, maxsplit=1)[0]
+        return re.sub(r"\s+", " ", visible(first)).casefold()
+
+    shown.update(values)
+    for qk, text in sorted(shown.items()):
+        domain, _, name = qk.partition(":")
+        if not name.startswith("trait-"):
+            continue
+        other = f"{domain}:traitname-{name[len('trait-'):]}"
+        if other not in shown:
+            continue
+        a, b = trait_name(text), trait_name(shown[other])
+        if a not in b and b not in a:
+            mine = qk if qk in ours else other if other in ours else None
+            rel = ours[mine] if mine else "(modpack)"
+            report("warning", rel, f"« {visible(text)} » dans la liste du personnage, « {visible(shown[other])} » dans les recettes ({other})", mine or qk)
 
     print(f"vs-lint : {len(ours)} clé(s), {counts['error']} erreur(s), {counts['warning']} avertissement(s)")
     sys.exit(1 if counts["error"] else 0)
@@ -842,6 +893,14 @@ in
           echo "vs-test : mod vsopenfrench chargé"
         else
           echo "vs-test : mod vsopenfrench absent de la liste des mods chargés" >&2
+          status=1
+        fi
+        # Pack theme : ses assets passent après ceux de tous les mods, donc ses traductions
+        # l'emportent. La ligne liste les origines dans l'ordre de chargement.
+        if grep "External Origins in load order:" "$log" | grep -qE "themepack@[^,]*vsopenfrench[^,]*$"; then
+          echo "vs-test : vsopenfrench chargé en dernier (pack theme)"
+        else
+          echo "vs-test : vsopenfrench n'est pas la dernière origine d'assets chargée" >&2
           status=1
         fi
 

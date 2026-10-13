@@ -54,7 +54,7 @@
   "armory:item-armor-armshands-lamellar-tinbronze-vanilla": "Manches lamellaires (Bronze-étain)",
   "armory:item-armor-armshands-lamellar-blackbronze-vanilla": "Manches lamellaires (Bronze noir)",
   "armory:item-armor-armshands-lamellar-bismuthbronze-vanilla": "Manches lamellaires (Bronze-bismuth)",
-  "game:trait-needlework": "<font color=\"#84ff84\">â€¢ Travail d'aiguille </font>",
+  "game:trait-needlework": "<font color=\"#84ff84\">• Travail d'aiguille </font>",
   "game:traitname-needlework": "Travail d'aiguille",
   "game:traitdesc-needlework": "+1 palier de dégâts perforants.",
   "armory:trait-needlework": "<font color=\"#23FAF6\">â€¢ Travail d'aiguille </font>",
