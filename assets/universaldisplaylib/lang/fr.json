@@ -28,7 +28,7 @@
   "config-overlap": "Laisser les objets se chevaucher pour les serrer davantage",
   "config-room-safe": "Garder une pièce étanche quand un bloc de présentation est ouvert",
   "config-sec-sounds": "Sons",
-  "config-sec-sounds-text": "La pluie entendue à travers les blocs de présentation. À régler selon vos goûts.",
+  "config-sec-sounds-text": "La pluie entendue à travers les blocs de présentation, et le son qu'ils font en s'ouvrant ou en se fermant. À régler selon vos goûts.",
   "config-sec-animation": "Animation",
   "config-sec-animation-text": "Vitesse d'ouverture et de fermeture des blocs de présentation sur votre écran.",
   "config-sec-controls": "Commandes de placement",
@@ -43,5 +43,15 @@
   "config-imm-animation": "Réglages du client - Animation",
   "config-imm-controls": "Réglages du client - Commandes de placement",
   "config-imm-ghost": "Réglages du client - Fantôme de placement",
-  "config-imm-outlines": "Réglages du client - Contours de débogage"
+  "config-imm-outlines": "Réglages du client - Contours de débogage",
+  "blockhelp-open": "Ouvrir",
+  "blockhelp-close": "Fermer",
+  "swap-size": "Il ne peut être échangé que contre une fenêtre de même taille.",
+  "config-openclose-volume": "Volume du son d'ouverture et de fermeture (0 = coupé)",
+  "reach-blocked": "Quelque chose gêne : il n'y a pas la place de l'ouvrir",
+  "reach-swapclosed": "Fermez-le avant de l'échanger",
+  "blockhelp-reach-close": "Fermer",
+  "reach-closeblocked": "Quelque chose d'ouvert gêne : fermez-le d'abord",
+  "materialkind-glass": "Verre ({0})",
+  "material-join": " et "
 }

@@ -5,6 +5,26 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- Modpack de référence mis à jour (41 mods, dont Improved Metallurgy 1.2.1, Forgotten Armory,
+  RP Voice Chat 2.6.6, Expanded Foods 2.0.0-dev.16, Window Display 1.1.0) et ses 748 nouveaux
+  textes traduits :
+  - Improved Metallurgy : aluminium (bauxite, alumine, cryolithe, potassium) et duralumin,
+    infobulles du haut fourneau, des rigoles et de la cuve à laitier, commandes `/IM` ;
+  - Forgotten Armory : armures d'écailles Qièxuē et brigandines Shìwèi Qīnjūn (153 pièces), et
+    les quatre chroniques réécrites (gothique, Greenwich, varègue, dynasties chinoises) ;
+  - RP Voice Chat : groupes vocaux ;
+  - Expanded Foods (`vs-gen`) : fenouil, céréales grillées ;
+  - Window Display : fenêtres classiques, volets extérieurs, vitres ; Universal Display Lib :
+    ouverture et fermeture des présentoirs ;
+  - carillons de porte (Wind Chimes), cornes skavens, soupières pleines (Aldi Classes), favoris des
+    émotes, assiettes (Dishware), erreurs du four (A Culinary Artillery).
+- Textes anglais modifiés retraduits : fenêtres « pliantes » (ex-« ouvrant à »), recettes de
+  VS Roofing (grandes lauzes, bardeaux de métal), chaudières (Pipes and Power Expanded),
+  convertisseur Bessemer, nodules polymétalliques des lacs, limite du soufflet.
+- Clés disparues de l'anglais retirées (ppex, smex, vintageskavenrat, windchimes).
+- `vs-check-updates` retient la release compatible de plus haute version et ne revient jamais en
+  arrière : alchemy reste en 2.2.0-rc.12 malgré la publication d'une 2.1.23.
+
 ## [0.4.0] - 2026-10-04
 
 - Modpack de référence étendu de 185 à 210 mods, et leurs 5 476 textes sans français traduits :

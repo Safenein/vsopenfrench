@@ -682,5 +682,6 @@
   "ui-This decoration color does not fit this armor piece.": "Cette couleur de décoration ne convient pas à cette pièce d'armure.",
   "ui-This decoration color does not fit the {0}.": "Cette couleur de décoration ne convient pas à cette pièce ({0}).",
   "ui-The mounted armor no longer contains the color preview supplied by the staged decoration.": "L'armure installée ne contient plus l'aperçu de couleur fourni par la décoration en attente.",
-  "ui-wolf texture": "texture de loup"
+  "ui-wolf texture": "texture de loup",
+  "facore:ui-Qing armor accepts only three cloth colors.": "L'armure Qing n'accepte que trois couleurs de tissu."
 }

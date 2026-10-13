@@ -27,6 +27,7 @@ Chanterelle
 Chlorociboria
 Chubbs
 Citrine
+Cobalt
 Coke
 Communis Cauda
 Communis Crista
@@ -46,6 +47,7 @@ Description
 Douglas
 Dovidarium
 Dragon
+Duralumin
 EarthLiving
 Eshin
 Eucalyptus
@@ -62,12 +64,14 @@ Gozinaki
 Herbivore
 Ikekomi
 Ikekomi Dōrō
+Inconel
 Insignia
 Intellect
 Intellect I
 Interactions
 Interface
 intoxication
+Invitations ({0})
 Jacaranda
 Jade
 Joker
@@ -113,6 +117,7 @@ Pilaf
 Pilaf {1}
 Pipes & Power
 Portfolio
+Potassium
 Production
 ProspectTogether
 psi

@@ -23,7 +23,6 @@
   "game:skinpart-tail-tied": "Nouée en ruban",
   "game:skinpart-tail-mangledandblighted": "Mutilée et flétrie",
   "game:skinpart-tail-protected": "Protégée",
-  "game:skinpart-horns-seerhorns": "Cornes de prophète",
   "game:skinpart-horns-nohorns": "Sans cornes",
   "game:skinpart-horns": "Type de cornes",
   "game:skinpart-horncolor": "Couleur des cornes",
@@ -274,5 +273,17 @@
   "game:skinpart-eyecolor-smokyquartz": "Quartz fumé",
   "game:skinpart-eyecolor-topaz": "Topaze",
   "game:skinpart-eyecolor-tourmaline": "Tourmaline",
-  "game:skinpart-eyecolor-white": "Blanc"
+  "game:skinpart-eyecolor-white": "Blanc",
+  "game:skinpart-horns-seerlorda": "Seigneur prophète oint",
+  "game:skinpart-horns-seerlordb": "Seigneur prophète renommé",
+  "game:skinpart-horns-seerlordc": "Seigneur prophète ascendant",
+  "game:skinpart-horns-seerlordd": "Seigneur prophète acolyte",
+  "game:skinpart-horns-seerlorde": "Seigneur prophète scribe",
+  "game:skinpart-horns-seerlordchosen": "Seigneur prophète élu",
+  "game:skinpart-horns-verminlorda": "Seigneur de la vermine exalté",
+  "game:skinpart-horns-verminlordb": "Seigneur de la vermine voyant de malepierre",
+  "game:skinpart-horns-verminlordc": "Seigneur de la vermine corrupteur",
+  "game:skinpart-horns-verminlordd": "Seigneur de la vermine trompeur",
+  "game:skinpart-horns-verminlorde": "Seigneur de la vermine porteur de guerre",
+  "game:skinpart-hornfaceplatecolor": "Couleur du masque de l'élu"
 }
