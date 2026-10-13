@@ -289,11 +289,18 @@ let
     """Cherche sur la ModDB une version plus récente de chaque mod de mods.json.
 
     Usage: vs-check-updates [--write] [--markdown FICHIER]
-    Retient, pour chaque mod, la release la plus récente dont les tags contiennent la version du
-    jeu de mods.json. --write met mods.json à jour (sha256 compris) ; --markdown écrit la liste
-    des mises à jour en tableau. Sort en 0 dans tous les cas : c'est vs-audit qui dit s'il y a
-    de nouveaux textes.
+    Retient, pour chaque mod, la release de plus haute version (SemVer) dont les tags contiennent
+    la version du jeu de mods.json, et jamais une version inférieure à celle de mods.json : un
+    auteur peut publier une 2.1.x stable après une 2.2.0-rc. --write met mods.json à jour (sha256
+    compris) ; --markdown écrit la liste des mises à jour en tableau. Sort en 0 dans tous les
+    cas : c'est vs-audit qui dit s'il y a de nouveaux textes.
     """
+    def version_key(version):
+        """Ordre SemVer : 2.1.23 < 2.2.0-rc.9 < 2.2.0-rc.12 < 2.2.0."""
+        core, _, pre = version.lstrip("vV").split("+")[0].partition("-")
+        ids = [(0, int(p), "") if p.isdigit() else (1, 0, p) for p in re.split(r"[.-]", pre)] if pre else []
+        return [int(n) for n in re.findall(r"\d+", core)], not pre, ids
+
     args = sys.argv[1:]
     write = "--write" in args
     markdown = Path(args[args.index("--markdown") + 1]) if "--markdown" in args else None
@@ -304,8 +311,10 @@ let
     updates, mods = [], []
     for old in lock["mods"]:
         moddb, mod = moddb_resolve(old["modid"], old.get("moddb"))
-        release = next((r for r in mod["releases"] if game in r.get("tags", [])), None)
-        if release is None or release["fileid"] == old["fileid"]:
+        compatible = [r for r in mod["releases"] if game in r.get("tags", [])]
+        release = max(compatible, key=lambda r: version_key(r["modversion"]), default=None)
+        if (release is None or release["fileid"] == old["fileid"]
+                or version_key(release["modversion"]) < version_key(old["version"])):
             mods.append(old)
             continue
         page = f"https://mods.vintagestory.at/show/mod/{mod['assetid']}"

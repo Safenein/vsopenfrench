@@ -26,7 +26,7 @@ dans `devenv shell`.
 | `vs-logo` | régénère `docs/logo.png` et `modicon.png`, identiques (480 px, format de la ModDB) ; police Libertinus Serif de nixpkgs |
 | `vs-release <version>` | met à jour modinfo + CHANGELOG, commit, tag `v<version>`, push, `gh release create` |
 | `vs-lock-mods <dossier> [jeu]` | régénère `mods.json` via l'API ModDB (`api/mod/<modid>`, repli sur l'urlalias ; champ `moddb` pour forcer un id) |
-| `vs-check-updates [--write] [--markdown f]` | cherche sur la ModDB la release la plus récente de chaque mod de `mods.json` compatible avec sa version du jeu ; `--write` met `mods.json` à jour |
+| `vs-check-updates [--write] [--markdown f]` | cherche sur la ModDB la release de plus haute version (SemVer) de chaque mod de `mods.json` compatible avec sa version du jeu, jamais inférieure à la référence (alchemy publie des 2.1.x après sa 2.2.0-rc.12) ; `--write` met `mods.json` à jour |
 
 Hooks pre-commit (lancés par prek, sur les fichiers suivis par git) : `vs-lint`, `nixfmt`, `actionlint`.
 
