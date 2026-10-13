@@ -5,6 +5,23 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 
 ## [Non publié]
 
+- vsopenfrench devient un pack *theme* : chargé après tous les mods, ses traductions s'affichent
+  même quand un mod à dépendances livre un fr.json resté en anglais (armoryfork, pandaxskills,
+  quiversfork, tabletopgames, electricalprogressiveindustry). `vs-test` vérifie qu'il charge en
+  dernier.
+- Caractéristiques de classe : un même trait portait deux noms, l'un dans la fiche du personnage
+  (touche C), l'autre dans les recettes qui l'exigent. Le Tisserand d'Aldi's Classes avait bien
+  « Drapier », mais sa fiche l'appelait « Couturier ». Noms alignés :
+  - jeu de base (surcharges justifiées dans `lint/surcharges.txt`) : Drapier, Facteur d'arcs
+    (ex-« Archer »), Raccommodeur (coquille), Impitoyable, Pillard, Précis, Pied léger,
+    Débrouillard ;
+  - Specialized Classes : 20 traits (Prudent, Pudique, Moissonneur, Laboureur, Charpentier de
+    marine…) et « Imprudent », resté en anglais ;
+  - Aldi's Classes : fiche du personnage en français pour Charbonnier, Boucher, Fermier, Fragile,
+    Affamé, Bûcheron et Mineur, que seul allclasses traduisait ; « Sus à l'ennemi ! » ;
+  - Rustbound Magic : « Recettes d'archimage » ; Armory : puce « • » au lieu de « â€¢ ».
+- `vs-lint` : surcharges assumées listées dans `lint/surcharges.txt` (clé du jeu de base ou déjà
+  traduite ailleurs), avertissement quand `trait-X` et `traitname-X` ne disent pas la même chose.
 - Modpack de référence mis à jour (41 mods, dont Improved Metallurgy 1.2.1, Forgotten Armory,
   RP Voice Chat 2.6.6, Expanded Foods 2.0.0-dev.16, Window Display 1.1.0) et ses 748 nouveaux
   textes traduits :

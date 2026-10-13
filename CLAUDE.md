@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Mod de contenu Vintage Story (`modid` `vsopenfrench`) qui livre des traductions françaises
+Pack theme Vintage Story (`modid` `vsopenfrench`, sans code) qui livre des traductions françaises
 pour les textes de mods que personne ne traduit. Aucun code C# : `modinfo.json`, `modicon.png` et
 des fichiers `assets/<domaine>/lang/fr.json`. Le contexte complet (chiffres, ordre de chargement,
 priorités) est dans `docs/audit-2026-09-30.md`. On écrit en français.
@@ -73,9 +73,16 @@ Ne jamais reprendre les traductions d'autres packs sans l'accord écrit de leurs
   7034 (`…-sugarbeet-insturmentalcase`), le jeu ignore donc tout son français. À signaler à
   l'auteur ; en attendant, ses fruits restent en anglais en jeu (le glossaire de
   `gen/wcfefcompat.json` n'en dépend pas). `vs-test` le signale en avertissement.
-- Un mod qui dépend d'un autre mod charge après vsopenfrench : ses valeurs restées en anglais dans
-  son fr.json écrasent les nôtres (armoryfork, pandaxskills pour `xskills:`, quiversfork,
-  tabletopgames, electricalprogressiveindustry). Livrées quand même, à signaler aux auteurs.
+- vsopenfrench est un pack `theme` (`modinfo.json`) : le jeu ajoute les origines theme après tous
+  les mods de contenu et de code, et pour une clé de langue la dernière valeur lue gagne. Ses
+  traductions l'emportent donc toujours, y compris sur les mods à dépendances (armoryfork,
+  pandaxskills…) qui écrasaient les nôtres en type `content`. Un theme n'a droit qu'aux assets
+  sans effet de jeu (`AffectsGameplay: false`), dont `lang`. `vs-test` vérifie que
+  `themepack@vsopenfrench` termine la ligne `External Origins in load order`.
+- Surcharges (`lint/surcharges.txt`) : clés déjà traduites, du jeu de base ou d'un autre mod,
+  remplacées exprès, avec leur raison. Les corrections du jeu de base vont dans
+  `assets/vsopenfrench/lang/fr.json`, jamais dans `assets/game/` (le fichier de ce chemin
+  masquerait celui du jeu pour l'AssetManager).
 - Noms de blocs ciselés (schémas `worldgen`) : le jeu fait `Lang.Get(nom)`, clé du domaine `game`,
   sensible à la casse ; un nom contenant `:` se cherche sans préfixe. Ne livrer `game:` que sinon.
 - Les messages du serveur sont traduits avec `ServerLanguage: fr` : `vs-test` attend

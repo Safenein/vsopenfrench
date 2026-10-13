@@ -1,0 +1,11 @@
+{
+  "game:trait-bowyer": "<font color=\"#84ff84\">• Facteur d'arcs </font>",
+  "game:traitname-bowyer": "Facteur d'arcs",
+  "game:trait-clothier": "<font color=\"#84ff84\">• Drapier </font>",
+  "game:trait-fleetfooted": "<font color=\"#84ff84\">• Pied léger </font>",
+  "game:traitname-mender": "Raccommodeur",
+  "game:traitname-merciless": "Impitoyable",
+  "game:trait-pilferer": "<font color=\"#84ff84\">• Pillard </font>",
+  "game:trait-precise": "<font color=\"#84ff84\">• Précis </font>",
+  "game:traitname-resourceful": "Débrouillard"
+}

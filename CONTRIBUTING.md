@@ -80,13 +80,14 @@ se traduit lui-même.
 `vs-lint` (et la CI) refuse un fichier qui enfreint les règles marquées ✔.
 
 - ✔ **Ne livrer que les trous.** Une clé déjà traduite par le mod lui-même ou par un autre mod
-  n'est pas livrée : en cas de doublon, la dernière valeur chargée gagne, et l'ordre de chargement
-  n'est pas maîtrisé. Exception : les packs de traduction tiers (`TRANSLATION_PACKS` dans
+  n'est pas livrée : vsopenfrench, pack *theme*, charge après tous les mods, et sa valeur
+  écraserait la leur. Exception : les packs de traduction tiers (`TRANSLATION_PACKS` dans
   `devenv.nix` : modtraductionsfr, vintagestoryfr, frtraductionmods) ne comptent pas, car
   vsopenfrench couvre leur périmètre avec ses propres traductions. Une « traduction » vide ou
   restée en anglais dans le fr.json d'un mod ne compte pas non plus (sauf texte listé dans
-  `lint/identiques.txt`) : on la remplace. Elle ne s'affiche en jeu que si le mod charge avant
-  vsopenfrench, donc s'il ne dépend d'aucun autre mod ; sinon, la signaler à son auteur.
+  `lint/identiques.txt`) : on la remplace, et la nôtre s'affiche en jeu. Exception assumée :
+  une clé listée dans `lint/surcharges.txt` avec sa raison (nom incohérent, clé partagée entre
+  deux mods dont un seul la traduit). vs-lint avertit quand une surcharge ne sert plus.
 - **Noms de blocs ciselés** : le nom qu'un bâtisseur donne à un bloc ciselé dans un schéma
   (`worldgen/**/*.json`) passe par la traduction, la première ligne comme nom, le reste comme
   description. `vs-audit` les extrait comme clés du domaine `game` : `"game:Old stool"`, sauf
@@ -96,7 +97,12 @@ se traduit lui-même.
   Conserver aussi les `\n` (avertissement seulement).
 - ✔ **JSON strict en UTF-8** : pas de commentaires, pas de virgule finale, pas de BOM.
 - ✔ **Pas de clé du jeu de base** : les trous du jeu lui-même se signalent à la
-  [traduction officielle](https://crowdin.com/project/vintage-story-game).
+  [traduction officielle](https://crowdin.com/project/vintage-story-game). Seule exception, les
+  corrections listées dans `lint/surcharges.txt`, livrées dans `assets/vsopenfrench/lang/fr.json`
+  et signalées aussi à la traduction officielle.
+- **Caractéristiques de classe** : `trait-X` (liste du personnage, touche C) et `traitname-X`
+  (recettes qui l'exigent) nomment la même chose ; vs-lint avertit quand les deux noms affichés
+  diffèrent.
 - **Lexique ancien et authentique** : entre deux termes, préférer le plus ancien et le plus
   authentique (« Pholiote marginée » plutôt que le calque « Chapeau ondulé », « charrette », « coupe »,
   « eau-de-vie » plutôt que « brandy »), y compris quand le jeu de base n'a qu'un calque.

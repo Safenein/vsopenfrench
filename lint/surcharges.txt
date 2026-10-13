@@ -1,0 +1,31 @@
+# Clés déjà traduites (par le jeu de base ou par un autre mod) que vsopenfrench remplace quand même.
+# vs-lint refuse toute autre clé déjà traduite. Chaque surcharge doit avoir une raison : on la retire
+# dès que la source corrige son texte (vs-lint avertit quand elle ne surcharge plus rien).
+# Une clé qualifiée par ligne ; le texte après # est la raison.
+
+# Jeu de base : une caractéristique porte deux noms, « trait-X » dans la liste du personnage
+# (touche C) et « traitname-X » dans les recettes qui l'exigent. Le joueur à qui une recette
+# demande « Drapier » ne le retrouve pas dans sa liste, où il s'appelle « Couturier ».
+# À signaler aussi à la traduction officielle (Crowdin).
+game:trait-bowyer          # « Fabricant d'arcs » / « Archer » : un facteur d'arcs n'est pas un archer
+game:traitname-bowyer
+game:trait-clothier        # « Couturier » / « Drapier »
+game:trait-fleetfooted     # « Élusif » / « Pied léger »
+game:traitname-mender      # « Raccomodeur » : coquille, « Raccommodeur » dans la liste
+game:traitname-merciless   # « Sans pitié » / « Impitoyable »
+game:trait-pilferer        # « Cambrioleur » / « Pillard »
+game:trait-precise         # « Minutieux » / « Précis »
+game:traitname-resourceful # « Plein de ressources » / « Débrouillard »
+
+# Clés partagées entre aldiclasses (ou specializedclasses) et allclasses : les deux mods
+# définissent la même caractéristique dans le domaine game. Seul allclasses en traduit le nom
+# affiché ; sans lui, la liste du personnage reste en anglais. Avec les deux, la dernière
+# définition de la caractéristique gagne de toute façon.
+game:trait-burner     # allclasses dit « Incandescent », aldiclasses en fait un charbonnier
+game:trait-butcher
+game:trait-farmer
+game:trait-fragile
+game:trait-hungry
+game:trait-lumberjack
+game:trait-miner
+game:trait-careless   # allclasses le laisse en anglais (« • Careless », sans l'espace finale)
