@@ -345,5 +345,9 @@
   "block-smallroundplate-clayworks-pink-dry-raw": "Petite assiette ronde en argile colorée rose brute",
   "block-smallroundplate-clayworks-pink-wet-raw": "Petite assiette ronde en argile colorée rose brute humide",
   "block-smallroundplate-clayworks-crimson-dry-raw": "Petite assiette ronde en argile colorée rouge brute",
-  "block-smallroundplate-clayworks-crimson-wet-raw": "Petite assiette ronde en argile colorée rouge brute humide"
+  "block-smallroundplate-clayworks-crimson-wet-raw": "Petite assiette ronde en argile colorée rouge brute humide",
+  "blockhelp-plate-pickup": "Ramasser l'assiette ou la nourriture",
+  "blockhelp-plate-placefood": "Poser de la nourriture",
+  "blockhelp-plate-rotatefood": "Molette pour tourner la nourriture",
+  "blockhelp-plate-takesame": "Ramasser la même nourriture"
 }

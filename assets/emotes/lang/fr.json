@@ -117,5 +117,10 @@
   "emotes:emote-sittingrelaxedelevated": "Assis en hauteur (relâché)",
   "emotes:emote-sittingrestedelevated": "Assis en hauteur (reposé)",
   "emotes:pair-carrying": "Cette personne porte quelqu'un ou est portée en ce moment.",
-  "emotes:pair-busy": "Cette personne est déjà occupée avec quelqu'un d'autre."
+  "emotes:pair-busy": "Cette personne est déjà occupée avec quelqu'un d'autre.",
+  "emotes:cat-favorites": "Favoris",
+  "emotes:hotkey-wheel": "Roue des émotes (maintenir)",
+  "emotes:favorites-hint": "Clic droit sur une émote pour l'ajouter aux favoris ou l'en retirer",
+  "emotes:favorites-empty": "Aucun favori pour l'instant. Clic droit sur une émote pour en ajouter un.",
+  "emotes:wheel-hint": "Molette pour changer de catégorie, clic droit pour mettre en favori"
 }

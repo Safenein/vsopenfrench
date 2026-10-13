@@ -222,5 +222,12 @@
   "pie-single-aculinaryartillery:eggyolkfullportion-chicken-raw": "Tarte à l'œuf de poule liquide (non cuite)",
   "pie-single-aculinaryartillery:eggyolkfullportion-chicken-partbaked": "Tarte à l'œuf de poule liquide (à moitié cuite)",
   "pie-single-aculinaryartillery:eggyolkfullportion-chicken-perfect": "Tarte à l'œuf de poule liquide",
-  "pie-single-aculinaryartillery:eggyolkfullportion-chicken-charred": "Tarte à l'œuf de poule liquide (carbonisée)"
+  "pie-single-aculinaryartillery:eggyolkfullportion-chicken-charred": "Tarte à l'œuf de poule liquide (carbonisée)",
+  "game:placefailure-toomanyspiles": "Cet arbre ne peut pas recevoir d'autre chalumeau.",
+  "game:blockhelp-oven-take": "Prendre",
+  "game:ovenerror-notfuel": "Il faut d'abord ajouter du combustible",
+  "game:ovenerror-toocold": "Impossible de cuire dans un four froid",
+  "game:ovenerror-notenoughspace": "Le four est plein",
+  "game:ovenerror-nonmatchingfuel": "Impossible de mélanger les combustibles",
+  "poweredmixingbowl-dialogtitle": "Bol mélangeur mécanique"
 }

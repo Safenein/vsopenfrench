@@ -1317,5 +1317,15 @@
   "game:charattribute-clayDropRate-0.2": "+20 % d'argile",
   "game:charattribute-mistletoeDropRate-1": "Deux fois plus de chances d'obtenir du gui",
   "game:charattribute-flaxDropRate-3.5": "Chance d'obtenir deux fois plus de bottes de lin",
-  "game:charattribute-nettleleavesDropRate-0.2": "+20 % de feuilles sur les orties"
+  "game:charattribute-nettleleavesDropRate-0.2": "+20 % de feuilles sur les orties",
+  "block-stewpot-earthyorange-meal": "Soupière en céramique orange foncé remplie ({0})",
+  "block-stewpot-blue-meal": "Soupière en céramique brun foncé remplie ({0})",
+  "block-stewpot-black-meal": "Soupière en céramique noire remplie ({0})",
+  "block-stewpot-brown-meal": "Soupière en céramique brune remplie ({0})",
+  "block-stewpot-cream-meal": "Soupière en céramique crème remplie ({0})",
+  "block-stewpot-fire-meal": "Soupière en céramique réfractaire remplie ({0})",
+  "block-stewpot-gray-meal": "Soupière en céramique grise remplie ({0})",
+  "block-stewpot-orange-meal": "Soupière en céramique orange remplie ({0})",
+  "block-stewpot-red-meal": "Soupière en céramique rouge remplie ({0})",
+  "block-stewpot-tan-meal": "Soupière en céramique ocre remplie ({0})"
 }

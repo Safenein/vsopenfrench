@@ -3,10 +3,10 @@
   "mods": [
     {
       "modid": "aculinaryartillery",
-      "version": "2.0.0-dev.26",
-      "fileid": 125876,
-      "url": "https://moddbcdn.vintagestory.at/ACulinaryArtillery+2_d35540678f334fb549f8597027461ac4.zip?dl=ACulinaryArtillery%202.0.0-dev.26.zip",
-      "sha256": "9317eab6f5f4b05f7a259e95397a28d8a70095a40b11a9094452ed4c26e799f7"
+      "version": "2.0.0-dev.28",
+      "fileid": 129701,
+      "url": "https://moddbcdn.vintagestory.at/ACulinaryArtillery_2_5c56c995ad8579d8cf7826c2e59252dd.zip?dl=ACulinaryArtillery_2.0.0-dev.28.zip",
+      "sha256": "95ee7899231531f939eda6df3b76a02b80b68ea4317797fbaba85107cc6133dc"
     },
     {
       "modid": "alchemy",
@@ -17,10 +17,10 @@
     },
     {
       "modid": "aldiclasses",
-      "version": "2.4.1",
-      "fileid": 126437,
-      "url": "https://moddbcdn.vintagestory.at/aldiclasses2.4.1_6afb253e6b0c0f0669c0eb6e09938d3d.zip?dl=aldiclasses2.4.1.zip",
-      "sha256": "55d32de1ced8dd24310bb72e7e6253d0d4748660ad9cd204f6aed9a2905ebe99"
+      "version": "2.4.2",
+      "fileid": 128034,
+      "url": "https://moddbcdn.vintagestory.at/aldiclasses2.4.2_5f0b608f60a85ed5987cd2fe292b0cd3.zip?dl=aldiclasses2.4.2.zip",
+      "sha256": "ff14859ac751006dcb7be51624a8cb42bab8376835bbe3286acf9554d4b861e2"
     },
     {
       "modid": "aldiclassesadvancedfeatures",
@@ -101,17 +101,17 @@
     },
     {
       "modid": "bloodtrail",
-      "version": "1.2.9",
-      "fileid": 125070,
-      "url": "https://moddbcdn.vintagestory.at/BloodTrail-v1.2.9_a811aa163ad5d0dadb56171899352180.zip?dl=BloodTrail-v1.2.9.zip",
-      "sha256": "d33d4aab573e24844f3ac72dff96d0fa27fbf42033eb9648104123a8aee42ed9"
+      "version": "1.2.11",
+      "fileid": 128518,
+      "url": "https://moddbcdn.vintagestory.at/BloodTrail-v1.2.11_f701860060dd3e6360c6aaf9918959b7.zip?dl=BloodTrail-v1.2.11.zip",
+      "sha256": "30881f636417d8c25524ece9b718f9476f31a11ce12b5f94ad78b3d0a84a0ed9"
     },
     {
       "modid": "bricklayers",
-      "version": "3.3.2",
-      "fileid": 125072,
-      "url": "https://moddbcdn.vintagestory.at/bricklayers-3.3.2_25bab1d0be687e5a5c673210e630db5f.zip?dl=bricklayers-3.3.2.zip",
-      "sha256": "b5fe5f8503b467d374700cf5a258a509fb4ad94691eaac09f61ec9ed37655478"
+      "version": "3.3.3",
+      "fileid": 127255,
+      "url": "https://moddbcdn.vintagestory.at/bricklayers-3.3.3_b1a4d8f212f98b748ec839e2b6a0d5b6.zip?dl=bricklayers-3.3.3.zip",
+      "sha256": "95f1d703c094c6f44324231ecc71e184ac75269e9264fa9d28a26fdee1f7813d"
     },
     {
       "modid": "butchering",
@@ -164,10 +164,10 @@
     },
     {
       "modid": "chiseltools",
-      "version": "1.17.8",
-      "fileid": 126466,
-      "url": "https://moddbcdn.vintagestory.at/ChiselTools1.17.8_0b113f2861e2e1212fefc3ef76170c1c.zip?dl=ChiselTools1.17.8.zip",
-      "sha256": "173cb381da4df68b13727eba53889bcfd3f954a9f604f519add6691ca6d4c30c"
+      "version": "1.17.9",
+      "fileid": 127670,
+      "url": "https://moddbcdn.vintagestory.at/ChiselTools1.17.9_70ca85b5daafc9f37c539a28d1cdf7c7.zip?dl=ChiselTools1.17.9.zip",
+      "sha256": "8d5d40b66f332f5c1d14d868fce67bdf5f76a95a9aa5185f8389c23539d90fe1"
     },
     {
       "modid": "clickuptorches",
@@ -199,10 +199,10 @@
     },
     {
       "modid": "deciduoustrees",
-      "version": "1.8.2",
-      "fileid": 116196,
-      "url": "https://moddbcdn.vintagestory.at/deciduoustrees_1.8.2_0fd2b2b53db1f1a7e285863495bb4e3c.zip?dl=deciduoustrees_1.8.2.zip",
-      "sha256": "e5ab4de9486dca115d8d91808674be5b95bdf0119438b1429460ac12b6a9e9e3"
+      "version": "1.9.0",
+      "fileid": 128676,
+      "url": "https://moddbcdn.vintagestory.at/deciduoustrees_1.9.0_f1d493c5bfaded635cfd53c4bce6fbd7.zip?dl=deciduoustrees_1.9.0.zip",
+      "sha256": "2360a21e5a47d89fbc06a1a83450dcf154cb44d45bcd5a544a18d3377ebcb166"
     },
     {
       "modid": "desirepaths",
@@ -227,10 +227,10 @@
     },
     {
       "modid": "efmealsmodule",
-      "version": "1.0.0-dev.8",
-      "fileid": 117692,
-      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods_MealsM_3b86a2f8a2686e2a60a18635784e5ca8.zip?dl=ExpandedFoods_MealsModule%201.0.0-dev.8.zip",
-      "sha256": "3ad6b067cccc9b5563e0eb9e457abdcc429811d6303edb9427a20e57dabf016a"
+      "version": "1.0.0-dev.9",
+      "fileid": 128626,
+      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods_MealsM_72ff1eb4843d72a680f1718585e03236.zip?dl=ExpandedFoods_MealsModule_1.0.0-dev.9.zip",
+      "sha256": "65c4bd877e8b61fbe99f7d5a46de7372304ace7510a4fbd9727bff68932bc084"
     },
     {
       "modid": "elkphysics",
@@ -255,10 +255,10 @@
     },
     {
       "modid": "expandedfoods",
-      "version": "2.0.0-dev.15",
-      "fileid": 125488,
-      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods+2.0.0-_e8d897e9a4b137a757b9761621231e6f.zip?dl=ExpandedFoods%202.0.0-dev.15.zip",
-      "sha256": "be59aef710307601a6f57fa3e484467b51f123eb10b48000a2adf81ad20ab1ec"
+      "version": "2.0.0-dev.16",
+      "fileid": 128625,
+      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods_2.0.0-_8110fa1ab48ade416a3f063aa62837b4.zip?dl=ExpandedFoods_2.0.0-dev.16.zip",
+      "sha256": "9fd85801a1956c9ccce06f36651c8fd070c6faeece9cc6a68fd4fb59629f1ffc"
     },
     {
       "modid": "extrafurniture",
@@ -290,10 +290,10 @@
     },
     {
       "modid": "footprints",
-      "version": "1.2.11",
-      "fileid": 125069,
-      "url": "https://moddbcdn.vintagestory.at/Footprints-v1.2.11_6acaf1b7726d54df4a66caff066db534.zip?dl=Footprints-v1.2.11.zip",
-      "sha256": "887d45f8640a335e6606dd9a1d28dffb87fb9cd3c666814143f2785410631ad5"
+      "version": "1.2.13",
+      "fileid": 128517,
+      "url": "https://moddbcdn.vintagestory.at/Footprints-v1.2.13_a1e7c2c454423f6dc2cab33a65110eca.zip?dl=Footprints-v1.2.13.zip",
+      "sha256": "150f2fa034edd5007d5c1fd7d603bf7d5096b52707696ccd0f5dcb5b86ae295c"
     },
     {
       "modid": "frtraductionmods",
@@ -354,10 +354,10 @@
     },
     {
       "modid": "hydrateordiedrate",
-      "version": "2.5.6",
-      "fileid": 123907,
-      "url": "https://moddbcdn.vintagestory.at/hydrateordiedrate_2._483d6f87671550febed4803e44a493e4.zip?dl=hydrateordiedrate_2.5.6.zip",
-      "sha256": "bfe1d779882f723df50febd7cf2f1f522afc0af770761b1a5afc2855b57b8e19"
+      "version": "2.5.8",
+      "fileid": 128386,
+      "url": "https://moddbcdn.vintagestory.at/hydrateordiedrate_2._733b57a82753f7a1ef94fdca820b3e02.zip?dl=hydrateordiedrate_2.5.8.zip",
+      "sha256": "d653dfc8d7abe8cb76246a0d05542869704bccecb0be617dfc37eac119f3ca8f"
     },
     {
       "modid": "immersivelanterns",
@@ -396,10 +396,10 @@
     },
     {
       "modid": "koboldrdx",
-      "version": "1.4.19",
-      "fileid": 123621,
-      "url": "https://moddbcdn.vintagestory.at/koboldplayerrdx_1.4._6b89e8a7eff40496939549b7564d5903.zip?dl=koboldplayerrdx_1.4.19.zip",
-      "sha256": "aa09151534956b1e426cef6910506fffecf41f22cfc57a3f05c17422ad68f660"
+      "version": "1.4.20",
+      "fileid": 126796,
+      "url": "https://moddbcdn.vintagestory.at/koboldplayerrdx_1.4._ebe74f1db350fe39eda5624c16c09ca6.zip?dl=koboldplayerrdx_1.4.20.zip",
+      "sha256": "1c51adac4266481476bc4b55590783cf08b8be33ab83cdc5b38c3a97a22e9034"
     },
     {
       "modid": "mealrecipefix",
@@ -522,10 +522,10 @@
     },
     {
       "modid": "overhaulliblegacycompat",
-      "version": "1.2.14",
-      "fileid": 122016,
-      "url": "https://moddbcdn.vintagestory.at/overhaulliblegacycom_17fbbdbc52f38a039dc7d83ae835b6a7.zip?dl=overhaulliblegacycompat_1.2.14.zip",
-      "sha256": "7cdea0e64b1214df4c4b4849f2f881a29b5eec84f09fb96e098dbe0e8cf5c9d5"
+      "version": "1.2.15",
+      "fileid": 128748,
+      "url": "https://moddbcdn.vintagestory.at/overhaulliblegacycom_401b32459a02b6405444c25b1ce6c45e.zip?dl=overhaulliblegacycompat_1.2.15.zip",
+      "sha256": "d9cfda41a304f7c8d09ac90159a27c29bed2934193feb22c5dadfa4ee5386de7"
     },
     {
       "modid": "firearmsfork",
@@ -543,10 +543,10 @@
     },
     {
       "modid": "combatoverhaulfork",
-      "version": "0.18.8",
-      "fileid": 118878,
-      "url": "https://moddbcdn.vintagestory.at/combatoverhaulfork_0_4a5c8f4852548c8e4c2dc8695fe787b1.zip?dl=combatoverhaulfork_0.18.8.zip",
-      "sha256": "eb1af1f6e59e22d6c3728b4bed42ee5f0f123bcc477e9cb5a6a9a21213945429"
+      "version": "0.18.9",
+      "fileid": 128751,
+      "url": "https://moddbcdn.vintagestory.at/combatoverhaulfork_0_76dbadb1a7b003a20c1de79e7cdd1946.zip?dl=combatoverhaulfork_0.18.9.zip",
+      "sha256": "05189774f90879d667e27a855aaecc30582fd76f05ce75ac80f848fcfd96ba1e"
     },
     {
       "modid": "armoryfork",
@@ -606,10 +606,10 @@
     },
     {
       "modid": "bettererprospecting",
-      "version": "3.4.10",
-      "fileid": 125721,
-      "url": "https://moddbcdn.vintagestory.at/bettererprospecting__09d34df9462b2d417090de3fe9e1c463.zip?dl=bettererprospecting_3.4.10.zip",
-      "sha256": "b4d1ef46e81cdd556b227b3e6ee5c225acf324be526a9e0b41e06cb361d7bfaf"
+      "version": "3.4.12",
+      "fileid": 127840,
+      "url": "https://moddbcdn.vintagestory.at/bettererprospecting__de3e174b516c57f300775505f4ae2aca.zip?dl=bettererprospecting_3.4.12.zip",
+      "sha256": "20f69fa670bf6b21a0c333370c276c9a7c4b5270cbb0d3c729f6db53246c3f3a"
     },
     {
       "modid": "blackguardadditionscofork",
@@ -627,10 +627,10 @@
     },
     {
       "modid": "chiselleaf",
-      "version": "1.2.1",
-      "fileid": 101034,
-      "url": "https://moddbcdn.vintagestory.at/chisel_leaf_1.2.1_4338053b33e40c25d427949f3d5824fa.zip?dl=chisel_leaf_1.2.1.zip",
-      "sha256": "2bc52202222186729e5f2b43c74b29ebb8945ba97146e9ad523fc3bcf82b5f11"
+      "version": "1.2.2",
+      "fileid": 127017,
+      "url": "https://moddbcdn.vintagestory.at/chisel_leaf_1.2.2_95fc9d3233d00385f5815da1e62dbfbe.zip?dl=chisel_leaf_1.2.2.zip",
+      "sha256": "2a4f2e35f2bde15808d21d106236690ae080b01f7bbb773d77e12f6cc941c11d"
     },
     {
       "modid": "claywheel",
@@ -648,24 +648,24 @@
     },
     {
       "modid": "dead",
-      "version": "2.7.4",
-      "fileid": 121085,
-      "url": "https://moddbcdn.vintagestory.at/dead_2.7.4_e2ece8fa129ca311b90a77a0c7b669e4.zip?dl=dead_2.7.4.zip",
-      "sha256": "550f061b0cfbf147d9f3df84eae1fe351e5ed1b8ca9baa7430a423e9d3cb5976"
+      "version": "2.7.5",
+      "fileid": 127239,
+      "url": "https://moddbcdn.vintagestory.at/dead_2.7.5_9b0f011deb0667b302896727c0a343a8.zip?dl=dead_2.7.5.zip",
+      "sha256": "7b18783448facd4ec9a03222467e52224bf4cd9ced5e6e154e650c5328a15d4c"
     },
     {
       "modid": "downed",
-      "version": "2.7.4",
-      "fileid": 120633,
-      "url": "https://moddbcdn.vintagestory.at/downed_2.7.4_5eda0b1de031039e1a56aa4d6400d0c0.zip?dl=downed_2.7.4.zip",
-      "sha256": "984fb078a68a952dacd65ad17e5cad50f11b5a77e59472fc65842e0ebeac0b95"
+      "version": "2.7.6",
+      "fileid": 128940,
+      "url": "https://moddbcdn.vintagestory.at/downed_2.7.6_3f56277ba77ab37a1599d2f0d9c8997e.zip?dl=downed_2.7.6.zip",
+      "sha256": "ad16c2ad36b73d5d323cdf03c4ea6788fdff8fb90cc1191c84b114bbc4ec4b4b"
     },
     {
       "modid": "efchefstricks",
-      "version": "1.0.0-dev.5",
-      "fileid": 125487,
-      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods_ChefsT_f514941b0be8a69db1b3145578ff506b.zip?dl=ExpandedFoods_ChefsTricks%201.0.0-dev.5.zip",
-      "sha256": "ca4c1f77176a8973bb27c72b0584a9e773fd1f796f7b8168dbd1d2a2a7bf4d03"
+      "version": "1.0.0-dev.6",
+      "fileid": 128235,
+      "url": "https://moddbcdn.vintagestory.at/ExpandedFoods_ChefsT_d41755600bd1dc03f66232775e403dd9.zip?dl=ExpandedFoods_ChefsTricks_1.0.0-dev.6.zip",
+      "sha256": "92e2fa102dd89f2ea706f8dd36325109785a0e9ac1109f5fd0df688f7bf1424f"
     },
     {
       "modid": "effectshud",
@@ -711,10 +711,10 @@
     },
     {
       "modid": "emotes",
-      "version": "2.9.0",
-      "fileid": 120863,
-      "url": "https://moddbcdn.vintagestory.at/emotes_2.9.0_c1c32b1d1970ee56e19d1a713a0131ff.zip?dl=emotes_2.9.0.zip",
-      "sha256": "3650aa48172322994ccb3b6bb5a6713276d9c69cefbd3d00297b5ac75cc5ae83"
+      "version": "2.10.0",
+      "fileid": 127407,
+      "url": "https://moddbcdn.vintagestory.at/emotes_2.10.0_72cb61db12e1624d27f79172221eb5d3.zip?dl=emotes_2.10.0.zip",
+      "sha256": "02247679a827644a6b794487d7c44e6d851b495535a229fbc4b40851ad583a56"
     },
     {
       "modid": "entitynametag",
@@ -732,10 +732,10 @@
     },
     {
       "modid": "gourmand",
-      "version": "1.9.3",
-      "fileid": 125447,
-      "url": "https://moddbcdn.vintagestory.at/gourmand_1.9.3_9b61c323d88d3ffab71a2b333b417892.zip?dl=gourmand_1.9.3.zip",
-      "sha256": "68eeb05b7b48213e5d5dc05accada3948d62fd49afe990cc2d0922450648780c"
+      "version": "1.9.4",
+      "fileid": 129175,
+      "url": "https://moddbcdn.vintagestory.at/gourmand_1.9.4_d1899372a017cbcdce17889727d04e9f.zip?dl=gourmand_1.9.4.zip",
+      "sha256": "71f4e37e81099485d04d82c52a7c9ec341267c2abb9c580ab59644ad60b5bfb5"
     },
     {
       "modid": "immersivemodularbackpacks",
@@ -753,10 +753,10 @@
     },
     {
       "modid": "improvedmetallurgy",
-      "version": "1.1.8",
-      "fileid": 102003,
-      "url": "https://moddbcdn.vintagestory.at/TheMadTeslaImprovedM_c8654488887404123485df3d50999aba.zip?dl=TheMadTeslaImprovedMetallurgy_VS1.22.0_1.1.8.zip",
-      "sha256": "b30fb891e68457a89515e50067909a6d4d51f8d0f6d490ef3e3b34e6f0c4daca"
+      "version": "1.2.1",
+      "fileid": 127166,
+      "url": "https://moddbcdn.vintagestory.at/TheMadTeslaImprovedM_6fc6b435b727e740cbfb6a78ef2852c1.zip?dl=TheMadTeslaImprovedMetallurgy_VS1.22.0_1.2.1.zip",
+      "sha256": "c5a922f24c19f453cd52b1ec3d9e129cbc110de6db59a0b475f55788e90b161c"
     },
     {
       "modid": "interestingoregen",
@@ -823,10 +823,10 @@
     },
     {
       "modid": "rpvoicechat",
-      "version": "2.6.5",
-      "fileid": 120569,
-      "url": "https://moddbcdn.vintagestory.at/rpvoicechat_2.6.5_416ee455e655f6a3b83dc5bb8ed88ea9.zip?dl=rpvoicechat_2.6.5.zip",
-      "sha256": "e0c67119de010e657a8f79b794ab21d3115e22da0aa519e14874492ca8afb83d"
+      "version": "2.6.6",
+      "fileid": 128112,
+      "url": "https://moddbcdn.vintagestory.at/rpvoicechat_2.6.6_44a6dcd6e5535e79ad2f6249bf540a63.zip?dl=rpvoicechat_2.6.6.zip",
+      "sha256": "104b3e134c9846e956183a3a09ac6b175bd5a366bc743ffbd933fe3dbe61b911"
     },
     {
       "modid": "rustboundmagic",
@@ -956,10 +956,10 @@
     },
     {
       "modid": "wrustbound",
-      "version": "4.0.6",
-      "fileid": 124003,
-      "url": "https://moddbcdn.vintagestory.at/Wilderlands+Rustboun_291dd428edd0866ba785228fbd998910.zip?dl=Wilderlands%20Rustbound%204.0.6.zip",
-      "sha256": "fc7de14e2addefd6f399daad10f4750c592246c9936cf95abd97b145791a4228"
+      "version": "4.0.8",
+      "fileid": 129729,
+      "url": "https://moddbcdn.vintagestory.at/Wilderlands+Rustboun_e26b659bf740b55745b6cc3c42190780.zip?dl=Wilderlands%20Rustbound%204.0.8.zip",
+      "sha256": "ec48b217dda65c947a46496418a050be6b98426cbeb9387e08c893beb02c048a"
     },
     {
       "modid": "noticeboard",
@@ -1012,10 +1012,10 @@
     },
     {
       "modid": "playercorpseforkedazu",
-      "version": "1.15.2",
-      "fileid": 126111,
-      "url": "https://moddbcdn.vintagestory.at/playercorpseforkedaz_ebb7781acf59b71e5d6340a759084994.zip?dl=playercorpseforkedazu_1.15.2.zip",
-      "sha256": "1e227db535a1ff62c8a27dc6ddc05f9c9aa6b701ae5bdabc877c1be14b880824"
+      "version": "1.16.0",
+      "fileid": 129605,
+      "url": "https://moddbcdn.vintagestory.at/playercorpseforkedaz_3aba8ac6be091314f2122b085055a80e.zip?dl=playercorpseforkedazu_1.16.0.zip",
+      "sha256": "6d840eef57369ceca6663017e438d3a340ab9a5b0269573f62766db6f75ac66f"
     },
     {
       "modid": "playermodellib",
@@ -1054,10 +1054,10 @@
     },
     {
       "modid": "realsmoke",
-      "version": "2.0.0-pre.6",
-      "fileid": 126502,
-      "url": "https://moddbcdn.vintagestory.at/realsmoke_2.0.0-pre._a633f2ea4a6b9d1d4dff57ee21dc4b96.zip?dl=realsmoke_2.0.0-pre.6.zip",
-      "sha256": "c55d190ca8fb0cc66954058688a6f4bdaa4de6eb5177d93cea1ae27015a6daf9"
+      "version": "2.0.0-pre.9",
+      "fileid": 129034,
+      "url": "https://moddbcdn.vintagestory.at/realsmoke_2.0.0-pre._c9c2ffaeac930ee8bc7e144c68506e2d.zip?dl=realsmoke_2.0.0-pre.9.zip",
+      "sha256": "75ee745306798b6872a2f68494bdd40ae508e010a193edc1051d7ba8fb846710"
     },
     {
       "modid": "rivers",
@@ -1208,10 +1208,10 @@
     },
     {
       "modid": "universaldisplaylib",
-      "version": "1.1.3",
-      "fileid": 121815,
-      "url": "https://moddbcdn.vintagestory.at/universaldisplaylib__85e133f72c83b4747290c42575d71f92.zip?dl=universaldisplaylib_1.1.3.zip",
-      "sha256": "5c1dc76df665e25515f79cafbe059178c2eed46289d9dac352b7e9269e49c0eb"
+      "version": "1.2.2",
+      "fileid": 129754,
+      "url": "https://moddbcdn.vintagestory.at/universaldisplaylib__7a05e7877bf67e7b11fa13f2aeaf389f.zip?dl=universaldisplaylib_1.2.2.zip",
+      "sha256": "6ddd1d4de0351e3f624f90b732215410b1d038df2e01cd22848ca4ca0ac39125"
     },
     {
       "modid": "valkyrjahair",
@@ -1229,17 +1229,17 @@
     },
     {
       "modid": "vintageskavenrat",
-      "version": "1.6.95",
-      "fileid": 121527,
-      "url": "https://moddbcdn.vintagestory.at/Skaven+Rat+Player+Mo_ca5163410e52e27a2501d5335245cc64.zip?dl=Skaven%20Rat%20Player%20Model%20Mod%201.6.95.zip",
-      "sha256": "9a3a272d945bb130e6b0e6bb516b2dcf798d019980151da7da269103c5f463a0"
+      "version": "1.7.0",
+      "fileid": 128072,
+      "url": "https://moddbcdn.vintagestory.at/Skaven+Rat+Player+Mo_23cc805739d5fee0d1538a6edfc98e72.zip?dl=Skaven%20Rat%20Player%20Model%20Mod%201.7.0.zip",
+      "sha256": "d795da518adf6c013ba670845d1fa424642fc349807b773fc7cb1b3a1cf4d0d3"
     },
     {
       "modid": "vintagestoryfr",
-      "version": "1.2.42",
-      "fileid": 125203,
-      "url": "https://moddbcdn.vintagestory.at/vintagestoryfr_1.2.4_9e461e5d4e433615f219ee6cd8fcdbac.zip?dl=vintagestoryfr_1.2.42.zip",
-      "sha256": "db5597b5c87187819900b232bd260aad11a4ddcf1a1adf5558665df3f8ba23b7"
+      "version": "1.2.83",
+      "fileid": 129746,
+      "url": "https://moddbcdn.vintagestory.at/vintagestoryfr_1.2.8_1a3c7f7d39472f3a79e085c2caab445d.zip?dl=vintagestoryfr_1.2.83.zip",
+      "sha256": "3493c6a0c4d1a197ddfd0bee22cce8cae91d4c7477029f91d7dfd519f371c246"
     },
     {
       "modid": "vsimgui",
@@ -1250,10 +1250,10 @@
     },
     {
       "modid": "vsroofing",
-      "version": "2.0.5",
-      "fileid": 125917,
-      "url": "https://moddbcdn.vintagestory.at/vsroofing_2.0.5_dbb77286f98fdab8da0c25df60719e19.zip?dl=vsroofing_2.0.5.zip",
-      "sha256": "0ca8902f5a8ea070cad8f368de83721c95e203dece5a769391b45016ec87d151"
+      "version": "2.1.1",
+      "fileid": 128654,
+      "url": "https://moddbcdn.vintagestory.at/vsroofing_2.1.1_265d0dabae2052946221f6bb85cdf10d.zip?dl=vsroofing_2.1.1.zip",
+      "sha256": "8d4cc26db0dd2275537c93e0842c9be220a329c920754c5a4ced8abf49925521"
     },
     {
       "modid": "walkableentities",
@@ -1285,17 +1285,17 @@
     },
     {
       "modid": "windchimes",
-      "version": "1.5.2",
-      "fileid": 93112,
-      "url": "https://moddbcdn.vintagestory.at/windchimes-1.22.0-v1_ec4d82e30b435f2704c7de371d1c46cb.zip?dl=windchimes-1.22.0-v1.5.2.zip",
-      "sha256": "5f5dc4d1fecb5e2c0171b6fb2fd30e9ee701b078097cc768f008d4fde5f6c695"
+      "version": "1.5.4",
+      "fileid": 128435,
+      "url": "https://moddbcdn.vintagestory.at/windchimes-1.22.0-v1_c8d6f4a96ab497f8ccde27b475ef1b46.zip?dl=windchimes-1.22.0-v1.5.4.zip",
+      "sha256": "930b49d5d354ecf2770895b32eec28da657baa20d61181f1be680abb9da50014"
     },
     {
       "modid": "windowdisplay",
-      "version": "1.0.4",
-      "fileid": 118477,
-      "url": "https://moddbcdn.vintagestory.at/windowdisplay_1.0.4_1fe31d0799724811004c92dca204206e.zip?dl=windowdisplay_1.0.4.zip",
-      "sha256": "a5ed5e71030501c10f1c70a68aa85a28cd7a326daa964180c9ab61c8b41944d2"
+      "version": "1.1.0",
+      "fileid": 128976,
+      "url": "https://moddbcdn.vintagestory.at/windowdisplay_1.1.0_5d09ed05000aa4ccab317732e59dfb05.zip?dl=windowdisplay_1.1.0.zip",
+      "sha256": "dab81598d5585a5292ad088fb0a187d9120f32023cd5321525b6eac6992d47da"
     },
     {
       "modid": "wool",
@@ -1327,10 +1327,10 @@
     },
     {
       "modid": "dishware",
-      "version": "2.0.1",
-      "fileid": 126510,
-      "url": "https://moddbcdn.vintagestory.at/Dishware+2.0.1_4cd62a4d157b2820012d81333c539bf9.zip?dl=Dishware%202.0.1.zip",
-      "sha256": "837ed96acd9d575bf9c1cfaedff69fb1fb20761bcaebeb1008112ae665386ac1"
+      "version": "2.0.3",
+      "fileid": 128503,
+      "url": "https://moddbcdn.vintagestory.at/Dishware+2.0.3_a598b22982d2aff83bc53c7386a21252.zip?dl=Dishware%202.0.3.zip",
+      "sha256": "d7579d0d9be9d9f04f852084c279785fa471a7e8169f19a1a2d166a383e991d6"
     },
     {
       "modid": "dovidarium",
@@ -1355,31 +1355,31 @@
     },
     {
       "modid": "facore",
-      "version": "1.1.0",
-      "fileid": 123445,
-      "url": "https://moddbcdn.vintagestory.at/FACore+1.1.0_6bb6f397c8d8296da6a3aaa223afc426.zip?dl=FACore%201.1.0.zip",
-      "sha256": "c13a67431192b1c0857dc5b6134c33f155e92c02811c746c2bbd48d0cf60b739"
+      "version": "1.2.0",
+      "fileid": 127896,
+      "url": "https://moddbcdn.vintagestory.at/FACore+1.2.0_2deee62d87cbaa4ae2f6eb8d2c7d42b6.zip?dl=FACore%201.2.0.zip",
+      "sha256": "3d5200fd8f3839cb3511464ca2a3caadedae76d4445cfa08702a20149b5f75ff"
     },
     {
       "modid": "fadynasties",
-      "version": "2.1.1",
-      "fileid": 126253,
-      "url": "https://moddbcdn.vintagestory.at/FA-Chinese-Dynasties_f0fe4139568f2e3d6cd01f284031a01c.zip?dl=FA-Chinese-Dynasties%202.1.1.zip",
-      "sha256": "a24a5a269755954bb9c6a81bfaabb9b01f90ea82c215d85bc45c1c4342e556c0"
+      "version": "2.2.0",
+      "fileid": 127898,
+      "url": "https://moddbcdn.vintagestory.at/FA-Chinese-Dynasties_937d125413553392adeb05868a325e54.zip?dl=FA-Chinese-Dynasties%202.2.0.zip",
+      "sha256": "d5db6037794d325339e9debb51e7a0fa501d90ab883260dee1576ab78fa4165d"
     },
     {
       "modid": "fagothic",
-      "version": "2.1.0",
-      "fileid": 123447,
-      "url": "https://moddbcdn.vintagestory.at/FA-Gothic+2.1.0_c679301416a63e5b3e1a18422baf0ee9.zip?dl=FA-Gothic%202.1.0.zip",
-      "sha256": "e5be8d17130abbee3a72ce4e84ca75bb2c1b7f98dd81c80ac863a96a51af66a7"
+      "version": "2.1.1",
+      "fileid": 127897,
+      "url": "https://moddbcdn.vintagestory.at/FA-Gothic+2.1.1_934c96e1545a5179386f3857a91affa1.zip?dl=FA-Gothic%202.1.1.zip",
+      "sha256": "8262d3d3b4ae56fae59311f3fe21d6850139502f8c744381273fb76118954785"
     },
     {
       "modid": "fagreenwich",
-      "version": "2.1.0",
-      "fileid": 123461,
-      "url": "https://moddbcdn.vintagestory.at/FA-Greenwich+2.1.0_e9fc41ab6cf602c95a403d67482b2545.zip?dl=FA-Greenwich%202.1.0.zip",
-      "sha256": "662fb413847eb75119cd1182a274ec3238f820fcade661ad4cc9163acc515b84"
+      "version": "2.1.1",
+      "fileid": 127895,
+      "url": "https://moddbcdn.vintagestory.at/FA-Greenwich+2.1.1_bc312f188a632f38f75ddb4cca5d7828.zip?dl=FA-Greenwich%202.1.1.zip",
+      "sha256": "39c8aa40e92007ce6174315ef81ade4e2e6a8766d31a97714968879ae999b5b5"
     },
     {
       "modid": "falandsknecht",
@@ -1390,10 +1390,10 @@
     },
     {
       "modid": "favarangian",
-      "version": "2.0.1",
-      "fileid": 123766,
-      "url": "https://moddbcdn.vintagestory.at/FA-Varangian+2.0.1_3f2ff665ac973d75762fb53570ca7ca0.zip?dl=FA-Varangian%202.0.1.zip",
-      "sha256": "8665dea483a80f7fd5abc5e47865396813bbab78ce0985606e42a35a11bef2ac"
+      "version": "2.0.2",
+      "fileid": 127893,
+      "url": "https://moddbcdn.vintagestory.at/FA-Varangian+2.0.2_e0e20b2f865546f8a8103e6c552f49b1.zip?dl=FA-Varangian%202.0.2.zip",
+      "sha256": "0f819c04e97b118c260514c0cda3dd9e5b1b533dad8c8dc8ae3f73ceaa41a946"
     },
     {
       "modid": "faviking",
@@ -1411,10 +1411,10 @@
     },
     {
       "modid": "flowerbeds",
-      "version": "1.0.2",
-      "fileid": 126712,
-      "url": "https://moddbcdn.vintagestory.at/flowerbeds-v1.22.0-1_6e5be3c94f60ce441a0cb5bcbb6fbbe3.zip?dl=flowerbeds-v1.22.0-1.0.2.zip",
-      "sha256": "a9390a5481aed33a32808b73c787597c3f227135fc7c78505c32aa77ab8093e5"
+      "version": "1.0.3",
+      "fileid": 129466,
+      "url": "https://moddbcdn.vintagestory.at/flowerbeds-v1.22.0-1_c5c5d5142fe16ff583711954fe5c35d3.zip?dl=flowerbeds-v1.22.0-1.0.3.zip",
+      "sha256": "6cdaacb141efec709d4e60dfd0c321db711bdc3650364bc22d4ecd187643f713"
     },
     {
       "modid": "gondolacablecar",
@@ -1446,17 +1446,17 @@
     },
     {
       "modid": "ppex",
-      "version": "0.6.8",
-      "fileid": 114431,
-      "url": "https://moddbcdn.vintagestory.at/ppex_0.6.8_befd512e3b3881e2cd55abc292a57432.zip?dl=ppex_0.6.8.zip",
-      "sha256": "d1366180a5c6b813850534b04bd5fbe9fdbe71878039687dcebae88e321d86f7"
+      "version": "0.7.1",
+      "fileid": 127767,
+      "url": "https://moddbcdn.vintagestory.at/ppex_0.7.1_e35ccfd58bf7cf57fdd43713a5dc5d3b.zip?dl=ppex_0.7.1.zip",
+      "sha256": "c1acfab80ffc528f6f520dbfefcdcfca026800d1ed39f0525c7af2e9a6e9b0cf"
     },
     {
       "modid": "smex",
-      "version": "0.9.8",
-      "fileid": 114432,
-      "url": "https://moddbcdn.vintagestory.at/smex_0.9.8_d49ab50ac95ba14e9d35d0a7f31b59d4.zip?dl=smex_0.9.8.zip",
-      "sha256": "8b1bbd9b62d96d589934d5528625ba742330ccb20d51c75b23551726c7267502"
+      "version": "0.10.1",
+      "fileid": 127768,
+      "url": "https://moddbcdn.vintagestory.at/smex_0.10.1_201000ba5ba5c57c611528357e6db8be.zip?dl=smex_0.10.1.zip",
+      "sha256": "5b5b2c5515d8b7d58b287dbaed0479931cde8e80312f165249612c8e5ef2fa4e"
     },
     {
       "modid": "spa",
@@ -1474,10 +1474,10 @@
     },
     {
       "modid": "weaponpackalphareb",
-      "version": "2.0.2",
-      "fileid": 124728,
-      "url": "https://moddbcdn.vintagestory.at/WeaponPackAlphaRebal_77afca05318c0ad39ee6e9b2e1689ac4.zip?dl=WeaponPackAlphaRebalanced%202.0.2.zip",
-      "sha256": "e7e6086597d36afd6185accd5ed74169b86b15e179fc2f45620579c8b5a20048"
+      "version": "2.0.4",
+      "fileid": 129702,
+      "url": "https://moddbcdn.vintagestory.at/WeaponPackAlphaRebal_2040497e0e4b59f6ccf1dd8a6943e1a3.zip?dl=WeaponPackAlphaRebalanced%202.0.4.zip",
+      "sha256": "fc27716397be62d52d4b17896b802fe2d6e7ff29609ac71184dbe1f09131b14c"
     }
   ]
 }
