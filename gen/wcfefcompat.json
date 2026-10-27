@@ -12,12 +12,6 @@
           "en": " syrup$",
           "fr": "Sirop {de}"
         }
-      ],
-      "tarte": [
-        {
-          "en": " syrup pie",
-          "fr": "Tarte au sirop {de}{etat}"
-        }
       ]
     },
     "yogurt": {
@@ -34,12 +28,6 @@
           "en": " gelatin$",
           "fr": "Gélatine {a}"
         }
-      ],
-      "tarte": [
-        {
-          "en": " jelly pie",
-          "fr": "Tarte à la gelée {de}{etat}"
-        }
       ]
     },
     "candiedfruit": {
@@ -53,38 +41,37 @@
     "dryfruit": {
       "objet": [
         {
+          "en": "^dried .+ grapes$",
+          "fr": "{nom}",
+          "table": "raisins"
+        },
+        {
+          "en": "grapes$",
+          "fr": "{pl}",
+          "table": "raisins"
+        },
+        {
           "en": "^dried ",
           "fr": "{nom} séché{e}{s}"
         },
         {
-          "en": " raisin$",
-          "fr": "{nom}",
-          "table": "raisins"
-        }
-      ],
-      "tarte": [
-        {
-          "en": "^dried .+ pie",
-          "fr": "Tarte aux {pl} séché{e}s{etat}"
+          "en": "s$",
+          "fr": "{pl}"
         },
         {
-          "en": " raisin pie",
-          "fr": "Tarte aux {pl}{etat}",
-          "table": "raisins"
-        }
-      ]
-    },
-    "dehydratedfruit": {
-      "objet": [
-        {
-          "en": "^dehydrated ",
-          "fr": "{nom} déshydraté{e}{s}"
+          "en": "",
+          "fr": "{nom}"
         }
       ],
       "tarte": [
         {
-          "en": "^dehydrated .+ pie",
-          "fr": "Tarte aux {pl} déshydraté{e}s{etat}"
+          "en": "^dried (foxgrape|redgrape|virgingrape|whitegrape)$",
+          "fr": "Tarte aux {pl}{etat}",
+          "table": "raisins"
+        },
+        {
+          "en": "^dried ",
+          "fr": "Tarte aux {pl} séché{e}s{etat}"
         }
       ]
     },
@@ -97,6 +84,10 @@
         {
           "en": "^strong .+ cider$",
           "fr": "Cidre {de} fort"
+        },
+        {
+          "en": "^strong .+ ambrosia$",
+          "fr": "Ambroisie {de} forte"
         }
       ]
     },
@@ -109,6 +100,10 @@
         {
           "en": "^fine .+ cider$",
           "fr": "Cidre {de} raffiné"
+        },
+        {
+          "en": "^fine .+ ambrosia$",
+          "fr": "Ambroisie {de} raffinée"
         }
       ]
     },
@@ -123,7 +118,7 @@
           "fr": "Liqueur {de} vieillie"
         },
         {
-          "en": "^aged \\w+$",
+          "en": "^aged ",
           "fr": "{nom} vieilli{e}",
           "table": "eaux-de-vie"
         }
@@ -140,7 +135,7 @@
           "fr": "Liqueur {de} millésimée"
         },
         {
-          "en": "^vintage \\w+$",
+          "en": "^vintage ",
           "fr": "{nom} millésimé{e}",
           "table": "eaux-de-vie"
         }
@@ -149,7 +144,7 @@
     "strongflowerwineportion": {
       "objet": [
         {
-          "en": "^strong .+ wine( portion)?$",
+          "en": "^strong .+ wine$",
           "fr": "Vin {de} fort",
           "table": "fleurs"
         }
@@ -158,9 +153,17 @@
     "potentflowerwineportion": {
       "objet": [
         {
-          "en": "^fine .+ wine( portion)?$",
-          "fr": "Vin {de} raffiné",
+          "en": "^aged .+ wine$",
+          "fr": "Vin {de} vieilli",
           "table": "fleurs"
+        }
+      ]
+    },
+    "pressedmash": {
+      "objet": [
+        {
+          "en": " mash$",
+          "fr": "marc {de}"
         }
       ]
     }
@@ -193,6 +196,14 @@
       },
       "barrelcactus": {
         "fr": "fruit de ferocactus",
+        "genre": "m"
+      },
+      "beachalmond": {
+        "fr": "fruit de badame",
+        "genre": "m"
+      },
+      "beachalmondwhole": {
+        "fr": "fruit de badame entier",
         "genre": "m"
       },
       "bearberry": {
@@ -247,6 +258,10 @@
         "fr": "baie de langue bleue",
         "genre": "f"
       },
+      "boysenberry": {
+        "fr": "mûre de Boysen",
+        "genre": "f"
+      },
       "brambleberry": {
         "fr": "mûre",
         "genre": "f"
@@ -263,6 +278,10 @@
         "fr": "baie de buisson des juristes",
         "genre": "f"
       },
+      "canemolasses": {
+        "fr": "mélasse",
+        "genre": "f"
+      },
       "caperberry": {
         "fr": "câpron",
         "genre": "m"
@@ -275,6 +294,10 @@
         "fr": "pomme de cajou",
         "genre": "f"
       },
+      "cashewwhole": {
+        "fr": "pomme de cajou entière",
+        "genre": "f"
+      },
       "cheeseberry": {
         "fr": "baie de cyathode glauque",
         "genre": "f"
@@ -283,6 +306,10 @@
         "fr": "prune-cerise jaune",
         "genre": "f"
       },
+      "chilli": {
+        "fr": "piment",
+        "genre": "m"
+      },
       "chinaberry": {
         "fr": "baie de faux neem",
         "genre": "f"
@@ -290,6 +317,10 @@
       "citron": {
         "fr": "cédrat",
         "genre": "m"
+      },
+      "clementine": {
+        "fr": "clémentine",
+        "genre": "f"
       },
       "cloudberry": {
         "fr": "plaquebière",
@@ -384,6 +415,10 @@
         "fr": "fraise",
         "genre": "f"
       },
+      "ginkgo": {
+        "fr": "fruit de ginkgo",
+        "genre": "m"
+      },
       "ginkgopulp": {
         "fr": "fruit de ginkgo",
         "genre": "m"
@@ -395,6 +430,10 @@
       "granadilla": {
         "fr": "grenadelle",
         "genre": "f"
+      },
+      "grape": {
+        "fr": "raisin",
+        "genre": "m"
       },
       "grapefruit": {
         "fr": "pamplemousse",
@@ -457,6 +496,10 @@
         "fr": "piment",
         "genre": "m"
       },
+      "jambu": {
+        "fr": "jamalac",
+        "genre": "m"
+      },
       "jujube": {
         "fr": "jujube",
         "genre": "m"
@@ -502,6 +545,11 @@
         "fr": "baie de tremble citron",
         "genre": "f"
       },
+      "lillypilly": {
+        "fr": "lilly-pilly",
+        "genre": "m",
+        "pluriel": "lilly-pillys"
+      },
       "lillypillyblue": {
         "fr": "lilly-pilly bleu",
         "genre": "m",
@@ -537,6 +585,10 @@
         "fr": "marita",
         "genre": "m"
       },
+      "melon": {
+        "fr": "melon",
+        "genre": "m"
+      },
       "midyimberry": {
         "fr": "baie de midgen",
         "genre": "f"
@@ -549,6 +601,10 @@
         "fr": "melon mirzachul",
         "genre": "m",
         "pluriel": "melons mirzachul"
+      },
+      "mulberry": {
+        "fr": "mûre",
+        "genre": "f"
       },
       "munthari": {
         "fr": "pomme à émeus",
@@ -614,6 +670,10 @@
         "fr": "baie d'if",
         "genre": "f"
       },
+      "plum": {
+        "fr": "prune",
+        "genre": "f"
+      },
       "pokeberry": {
         "fr": "baie de vigne de Judée",
         "genre": "f"
@@ -621,6 +681,10 @@
       "pomelo": {
         "fr": "pomélo",
         "genre": "m"
+      },
+      "pooraberry": {
+        "fr": "baie de poora",
+        "genre": "f"
       },
       "pricklyheath": {
         "fr": "baie de gaulthérie mucronée",
@@ -710,6 +774,14 @@
         "fr": "fraise des bois",
         "genre": "f"
       },
+      "sugarbeet": {
+        "fr": "betterave sucrière",
+        "genre": "f"
+      },
+      "sugarcane": {
+        "fr": "canne à sucre",
+        "genre": "f"
+      },
       "sugarhackberry": {
         "fr": "micocoule du Mississippi",
         "genre": "f"
@@ -762,6 +834,10 @@
         "fr": "baie de chèvrefeuille des jardins",
         "genre": "f"
       },
+      "yew": {
+        "fr": "baie d'if",
+        "genre": "f"
+      },
       "yuzu": {
         "fr": "yuzu",
         "genre": "m"
@@ -769,15 +845,19 @@
     },
     "eaux-de-vie": {
       "apricot": {
-        "fr": "chacha",
+        "fr": "chacha d'abricot",
         "genre": "f"
       },
+      "canemolasses": {
+        "fr": "rhum",
+        "genre": "m"
+      },
       "cashewapple": {
-        "fr": "feni",
+        "fr": "feni de cajou",
         "genre": "m"
       },
       "cherryplum": {
-        "fr": "chacha",
+        "fr": "chacha de prune-cerise",
         "genre": "f"
       },
       "citron": {
@@ -792,12 +872,36 @@
         "fr": "gin",
         "genre": "m"
       },
+      "mandarin": {
+        "fr": "mandarinetto",
+        "genre": "m"
+      },
+      "pinklemon": {
+        "fr": "limoncello rose",
+        "genre": "m"
+      },
       "purpleplum": {
-        "fr": "chacha",
+        "fr": "chacha de prune",
+        "genre": "f"
+      },
+      "sloe": {
+        "fr": "chacha de prunelle",
+        "genre": "f"
+      },
+      "sugarbeet": {
+        "fr": "rhum de betterave",
+        "genre": "m"
+      },
+      "sugarcane": {
+        "fr": "cachaça",
         "genre": "f"
       },
       "ugni": {
         "fr": "murtado",
+        "genre": "m"
+      },
+      "yuzu": {
+        "fr": "yuzushu",
         "genre": "m"
       }
     },
@@ -840,7 +944,7 @@
         "genre": "f",
         "nombre": "pluriel"
       },
-      "orangeblossom": {
+      "orangeblossum": {
         "fr": "fleurs d'oranger",
         "genre": "f",
         "nombre": "pluriel"
@@ -858,33 +962,19 @@
     }
   },
   "cles": {
-    "itemdesc-fruitsyrupportion-*": "Épais et sucré, parfait sur les friandises !",
-    "itemdesc-candiedfruit-*": "La plus sucrée des friandises ! En manger vous fera vous sentir mieux que jamais.",
-    "itemdesc-yogurt-*": "Fruité et crémeux !",
-    "itemdesc-gelatin-*": "Le goût est légèrement salé...",
-    "item-strongwineportion-pomace": "Piquette forte",
+    "item-strongwineportion-pomace": "Portion de piquette forte",
     "incontainer-item-strongwineportion-pomace": "Piquette forte",
-    "item-potentwineportion-pomace": "Piquette raffinée",
+    "item-potentwineportion-pomace": "Portion de piquette raffinée",
     "incontainer-item-potentwineportion-pomace": "Piquette raffinée",
-    "item-liqueurportion-limencello": "Limoncello",
-    "incontainer-item-liqueurportion-limencello": "Limoncello",
-    "recipeingredient-item-liqueurportion-limencello-insturmentalcase": "limoncello",
-    "item-liqueurportion-amaretto": "Amaretto",
-    "incontainer-item-liqueurportion-amaretto": "Amaretto",
-    "recipeingredient-item-liqueurportion-amaretto-insturmentalcase": "amaretto",
-    "item-chocolatebread-dough": "Pâte à pain aux pépites de chocolat",
-    "item-chocolatebread-partbaked": "Pain aux pépites de chocolat (à moitié cuit)",
-    "item-chocolatebread-cooked": "Pain aux pépites de chocolat (cuit)",
-    "item-chocolatebread-charred": "Pain aux pépites de chocolat (carbonisé)",
-    "item-chocolatebread-syruppartbaked": "Pain aux pépites de chocolat (au sirop, à moitié cuit)",
-    "item-chocolatebread-syrup": "Pain aux pépites de chocolat (au sirop)",
-    "item-chocolatebread-syrupcharred": "Pain aux pépites de chocolat (au sirop, carbonisé)",
-    "item-chocolatemuffin-dough": "Pâte à muffin aux pépites de chocolat",
-    "item-chocolatemuffin-partbaked": "Muffin aux pépites de chocolat (à moitié cuit)",
-    "item-chocolatemuffin-cooked": "Muffin aux pépites de chocolat (cuit)",
-    "item-chocolatemuffin-charred": "Muffin aux pépites de chocolat (carbonisé)",
-    "item-chocolatemuffin-syruppartbaked": "Muffin aux pépites de chocolat (au sirop, à moitié cuit)",
-    "item-chocolatemuffin-syrup": "Muffin aux pépites de chocolat (au sirop)",
-    "item-chocolatemuffin-syrupcharred": "Muffin aux pépites de chocolat (au sirop, carbonisé)"
+    "game:incontainer-item-strongwineportion-pomace": "Piquette forte",
+    "recipeingredient-item-strongwineportion-pomace-insturmentalcase": "piquette forte",
+    "game:incontainer-item-potentwineportion-pomace": "Piquette raffinée",
+    "recipeingredient-item-potentwineportion-pomace-insturmentalcase": "piquette raffinée",
+    "game:recipeingredient--pressedcocoa-cocoapowder": "pâte de cacao",
+    "game:incontainer-item-potentspiritportion-mingimingi": "Eau-de-vie de baie de mingimingi millésimée",
+    "game:recipeingredient--pressedmash-grapeseed": "marc de pépins de raisin",
+    "game:recipeingredient--pressedmash-pumpkinseed": "marc de graines de citrouille",
+    "game:recipeingredient--pressedmash-sugarcane": "bagasse",
+    "game:recipeingredient--pressedmash-walnut": "marc de noix"
   }
 }

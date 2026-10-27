@@ -12,13 +12,13 @@ dans `devenv shell`.
 
 - `vsServer` : serveur officiel du jeu (`gameVersion`, tarball du CDN). Donne `VS_GAME_ASSETS`.
 - `vsMods` : modpack de référence construit depuis `mods.json` (zips ModDB, ré-empaquetés avec
-  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation et ceux ajoutés à la demande (211 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…). Sans release taguée 1.22.7, on retient la dernière release 1.22.x (loggingmod, vanillavarnished, japanesearchitecture, clothierheirloomsmod, faviking, falandsknecht) ; `vs-check-updates` les laisse alors telles quelles.
+  des `/`). Donne `VS_MODS_DIR`. Reproduit le modpack de bihan au jeu 1.22.7 (les packs tiers, allclasses et koboldrdx, retirés de bihan, y restent pour la couverture), plus les mods couverts par Aethernia Translation et ceux ajoutés à la demande (211 mods en tout ; forks retenus quand l'original n'existe plus en 1.22 : combatoverhaulfork, armoryfork, firearmsfork, pandaxskills/pandaxlib…). Sans release taguée 1.22.7, on retient la dernière release 1.22.x (loggingmod, vanillavarnished, japanesearchitecture, clothierheirloomsmod, falandsknecht) ; `vs-check-updates` les laisse alors telles quelles.
 - Les scripts Python partagent `pyLib` (lecture tolérante des lang des mods, résolution des domaines).
 
 | Commande | Rôle |
 | --- | --- |
 | `vs-audit [sortie]` | textes sans français → `work/todo/<modid>.json` (par domaine). Les fr.json du dépôt comptent comme traduits. Les packs tiers (`TRANSLATION_PACKS`) ne comptent pas, ni une valeur vide ou identique à l'anglais dans le fr.json d'un mod (hors `lint/identiques.txt`). Les noms de blocs ciselés des schémas comptent comme clés `game:<nom>`. Référence : 0 clé (tout le modpack, packs compris, est couvert) |
-| `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés), `expandedfoods.json` (tartes mixtes « A/B pie » × glossaire d'ingrédients), `pipeleaf.json` (mélanges × plantes, pipes × métaux) et `heraldique.json` (motifs × émaux héraldiques, « de gueules », et objets × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
+| `vs-gen [--check]` | génère les fr.json traduits par gabarits depuis `gen/*.json` : `wcfefcompat.json` (produits × fruits accordés), `expandedfoods.json` (tartes mixtes « A/B pie » × glossaire d'ingrédients, ingrédients liquides nommés comme la boisson dans son récipient), `pipeleaf.json` (mélanges × plantes, pipes × métaux) et `heraldique.json` (motifs × émaux héraldiques, « de gueules », et objets × couleurs accordées pour heraldry, capes, heraldrybanners, morebanners ; clé partagée entre ces mods → `assets/heraldry`). Échoue sur toute clé anglaise non couverte. `--check` dans `enterTest` |
 | `vs-lint` | JSON strict UTF-8 sans BOM, sans doublon ; clé présente en anglais dans le modpack ; non traduite ailleurs ; mêmes `{n}`, `>>>nom<<<` et balises que l'anglais (le texte des pluriels `{p0:…}` se traduit). Hook pre-commit |
 | `vs-build` | `dist/vsopenfrench_<version>.zip`, chemins en `/`, horodatage fixe |
 | `vs-test` | serveur jetable dans `work/server/` (`ServerLanguage: fr`), échoue sur `Failed to load language file` |
@@ -42,7 +42,8 @@ est factorisée dans `.github/actions/setup-devenv`.
 - **Nouvelles versions des mods** (`.github/workflows/mods.yml`, lundi 5 h UTC et à la demande) :
   `vs-check-updates --write` dans l'exécution seulement, puis `vs-audit` et `vs-lint` sur ce modpack.
   Tient à jour une issue étiquetée « traductions à faire » (nouveaux textes, clés disparues de
-  l'anglais), fermée quand il ne reste rien ; `work/todo/` et le `mods.json` à jour en artefact.
+  l'anglais), fermée quand il ne reste rien ; le rapport est coupé pour tenir dans une issue
+  (65 536 caractères au plus, sinon l'étape échoue sans rien créer) ; `work/todo/` et le `mods.json` à jour en artefact.
   Pour traiter : `vs-check-updates --write` en local, traduire, committer `mods.json` avec.
 - **Nightly** (`.github/workflows/nightly.yml`, chaque nuit à 3 h UTC et à la demande, input
   `force`) : sauté si le tag `nightly` pointe déjà sur `main`. Sinon `devenv test`, version

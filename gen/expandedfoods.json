@@ -555,7 +555,6 @@
     "Gozinaki": "Gozinaki",
     "A simple, brittle confection made by <a href=\"handbook://kneadingmixingguide\">kneading</a> nuts or sunflower grain with honey, then baked until hard. It can then be further sweetened with a variety of toppings, such as peanut butter/sauce, syrup, or additional honey.": "Une confiserie simple et croquante, préparée en <a href=\"handbook://kneadingmixingguide\">pétrissant</a> des noix ou des graines de tournesol avec du miel, puis cuite jusqu'à durcir. On peut ensuite l'adoucir encore avec diverses garnitures : beurre ou sauce d'arachide, sirop, ou davantage de miel.",
     "Confectionery": "Confiserie",
-    "Making candy is a relatively easy process. Start by <a href=\"handbook://kneadingmixingguide\">kneading</a> a sweetener, such as honey or syrup, with either peanut paste or sunflower grain... and you're done! Adding salt imparts a little extra healing, on top of the healing provided by all the sugar.": "Faire des bonbons est assez simple. Commencez par <a href=\"handbook://kneadingmixingguide\">pétrir</a> un édulcorant, comme du miel ou du sirop, avec de la pâte d'arachide ou des graines de tournesol... et c'est prêt ! Ajouter du sel apporte un petit supplément de soin, en plus de celui qu'apporte tout ce sucre.",
     "Fruit Bars": "Barres de fruits",
     "A high energy food, compact and easily transportable. It is made by <a href=\"handbook://kneadingmixingguide\">kneading</a> a stabilizing agent, such as grain or nuts, with fruit, filling (such as gelatin or yogurt), and sweetener (such as honey or syrup).": "Un aliment très énergétique, compact et facile à transporter. On le prépare en <a href=\"handbook://kneadingmixingguide\">pétrissant</a> un liant, comme des céréales ou des noix, avec des fruits, une garniture (comme de la gélatine ou du yaourt) et un édulcorant (comme du miel ou du sirop).",
     "Dumplings": "Raviolis",
@@ -785,10 +784,8 @@
     "num-num mash": "marc de prune du Natal",
     "pomegranate mash": "marc de grenade",
     "raspberry mash": "marc de framboise",
-    "red currant mash": "marc de groseille rouge",
     "saguaro mash": "marc de fruit de saguaro",
     "strawberry mash": "marc de fraise",
-    "white currant mash": "marc de groseille blanche",
     "Dried beautyberry pie (raw)": "Tarte aux baies de callicarpe séchées (non cuite)",
     "Dried blackberry pie (raw)": "Tarte aux mûres séchées (non cuite)",
     "Dried cactus fruit pie (raw)": "Tarte aux figues de Barbarie séchées (non cuite)",
@@ -1070,6 +1067,14 @@
     "Fennel pie (part-baked)": "Tarte au fenouil (à moitié cuite)",
     "Pickled fennel pie (part-baked)": "Tarte au fenouil mariné (à moitié cuite)",
     "Fennel pie": "Tarte au fenouil",
-    "Pickled fennel pie ": "Tarte au fenouil mariné"
+    "Pickled fennel pie ": "Tarte au fenouil mariné",
+    "Making candy is a relatively easy process. Start by <a href=\"handbook://kneadingmixingguide\">kneading</a> a sweetener, such as honey or syrup, with either peanut paste, sunflower grain, or roasted grains... and you're done! Adding salt imparts a little extra healing, on top of the healing provided by all the sugar.": "Faire des bonbons est assez simple. Commencez par <a href=\"handbook://kneadingmixingguide\">pétrir</a> un édulcorant, comme du miel ou du sirop, avec de la pâte d'arachide, des graines de tournesol ou des céréales grillées... et c'est prêt ! Ajouter du sel apporte un petit supplément de soin, en plus de celui qu'apporte tout ce sucre.",
+    "Roasted amaranth candy": "Nougatine d'amarante grillée",
+    "Roasted flax candy": "Nougatine de lin grillé",
+    "Roasted rice candy": "Nougatine de riz grillé",
+    "Roasted rye candy": "Nougatine de seigle grillé",
+    "Roasted spelt candy": "Nougatine d'épeautre grillé",
+    "redcurrant mash": "marc de groseille rouge",
+    "whitecurrant mash": "marc de groseille blanche"
   }
 }

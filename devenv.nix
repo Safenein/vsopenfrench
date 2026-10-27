@@ -391,7 +391,7 @@ let
     VOWELS = "aàâeéèêëiîïoôuùûüœ"
     PREPOSITIONS = {"de", "du", "des", "à", "au", "aux", "en"}
 
-    english, french, _ = load_modpack()
+    english, french, _, shown = load_modpack(with_texts=True)
     outputs = defaultdict(dict)  # domaine du fichier -> {clé: texte}
     missing = 0
 
@@ -401,12 +401,12 @@ let
             if qkey not in french and text.strip():
                 yield qkey, text
 
-    placed = set()  # clés qualifiées déjà livrées : une clé déclarée par plusieurs mods ne sort qu'une fois
+    placed = {}  # clés qualifiées déjà livrées : une clé déclarée par plusieurs mods ne sort qu'une fois
 
     def put(domain, qkey, value):
         if qkey in placed:
             return
-        placed.add(qkey)
+        placed[qkey] = value
         key_domain, key = qkey.split(":", 1)
         outputs[domain][key if key_domain == domain else qkey] = value
 
@@ -433,16 +433,22 @@ let
         first = text[0].upper() if model[0].isupper() else text[0].lower()
         return first + text[1:]
 
+    def of(name):
+        name = name[0].lower() + name[1:]
+        return ("d'" if name[0] in VOWELS + "h" else "de ") + name
+
     # --- wcfefcompat : produits × fruits ---
 
     wcfef = json.loads((ROOT / "gen/wcfefcompat.json").read_text("utf-8"))
     types = "|".join(sorted(map(re.escape, wcfef["gabarits"]), key=len, reverse=True))
     states = "|".join(wcfef["etats"])
-    PIE = re.compile(rf"^pie-single-wcfefcompat:({types})-(.+)-({states})$")
+    PIE = re.compile(rf"^pie-single-(?:wcfefcompat|expandedfoods):({types})-(.+)-({states})$")
     ITEM = re.compile(
-        rf"^(?:incontainer-item-|game:recipeingredient-item-|recipeingredient-item-|item-"
-        rf"|game:meal-ingredient-yogurtmeal-primary-yogurt-)({types})-(.+?)(?:-insturmentalcase)?$"
+        rf"^(?:game:|expandedfoods:|wcfefcompat:)?(?:incontainer-item-|recipeingredient-item-|recipeingredient--|item-"
+        rf"|meal-ingredient-yogurtmeal-primary-yogurt-|meal-ingredient-stew-(?:primary|secondary)-)"
+        rf"({types})-(.+?)(?:-insturmentalcase)?$"
     )
+    PORTION = re.compile(r" portion$", re.I)
 
     def fruit_fields(entry):
         name, fem = entry["fr"], entry["genre"] == "f"
@@ -476,13 +482,18 @@ let
             form = "objet"
         else:
             return None, "aucun gabarit pour cette clé"
+        code = code.strip()  # « - orangeblossom » dans les clés du mod
+        portion = form == "objet" and PORTION.search(text)  # « Strong X wine portion » : « Portion de vin… »
+        stem = PORTION.sub("", text) if portion else text
         for rule in wcfef["gabarits"][kind].get(form, []):
-            if re.search(rule["en"], text, re.I):
+            if re.search(rule["en"], stem, re.I):
                 table = rule.get("table", "fruits")
                 entry = wcfef["tables"][table].get(code)
                 if entry is None:
                     return None, f"code « {code} » absent de la table « {table} »"
                 value = rule["fr"].format(etat=wcfef["etats"].get(state, ""), **fruit_fields(entry))
+                if portion:
+                    value = "Portion " + of(value)
                 return same_case(value, text), None
         return None, f"texte anglais hors gabarit ({kind}, {form})"
 
@@ -553,10 +564,6 @@ let
         "briquet": re.compile(rf"^pipeleaf:item-pipelighter-({METAL})$"),
     }
 
-    def of(name):
-        name = name[0].lower() + name[1:]
-        return ("d'" if name[0] in VOWELS + "h" else "de ") + name
-
     def translate_pipeleaf(qkey):
         if qkey in pipeleaf["cles"]:
             return pipeleaf["cles"][qkey], None
@@ -582,12 +589,20 @@ let
         else:
             put("pipeleaf", qkey, value)
 
-    # --- expandedfoods : tartes mixtes (« A/B pie ») et légumes émincés ---
+    # --- expandedfoods : tartes mixtes (« A/B pie »), légumes émincés, ingrédients liquides ---
 
     expanded = json.loads((ROOT / "gen/expandedfoods.json").read_text("utf-8"))
     PIE_EF = re.compile(r"^game:pie-(?:single|mixed)-.+-(raw|partbaked|perfect|charred)$")
     CHOPPED = re.compile(r"^(?:game:)?recipeingredient-item-cookedchoppedvegetable-(.+)-\*(?:-insturmentalcase)?$")
+    LIQUID = re.compile(r"^(?:game:)?recipeingredient-item-(.+?)(?:-topping|-insturmentalcase|-)?$")
     STATE_EN = re.compile(r"\s*\((?:raw|part-baked|charred)\)$")
+
+    def in_container(code):
+        """Nom français affiché pour le contenu d'un récipient (« Cidre de pomme »), livré ici ou ailleurs."""
+        for qkey in (f"game:incontainer-item-{code}", f"expandedfoods:incontainer-item-{code}"):
+            if qkey in placed or qkey in shown:
+                return placed.get(qkey) or shown[qkey]
+        return None
 
     def pie_name(stem):
         if stem in expanded["noms"]:
@@ -619,6 +634,10 @@ let
             if name is None:
                 return None, "nom de tarte hors motifs et hors « noms »"
             return name + expanded["etats"][m.group(1)], None
+        # Ingrédient d'un plat (boisson, bouillon, sauce) : le nom de la boisson telle qu'on la voit
+        # dans son récipient, plutôt que l'anglais propre à la recette (« sake » pour le whisky de riz).
+        if (m := LIQUID.match(key)) and (name := in_container(m.group(1))):
+            return same_case(name, text), None
         return None, "aucun gabarit pour cette clé"
 
     for qkey, text in todo("expandedfoods"):

@@ -41,6 +41,31 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 - Clés disparues de l'anglais retirées (ppex, smex, vintageskavenrat, windchimes).
 - `vs-check-updates` retient la release compatible de plus haute version et ne revient jamais en
   arrière : alchemy reste en 2.2.0-rc.12 malgré la publication d'une 2.1.23.
+- Modpack de référence mis à jour une deuxième fois (45 mods, dont WCF/EF Compat 1.3.2,
+  Forgotten Armory: Viking 2.0.0, Interesting Ore Gen 3.0.2, Shipwright 1.5.1, Carry On
+  2.0.0-rc.1, alchemy 2.2.0-rc.14) et ses nouveaux textes traduits (3 420 clés ajoutées) :
+  - WCF/EF Compat (`vs-gen`) : clés réorganisées par le mod, fichier régénéré (2 587 clés) ;
+    tartes aux fruits secs, portions, marcs (« Marc de raisin »), vins de fleurs vieillis,
+    ambroisie ;
+  - Expanded Foods (`vs-gen`) : ingrédients liquides des recettes, nommés comme la boisson dans
+    son récipient (« Cidre de pomme »), nougatines grillées, page du guide sur les bonbons ;
+  - Alchemy : 288 boutures ; Aldi's Classes race patch : races et leurs caractéristiques (125
+    textes) ; Aldi's Classes : verre ouraline, guide des recettes des classes ;
+  - Forgotten Armory: Viking 2.0.0, refondu : casques, plastrons et jambières Bjarnhǫldr et
+    Ragnbjörn ; ornement Metallicus Arietinus dans les chroniques et l'établi de décoration ;
+  - Interesting Ore Gen 3.0 : guide retraduit (amas, couches, failles, cheminées, roche
+    encaissante) ;
+  - Shipwright : færing ; Window Display : volets coulissants ; Universal Display Lib :
+    présentation dans les blocs sculptés et au sol ; Carry On, effectlib, dead (gravures,
+    blessures d'Injury Expanded), downed, Purposeful Storage (armoire d'apothicaire).
+- Textes anglais modifiés retraduits : coûts de construction de Shipwright, bac à ressources,
+  pot temporel (Aldi's Classes), réglage de tolérance (SlowTox), fenêtres de Window Display.
+- Clés disparues de l'anglais retirées (faviking, wrustbound, aldiclasses, carryon, effectlib,
+  facore, slowtox).
+- Workflow `mods.yml` : le rapport des 19 et 26 octobre dépassait les 65 536 caractères d'une
+  issue (lignes de `vs-lint` citant des textes anglais entiers), qui n'a pas pu être créée.
+  Lignes coupées à 300 caractères, rapport tronqué au-delà de 60 000 octets, bannière de devenv
+  retirée de la liste des mods.
 
 ## [0.4.0] - 2026-10-04
 
