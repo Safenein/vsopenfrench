@@ -94,6 +94,7 @@ Lupinae
 Malachite
 Mantellum
 Massicot
+Metallicus Arietinus
 Metallicus Laurea
 More Lanterns
 Mors
@@ -370,3 +371,14 @@ Yuzushu
 {0} sat
 Cointreau
 Nutrition
+Suspension
+Alpha
+Amphitari
+Bixo
+Fluffdreg
+Galeret
+Gnome
+Hobbit
+Orrukin
+Skaven
+Threnkal

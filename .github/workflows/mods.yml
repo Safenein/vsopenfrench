@@ -47,6 +47,9 @@ jobs:
           echo "errors=$errors" >>"$GITHUB_OUTPUT"
           cat updates.md audit.txt lint.txt
 
+      # Le corps d'une issue est limité à 65 536 caractères : les lignes de vs-lint (qui citent
+      # parfois des textes anglais entiers) sont coupées, et le rapport tronqué au-delà de 60 000
+      # octets. Le détail complet reste dans l'artefact.
       - name: Rapport
         run: |
           {
@@ -54,15 +57,24 @@ jobs:
             echo
             echo "**Textes sans français : ${{ steps.audit.outputs.total }}**"
             echo
-            grep -v '^Total' audit.txt | sed 's/^/- /'
+            grep ' clé(s) sans français$' audit.txt | sed 's/^/- /'
             if [ "${{ steps.audit.outputs.errors }}" != 0 ]; then
               echo
               echo "**vs-lint : ${{ steps.audit.outputs.errors }} erreur(s)** (souvent des clés disparues de l'anglais)"
               echo
               echo '```'
-              grep '^erreur' lint.txt | head -n 50
+              grep '^erreur' lint.txt | head -n 50 | cut -c1-300 | iconv -c -f UTF-8 -t UTF-8 || true
               echo '```'
             fi
+          } >body.md
+          if [ "$(wc -c <body.md)" -gt 60000 ]; then
+            head -c 60000 body.md | sed '$d' >cut.md
+            if [ $(($(grep -c '^```' cut.md) % 2)) = 1 ]; then echo '```' >>cut.md; fi
+            printf '\n%s\n' "*Rapport tronqué : la suite est dans l'artefact \`todo\`.*" >>cut.md
+            mv cut.md body.md
+          fi
+          {
+            cat body.md
             echo
             echo "Pour traiter : \`vs-check-updates --write\`, puis \`vs-audit\` (fichiers dans \`work/todo/\`),"
             echo "traduire (ou compléter \`gen/*.json\` et relancer \`vs-gen\`), \`vs-lint\`, et committer"

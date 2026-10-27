@@ -24,6 +24,8 @@
   "block-swordplaque-*": "Plaque à épée",
   "block-clothrack-*": "Présentoir à tissus",
   "block-roperack-*": "Présentoir à cordes",
+  "block-jonaspartscabinet-*": "Armoire à éléments de Jonas",
+  "block-apothecarycabinet-*": "Armoire d'apothicaire",
   "blockdesc-canhold-title": "Peut contenir :",
   "helddesc-wardrobe": "Peut contenir la plupart des vêtements du haut et du bas, ainsi que la plupart des chaussures !",
   "helddesc-hatrack": "Peut contenir la plupart des chapeaux !",
@@ -33,7 +35,7 @@
   "helddesc-glidermount": "Un support pour votre planeur !",
   "helddesc-weaponrack": "Peut contenir la plupart des armes longues !",
   "helddesc-gearrack": "Peut contenir des engrenages !",
-  "helddesc-resourcebin": "Peut contenir de l'herbe sèche et du chaume, des bâtons, des pierres, du charbon ou du quartz, de la ficelle ou des fibres de lin, de la tourbe, du compost, des morceaux de minerai, des pépites et morceaux de métal, et la plupart des poudres !",
+  "helddesc-resourcebin": "Peut contenir de l'herbe sèche et du chaume, des bâtons, des pierres, des os, des plumes, du charbon ou du quartz, de la ficelle ou des fibres de lin, de la tourbe, du compost, des pièces métalliques, des morceaux de minerai, des pépites et morceaux de métal, et la plupart des poudres !",
   "helddesc-pantsrack": "Peut contenir toutes sortes de pantalons !",
   "helddesc-gloverack": "Peut contenir la plupart des gants, brassards et bracelets !",
   "helddesc-necklacestand": "Peut contenir la plupart des colliers !",
@@ -47,6 +49,9 @@
   "helddesc-swordplaque": "Accrochez votre épée préférée !",
   "helddesc-clothrack": "Rangez vos tissus !",
   "helddesc-roperack": "Rangez vos cordes !",
+  "helddesc-jonaspartscabinet": "Rangez tous vos éléments de Jonas !",
+  "helddesc-apothecarycabinet": "Rangez tous vos bandages et cataplasmes ! Empêche les bandages imprégnés d'alcool de sécher.",
   "This item cannot be placed in this container.": "Cet objet ne peut pas être placé dans ce contenant.",
-  "This item is not of the same type as the item in the container!": "Cet objet n'est pas du même type que celui du contenant !"
+  "This item is not of the same type as the item in the container!": "Cet objet n'est pas du même type que celui du contenant !",
+  "Can't place this item here, it's either not the right type, or not the right size for this section.": "Impossible de placer cet objet ici : il n'est pas du bon type ou pas de la bonne taille pour cette section."
 }

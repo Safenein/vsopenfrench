@@ -33,6 +33,8 @@
   "ExecuteHoldSeconds-comment": "Secondes pendant lesquelles l'interaction d'exécution doit être maintenue pour achever un joueur à terre.",
   "ExecuteRange": "Portée d'exécution",
   "ExecuteRange-comment": "Distance maximale en blocs pour démarrer une exécution.",
+  "ExecuteInterruptDamage": "Dégâts interrompant l'exécution",
+  "ExecuteInterruptDamage-comment": "Total des dégâts que le bourreau peut subir avant que l'exécution soit interrompue.",
   "DragHoldSeconds": "Temps de maintien pour traîner",
   "DragHoldSeconds-comment": "Secondes pendant lesquelles l'interaction de traînage doit être maintenue pour commencer à traîner.",
   "DragWalkSpeedMultiplier": "Modificateur de vitesse de traînage",

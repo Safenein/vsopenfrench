@@ -4,7 +4,7 @@
   "slowtox:Config.Setting.IntoxicationSpeed": "Vitesse globale d'élimination des substances intoxicantes",
   "slowtox:Config.Setting.IntakeRate": "Vitesse de montée de l'intoxication (réglage délicat : mieux vaut ajuster IntoxicationSpeed)",
   "slowtox:Config.Setting.DecayRate": "Vitesse de baisse de l'intoxication (réglage délicat : mieux vaut ajuster IntoxicationSpeed)",
-  "slowtox:Config.Setting.HabitualToleranceChangeRate": "Vitesse d'adaptation de la tolérance selon les habitudes",
+  "slowtox:Config.Setting.ToleranceAffinity": "Au-dessus de 1, la tolérance s'acquiert plus vite et se perd plus lentement ; en dessous de 1, c'est l'inverse",
   "slowtox:Config.Setting.OverintoxicationThreshold": "Seuil au-delà duquel l'intoxication inflige des dégâts",
   "slowtox:Config.Setting.HealthRegenIntoxRangeBottom": "Seuil au-delà duquel la santé se régénère",
   "slowtox:Config.Setting.HealthRegenIntoxRangeTop": "Seuil au-delà duquel la santé ne se régénère plus",
