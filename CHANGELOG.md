@@ -66,6 +66,11 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
   issue (lignes de `vs-lint` citant des textes anglais entiers), qui n'a pas pu être créée.
   Lignes coupées à 300 caractères, rapport tronqué au-delà de 60 000 octets, bannière de devenv
   retirée de la liste des mods.
+- Elk Adornments 2.0.15 : schémas de masque de wapiti (crocs, cornes, corne nasale, plumets,
+  ramure, anneaux, garniture) et deux couvertures rares (« La Flèche brisée », « Flèche dorée ») ;
+  les anciens masques personnalisables obsolètes et les pages « Personnalisation de masque » du
+  guide, disparus du mod, sont retirés (299 clés). Mises à jour sans nouveau texte : alchemy
+  2.2.0-rc.15, deciduoustrees 2.1.0, effectlib 1.2.2, WCF/EF Compat 1.3.3.
 
 ## [0.4.0] - 2026-10-04
 
