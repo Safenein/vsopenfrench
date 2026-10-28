@@ -10,10 +10,10 @@
     },
     {
       "modid": "alchemy",
-      "version": "2.2.0-rc.14",
-      "fileid": 131865,
-      "url": "https://moddbcdn.vintagestory.at/alchemy_2.2.0-rc.14_af43b651777c0368e8a07a5548c91d27.zip?dl=alchemy_2.2.0-rc.14.zip",
-      "sha256": "59abc6f1cfada30072681bd9daa7467c33574074deafe1703c7445bc82fef377"
+      "version": "2.2.0-rc.15",
+      "fileid": 133950,
+      "url": "https://moddbcdn.vintagestory.at/alchemy_2.2.0-rc.15_8cad5af1045979ad135934ba9f91235b.zip?dl=alchemy_2.2.0-rc.15.zip",
+      "sha256": "6e49769d1d62a04cc2bc0a5f28c0df145b36fd14937136d4eeeeb52d24550b3e"
     },
     {
       "modid": "aldiclasses",
@@ -199,10 +199,10 @@
     },
     {
       "modid": "deciduoustrees",
-      "version": "2.0.7",
-      "fileid": 132801,
-      "url": "https://moddbcdn.vintagestory.at/deciduoustrees_2.0.7_2ea7636661e362963e4171adfa765bca.zip?dl=deciduoustrees_2.0.7.zip",
-      "sha256": "ec4a3fc44abc4674124bf7266c6a4a2a05f3081eab4b816e484cb3094055198d"
+      "version": "2.1.0",
+      "fileid": 134006,
+      "url": "https://moddbcdn.vintagestory.at/deciduoustrees_2.1.0_45a5eb173e762caa9e7f4027e0f6243b.zip?dl=deciduoustrees_2.1.0.zip",
+      "sha256": "11dfe7c71b058a879f055c3cb4ca84a343164d36223464bae989801576ba9de4"
     },
     {
       "modid": "desirepaths",
@@ -220,10 +220,10 @@
     },
     {
       "modid": "effectlib",
-      "version": "1.2.1",
-      "fileid": 131863,
-      "url": "https://moddbcdn.vintagestory.at/effectlib_1.2.1_2648ce161b5d72f9694ae93539b2ae5f.zip?dl=effectlib_1.2.1.zip",
-      "sha256": "5e86cefd5c9784c9baa309228229db2c78c99002d83d775a1d603438cd4b6982"
+      "version": "1.2.2",
+      "fileid": 133949,
+      "url": "https://moddbcdn.vintagestory.at/effectlib_1.2.2_f028b1b7e7f4462010f1743e9d0591be.zip?dl=effectlib_1.2.2.zip",
+      "sha256": "995c42bf9a50a539600ff34f8fd9d6fe34263588872ff2baedfe7d5e4101d664"
     },
     {
       "modid": "efmealsmodule",
@@ -697,10 +697,10 @@
     },
     {
       "modid": "elkadornments",
-      "version": "2.0.14",
-      "fileid": 125197,
-      "url": "https://moddbcdn.vintagestory.at/ElkAdornments2.0.14_2900882c7ab996a524dbffc5a617f2ba.zip?dl=ElkAdornments2.0.14.zip",
-      "sha256": "53c19e878dd951eaf8d52ef0e44c2ccdf4f26a399d6c441c9c4906faa0e161bc"
+      "version": "2.0.15",
+      "fileid": 133888,
+      "url": "https://moddbcdn.vintagestory.at/ElkAdornments2.0.15_c409f9bc799acc0c4a8090deada448dd.zip?dl=ElkAdornments2.0.15.zip",
+      "sha256": "5f8f73edf2701f43abaa78806f37f780923274f744f6376c640f9cb599c4db01"
     },
     {
       "modid": "elkvariants",
@@ -1271,10 +1271,10 @@
     },
     {
       "modid": "wcfefcompat",
-      "version": "1.3.2",
-      "fileid": 133732,
-      "url": "https://moddbcdn.vintagestory.at/wcfefcompat_V1.3.2_230409cd14ca57ca2f41c06728322e9e.zip?dl=wcfefcompat_V1.3.2.zip",
-      "sha256": "e2fd2ade6f5576078ebec935ff8967dd489087abdb643aaabcaa0ef9afba22e1"
+      "version": "1.3.3",
+      "fileid": 133754,
+      "url": "https://moddbcdn.vintagestory.at/wcfefcompat_V1.3.3_25b278c238063f3b88a8225f55c93a5d.zip?dl=wcfefcompat_V1.3.3.zip",
+      "sha256": "13ef08bfe9b92fb1ab9e5dcf8dfc2b348ea0d09c9dbcf480b1ad0cb624156643"
     },
     {
       "modid": "wildcraftfruit",
